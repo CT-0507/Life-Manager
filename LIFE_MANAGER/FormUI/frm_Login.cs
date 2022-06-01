@@ -18,12 +18,23 @@ namespace LIFE_MANAGER.FormUI
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+     
+      
+
+        private void roundedButton1_Click(object sender, EventArgs e)
         {
             Thread a = new Thread(() => new frm_Dashboard().ShowDialog());
             a.SetApartmentState(ApartmentState.STA);
             a.Start();
-           this.Close(); 
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Thread a = new Thread(() => new frm_Register().ShowDialog());
+            a.SetApartmentState(ApartmentState.STA);
+            a.Start();
+            this.Close();
         }
     }
 }

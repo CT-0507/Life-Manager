@@ -52,12 +52,12 @@ namespace LIFE_MANAGER.FormUI
             this.panelDesktopPane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktopPane.Location = new System.Drawing.Point(228, 84);
             this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(898, 494);
+            this.panelDesktopPane.Size = new System.Drawing.Size(1092, 551);
             this.panelDesktopPane.TabIndex = 6;
             // 
             // button5
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.AutoSize = true;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -75,7 +75,7 @@ namespace LIFE_MANAGER.FormUI
             // 
             // button4
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.AutoSize = true;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -93,7 +93,7 @@ namespace LIFE_MANAGER.FormUI
             // 
             // button3
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.AutoSize = true;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,12 +120,11 @@ namespace LIFE_MANAGER.FormUI
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 84);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(228, 494);
+            this.panelMenu.Size = new System.Drawing.Size(228, 551);
             this.panelMenu.TabIndex = 4;
             // 
             // button2
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -143,7 +142,7 @@ namespace LIFE_MANAGER.FormUI
             // 
             // button1
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.AutoSize = true;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -164,7 +163,7 @@ namespace LIFE_MANAGER.FormUI
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(571, 22);
+            this.lblTitle.Location = new System.Drawing.Point(668, 22);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(99, 32);
             this.lblTitle.TabIndex = 3;
@@ -181,7 +180,7 @@ namespace LIFE_MANAGER.FormUI
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1126, 84);
+            this.panelTitleBar.Size = new System.Drawing.Size(1320, 84);
             this.panelTitleBar.TabIndex = 5;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelTitleBar_MouseDown);
             // 
@@ -192,7 +191,7 @@ namespace LIFE_MANAGER.FormUI
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(1073, 12);
+            this.button8.Location = new System.Drawing.Point(1267, 12);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(30, 30);
             this.button8.TabIndex = 9;
@@ -207,7 +206,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Maximize.FlatAppearance.BorderSize = 0;
             this.btn_Maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Maximize.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Maximize.Location = new System.Drawing.Point(1027, 12);
+            this.btn_Maximize.Location = new System.Drawing.Point(1221, 12);
             this.btn_Maximize.Name = "btn_Maximize";
             this.btn_Maximize.Size = new System.Drawing.Size(30, 30);
             this.btn_Maximize.TabIndex = 8;
@@ -222,7 +221,7 @@ namespace LIFE_MANAGER.FormUI
             this.bnt_Minimize.FlatAppearance.BorderSize = 0;
             this.bnt_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bnt_Minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnt_Minimize.Location = new System.Drawing.Point(979, 12);
+            this.bnt_Minimize.Location = new System.Drawing.Point(1173, 12);
             this.bnt_Minimize.Name = "bnt_Minimize";
             this.bnt_Minimize.Size = new System.Drawing.Size(30, 30);
             this.bnt_Minimize.TabIndex = 7;
@@ -246,7 +245,7 @@ namespace LIFE_MANAGER.FormUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1126, 578);
+            this.ClientSize = new System.Drawing.Size(1320, 635);
             this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelTitleBar);
@@ -255,6 +254,7 @@ namespace LIFE_MANAGER.FormUI
             this.Text = "frm_Dashboardcs";
             this.Load += new System.EventHandler(this.frm_Dashboard_Load);
             this.panelMenu.ResumeLayout(false);
+            this.panelMenu.PerformLayout();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             this.ResumeLayout(false);

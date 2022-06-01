@@ -82,6 +82,12 @@
     <Compile Include="FormUI\frm_Profile.Designer.cs">
       <DependentUpon>frm_Profile.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUI\frm_Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\frm_Register.Designer.cs">
+      <DependentUpon>frm_Register.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\frm_Setting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\frm_Profile.resx">
       <DependentUpon>frm_Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\frm_Register.resx">
+      <DependentUpon>frm_Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\frm_Setting.resx">
       <DependentUpon>frm_Setting.cs</DependentUpon>
