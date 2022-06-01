@@ -40,6 +40,7 @@ namespace LIFE_MANAGER.FormUI
             this.tb_Date = new System.Windows.Forms.TextBox();
             this.rtb_Bio = new System.Windows.Forms.RichTextBox();
             this.btn_SaveChanges = new LIFE_MANAGER.Custom_Control.RoundedButton();
+            this.btn_DeleteUser = new LIFE_MANAGER.Custom_Control.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,12 +150,33 @@ namespace LIFE_MANAGER.FormUI
             this.btn_SaveChanges.UseVisualStyleBackColor = false;
             this.btn_SaveChanges.Click += new System.EventHandler(this.btn_SaveChanges_Click);
             // 
+            // btn_DeleteUser
+            // 
+            this.btn_DeleteUser.BackColor = System.Drawing.Color.Red;
+            this.btn_DeleteUser.BackgroundColor = System.Drawing.Color.Red;
+            this.btn_DeleteUser.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_DeleteUser.BorderRadius = 40;
+            this.btn_DeleteUser.BorderSize = 0;
+            this.btn_DeleteUser.FlatAppearance.BorderSize = 0;
+            this.btn_DeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DeleteUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DeleteUser.ForeColor = System.Drawing.Color.White;
+            this.btn_DeleteUser.Location = new System.Drawing.Point(330, 402);
+            this.btn_DeleteUser.Name = "btn_DeleteUser";
+            this.btn_DeleteUser.Size = new System.Drawing.Size(221, 46);
+            this.btn_DeleteUser.TabIndex = 11;
+            this.btn_DeleteUser.Text = "Delete User";
+            this.btn_DeleteUser.TextColor = System.Drawing.Color.White;
+            this.btn_DeleteUser.UseVisualStyleBackColor = false;
+            this.btn_DeleteUser.Click += new System.EventHandler(this.btn_DeleteUser_Click);
+            // 
             // frm_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(853, 480);
+            this.Controls.Add(this.btn_DeleteUser);
             this.Controls.Add(this.btn_SaveChanges);
             this.Controls.Add(this.rtb_Bio);
             this.Controls.Add(this.tb_Date);
@@ -185,5 +207,6 @@ namespace LIFE_MANAGER.FormUI
         private System.Windows.Forms.TextBox tb_Date;
         private System.Windows.Forms.RichTextBox rtb_Bio;
         private Custom_Control.RoundedButton btn_SaveChanges;
+        private Custom_Control.RoundedButton btn_DeleteUser;
     }
 }

@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -63,6 +64,29 @@ namespace LIFE_MANAGER.FormUI
             {
                 MessageBox.Show("Name cannot be null");
             }
+        }
+
+        private void btn_DeleteUser_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to Delete this account", "Delete Account ?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                
+                try
+                {
+                    frm_Login.Users.DeleteOne(user => user._id == frm_Login.User._id);
+                    frm_Login.User = null;
+                    Thread a = new Thread(() => new frm_Login().ShowDialog());
+                    a.SetApartmentState(ApartmentState.STA);
+                    a.Start();
+                    this.ParentForm.Close();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            
         }
     }
 }

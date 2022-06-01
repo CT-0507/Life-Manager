@@ -72,7 +72,7 @@ namespace LIFE_MANAGER.FormUI
             this.tb_Pass.Name = "tb_Pass";
             this.tb_Pass.PasswordChar = '*';
             this.tb_Pass.Size = new System.Drawing.Size(209, 38);
-            this.tb_Pass.TabIndex = 9;
+            this.tb_Pass.TabIndex = 2;
             // 
             // tb_User
             // 
@@ -81,7 +81,7 @@ namespace LIFE_MANAGER.FormUI
             this.tb_User.Multiline = true;
             this.tb_User.Name = "tb_User";
             this.tb_User.Size = new System.Drawing.Size(209, 38);
-            this.tb_User.TabIndex = 8;
+            this.tb_User.TabIndex = 1;
             // 
             // pictureBox2
             // 
@@ -140,7 +140,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Login.Location = new System.Drawing.Point(175, 256);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(102, 40);
-            this.btn_Login.TabIndex = 12;
+            this.btn_Login.TabIndex = 3;
             this.btn_Login.Text = "Login";
             this.btn_Login.TextColor = System.Drawing.Color.White;
             this.btn_Login.UseVisualStyleBackColor = false;

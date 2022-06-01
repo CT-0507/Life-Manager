@@ -28,32 +28,40 @@ namespace LIFE_MANAGER.FormUI
             string strPassword = tb_Password.Text;
             string strBiography = rtb_Biography.Text;
             string strDate = tb_Date.Text;
+            string strConfirm = tb_Confirm.Text;
             string savedPasswordHash = HashPassword(strPassword);
             if (strUsername != "" && strPassword != "" && strName != "")
             {
-                try
+                if (strConfirm == strPassword)
                 {
-                    Models.User user = new Models.User()
+                    try
                     {
-                        Name = strName,
-                        Username = strUsername,
-                        Password = savedPasswordHash,
-                        Biography = strBiography,
-                        Date = strDate,
-                    };
-                    var options = new CreateIndexOptions { Unique = true };
+                        Models.User user = new Models.User()
+                        {
+                            Name = strName,
+                            Username = strUsername,
+                            Password = savedPasswordHash,
+                            Biography = strBiography,
+                            Date = strDate,
+                        };
+                        var options = new CreateIndexOptions { Unique = true };
 #pragma warning disable CS0618 // Type or member is obsolete
-                    frm_Login.Users.Indexes.CreateOne("{ Username : 1 }", options);
+                        frm_Login.Users.Indexes.CreateOne("{ Username : 1 }", options);
 #pragma warning restore CS0618 // Type or member is obsolete
-                    frm_Login.Users.InsertOne(user);
-                    Thread a = new Thread(() => new frm_Login().ShowDialog());
-                    a.SetApartmentState(ApartmentState.STA);
-                    a.Start();
-                    this.Close();
+                        frm_Login.Users.InsertOne(user);
+                        Thread a = new Thread(() => new frm_Login().ShowDialog());
+                        a.SetApartmentState(ApartmentState.STA);
+                        a.Start();
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Username is already exist");
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Confirm password is not match");
                 }
             }
             else
