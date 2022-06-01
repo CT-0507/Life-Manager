@@ -54,7 +54,7 @@ namespace LIFE_MANAGER.FormUI
                         a.Start();
                         this.Close();
                     }
-                    catch (Exception ex)
+                    catch
                     {
                         MessageBox.Show("Username is already exist");
                     }

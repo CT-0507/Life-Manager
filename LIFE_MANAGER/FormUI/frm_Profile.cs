@@ -14,15 +14,13 @@ namespace LIFE_MANAGER.FormUI
 {
     public partial class frm_Profile : Form
     {
-        private string OriginalName = frm_Login.User.Name;
-        private string OriginalDate = frm_Login.User.Date;
-        private string OriginalBiography = frm_Login.User.Biography;
+        private string OriginalName;
+        private string OriginalDate;
+        private string OriginalBiography;
         public frm_Profile()
         {
             InitializeComponent();
-            tb_Name.Text = OriginalName;
-            tb_Date.Text = OriginalDate;
-            rtb_Bio.Text = OriginalBiography;
+            FormLoad();
         }
 
         private void btn_SaveChanges_Click(object sender, EventArgs e)
@@ -48,6 +46,7 @@ namespace LIFE_MANAGER.FormUI
                             .Set("Biography", rtb_Bio.Text);
                         var query = frm_Login.Users.UpdateOne(user => user._id == frm_Login.User._id, update);
                         MessageBox.Show("Your changes is successfully saved");
+                        frm_Login.User = UserChanges;
                     }
                     catch (Exception ex)
                     {
@@ -87,6 +86,17 @@ namespace LIFE_MANAGER.FormUI
                 }
             }
             
+        }
+        private void FormLoad() {
+            OriginalName = frm_Login.User.Name;
+            OriginalDate = frm_Login.User.Date;
+            OriginalBiography = frm_Login.User.Biography;
+        }
+        private void frm_Profile_Load(object sender, EventArgs e)
+        {
+            tb_Name.Text = OriginalName;
+            tb_Date.Text = OriginalDate;
+            rtb_Bio.Text = OriginalBiography;
         }
     }
 }
