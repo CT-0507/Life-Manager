@@ -64,7 +64,6 @@ namespace LIFE_MANAGER.FormUI
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                     panelTitleBar.BackColor = color;
-                    //panelLogo.BackColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     LIFE_MANAGER.ThemeColor.PrimaryColor = color;
                     ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
                     btn_Close.Visible = true;
@@ -108,7 +107,6 @@ namespace LIFE_MANAGER.FormUI
             DisableButton();
             lblTitle.Text = "HOME";
             panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
-            //panelLogo.BackColor = Color.FromArgb(39, 39, 58);
             currentButton = null;
             btn_Close.Visible = false;
         }
@@ -175,6 +173,11 @@ namespace LIFE_MANAGER.FormUI
         {
             this.Close();
 
+        }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            Reset();
         }
     }
 }

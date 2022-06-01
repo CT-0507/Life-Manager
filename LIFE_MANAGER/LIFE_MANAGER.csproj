@@ -144,9 +144,13 @@
   <ItemGroup>
     <Content Include="Resource\icon\Login.ico" />
     <Content Include="Resource\icon\Setting.ico" />
-    <Content Include="Resource\image\list.png" />
-    <Content Include="Resource\image\password.png" />
-    <Content Include="Resource\image\user.png" />
+    <Content Include="Resource\image\1291754_document_file_notes_reminder_todo_icon.png" />
+    <Content Include="Resource\image\2203540_bar_chart_stat_statistic_icon.png" />
+    <Content Include="Resource\image\2703079_close_delete_exit_x_icon.png" />
+    <Content Include="Resource\image\2849830_multimedia_options_setting_settings_gear_icon.png" />
+    <Content Include="Resource\image\290119_card_id_identification_identity_profile_icon.png" />
+    <Content Include="Resource\image\5120884_dairy_grocery_milk_organic_product_icon.png" />
+    <Content Include="Resource\image\chart.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
