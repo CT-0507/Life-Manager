@@ -38,10 +38,10 @@ namespace LIFE_MANAGER.FormUI
             this.button1 = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
-            this.btn_Close = new System.Windows.Forms.Button();
-            this.bnt_Minimize = new System.Windows.Forms.Button();
-            this.btn_Maximize = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.btn_Maximize = new System.Windows.Forms.Button();
+            this.bnt_Minimize = new System.Windows.Forms.Button();
+            this.btn_Close = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
@@ -172,33 +172,25 @@ namespace LIFE_MANAGER.FormUI
             this.panelTitleBar.TabIndex = 5;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelTitleBar_MouseDown);
             // 
-            // btn_Close
+            // button8
             // 
-            this.btn_Close.FlatAppearance.BorderSize = 0;
-            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Close.Location = new System.Drawing.Point(265, 26);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(75, 23);
-            this.btn_Close.TabIndex = 4;
-            this.btn_Close.Text = "button6";
-            this.btn_Close.UseVisualStyleBackColor = true;
-            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
-            // 
-            // bnt_Minimize
-            // 
-            this.bnt_Minimize.FlatAppearance.BorderSize = 0;
-            this.bnt_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bnt_Minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnt_Minimize.Location = new System.Drawing.Point(979, 12);
-            this.bnt_Minimize.Name = "bnt_Minimize";
-            this.bnt_Minimize.Size = new System.Drawing.Size(30, 30);
-            this.bnt_Minimize.TabIndex = 7;
-            this.bnt_Minimize.Text = "O";
-            this.bnt_Minimize.UseVisualStyleBackColor = true;
-            this.bnt_Minimize.Click += new System.EventHandler(this.bntMinimizeClick);
+            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button8.AutoSize = true;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(1073, 12);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(30, 30);
+            this.button8.TabIndex = 9;
+            this.button8.Text = "O";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // btn_Maximize
             // 
+            this.btn_Maximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Maximize.AutoSize = true;
             this.btn_Maximize.FlatAppearance.BorderSize = 0;
             this.btn_Maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Maximize.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -210,17 +202,31 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Maximize.UseVisualStyleBackColor = true;
             this.btn_Maximize.Click += new System.EventHandler(this.btnMaximizeClick);
             // 
-            // button8
+            // bnt_Minimize
             // 
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(1076, 12);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(30, 30);
-            this.button8.TabIndex = 9;
-            this.button8.Text = "O";
-            this.button8.UseVisualStyleBackColor = true;
+            this.bnt_Minimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bnt_Minimize.AutoSize = true;
+            this.bnt_Minimize.FlatAppearance.BorderSize = 0;
+            this.bnt_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bnt_Minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnt_Minimize.Location = new System.Drawing.Point(979, 12);
+            this.bnt_Minimize.Name = "bnt_Minimize";
+            this.bnt_Minimize.Size = new System.Drawing.Size(30, 30);
+            this.bnt_Minimize.TabIndex = 7;
+            this.bnt_Minimize.Text = "O";
+            this.bnt_Minimize.UseVisualStyleBackColor = true;
+            this.bnt_Minimize.Click += new System.EventHandler(this.bntMinimizeClick);
+            // 
+            // btn_Close
+            // 
+            this.btn_Close.FlatAppearance.BorderSize = 0;
+            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Close.Location = new System.Drawing.Point(265, 26);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(75, 23);
+            this.btn_Close.TabIndex = 4;
+            this.btn_Close.Text = "button6";
+            this.btn_Close.UseVisualStyleBackColor = true;
             // 
             // frm_Dashboard
             // 
@@ -231,6 +237,7 @@ namespace LIFE_MANAGER.FormUI
             this.Controls.Add(this.panelMenu);
             this.Controls.Add(this.panelTitleBar);
             this.Name = "frm_Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Dashboardcs";
             this.Load += new System.EventHandler(this.frm_Dashboard_Load);
             this.panelMenu.ResumeLayout(false);

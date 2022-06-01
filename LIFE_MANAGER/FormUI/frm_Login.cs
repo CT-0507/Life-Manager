@@ -23,7 +23,7 @@ namespace LIFE_MANAGER.FormUI
             Thread a = new Thread(() => new frm_Dashboard().ShowDialog());
             a.SetApartmentState(ApartmentState.STA);
             a.Start();
-            this.Close(); 
+           this.Close(); 
         }
     }
 }

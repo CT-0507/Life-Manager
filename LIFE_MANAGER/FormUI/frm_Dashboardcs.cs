@@ -152,10 +152,6 @@ namespace LIFE_MANAGER.FormUI
 
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
         private void btnMaximizeClick(object sender, EventArgs e)
         {
@@ -175,11 +171,10 @@ namespace LIFE_MANAGER.FormUI
             Reset();
         }
 
-        private void btn_Close_Click(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)
         {
-            if (activeForm != null)
-                activeForm.Close();
-            Reset();
+            this.Close();
+
         }
     }
 }
