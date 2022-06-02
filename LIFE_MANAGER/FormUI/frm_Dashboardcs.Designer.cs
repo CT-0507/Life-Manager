@@ -35,6 +35,7 @@ namespace LIFE_MANAGER.FormUI
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btn_Logout = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Maximize = new System.Windows.Forms.Button();
             this.bnt_Minimize = new System.Windows.Forms.Button();
             this.btn_Close = new System.Windows.Forms.Button();
-            this.btn_Logout = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
             this.SuspendLayout();
@@ -125,6 +125,24 @@ namespace LIFE_MANAGER.FormUI
             this.panelMenu.Size = new System.Drawing.Size(228, 551);
             this.panelMenu.TabIndex = 4;
             // 
+            // btn_Logout
+            // 
+            this.btn_Logout.AutoSize = true;
+            this.btn_Logout.FlatAppearance.BorderSize = 0;
+            this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Logout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_Logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_Logout.Image")));
+            this.btn_Logout.Location = new System.Drawing.Point(0, 467);
+            this.btn_Logout.Name = "btn_Logout";
+            this.btn_Logout.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btn_Logout.Size = new System.Drawing.Size(228, 84);
+            this.btn_Logout.TabIndex = 7;
+            this.btn_Logout.Text = "Logout";
+            this.btn_Logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_Logout.UseVisualStyleBackColor = true;
+            this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
+            // 
             // button2
             // 
             this.button2.FlatAppearance.BorderSize = 0;
@@ -167,7 +185,7 @@ namespace LIFE_MANAGER.FormUI
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(668, 22);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(98, 32);
+            this.lblTitle.Size = new System.Drawing.Size(99, 32);
             this.lblTitle.TabIndex = 3;
             this.lblTitle.Text = "label1";
             // 
@@ -242,24 +260,6 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Close.TabIndex = 4;
             this.btn_Close.UseVisualStyleBackColor = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
-            // 
-            // btn_Logout
-            // 
-            this.btn_Logout.AutoSize = true;
-            this.btn_Logout.FlatAppearance.BorderSize = 0;
-            this.btn_Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Logout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_Logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_Logout.Image")));
-            this.btn_Logout.Location = new System.Drawing.Point(0, 467);
-            this.btn_Logout.Name = "btn_Logout";
-            this.btn_Logout.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btn_Logout.Size = new System.Drawing.Size(228, 84);
-            this.btn_Logout.TabIndex = 7;
-            this.btn_Logout.Text = "Logout";
-            this.btn_Logout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Logout.UseVisualStyleBackColor = true;
-            this.btn_Logout.Click += new System.EventHandler(this.btn_Logout_Click);
             // 
             // frm_Dashboard
             // 

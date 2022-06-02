@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 
 namespace LIFE_MANAGER.FormUI
 {
@@ -23,6 +25,25 @@ namespace LIFE_MANAGER.FormUI
         private Form activeForm;
 
         //Constructor
+        private object DeserializeFromXML(string filePath)
+        {
+            FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+            try
+            {
+                XmlSerializer sr = new XmlSerializer(typeof(PlanData));
+
+                object result = sr.Deserialize(fs);
+                fs.Close();
+                return result;
+            }
+            catch (Exception e)
+            {
+                fs.Close();
+                throw new NotImplementedException();
+            }
+        }
+        private string filePath = "data.xml";
+
         public frm_Dashboard()
         {
             InitializeComponent();
@@ -31,8 +52,32 @@ namespace LIFE_MANAGER.FormUI
             this.Text = string.Empty;
             this.ControlBox = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
+            try
+            {
+                Job = DeserializeFromXML(filePath) as PlanData;
+            }
+            catch
+            {
+                SetDefaultJob();
+            }
         }
-        
+
+        void SetDefaultJob()
+        {
+            Job = new PlanData();
+            Job.Job = new List<PlanItem>();
+            Job.Job.Add(new PlanItem()
+            {
+                Date = DateTime.Now,
+                FromTime = new Point(4, 0),
+                ToTime = new Point(5, 0),
+                Job = "Thử nghiệm thôi",
+                Status = PlanItem.ListStatus[(int)EPlanItem.COMING]
+            });
+        }
+
+
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -118,14 +163,22 @@ namespace LIFE_MANAGER.FormUI
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-      
+
+
+        private PlanData job;
+
+        public PlanData Job
+        {
+            get { return job; }
+            set { job = value; }
+        }
 
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (this.ActiveMdiChild != null)
                 this.ActiveMdiChild.Close();
-            OpenChildForm(new FormUI.frm_Todo(), sender);
+            OpenChildForm(new FormUI.frm_Todo(new DateTime(dtpkDate.Value.Year, dtpkDate.Value.Month, dtpkDate.Value.Day), Job),sender);
 
         }
 
@@ -174,9 +227,11 @@ namespace LIFE_MANAGER.FormUI
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
+        DateTimePicker dtpkDate = new DateTimePicker();
         private void frm_Dashboard_Load(object sender, EventArgs e)
         {
+            
+            dtpkDate.Value = DateTime.Now;
             Reset();
         }
 
