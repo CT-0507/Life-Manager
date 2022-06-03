@@ -48,25 +48,6 @@ namespace LIFE_MANAGER.FormUI
         public frm_Diary()
         {
             InitializeComponent();
-
-            RegistryKey regkey = Registry.CurrentUser.CreateSubKey("Software\\LapLich");
-            //mo registry khoi dong cung win
-            RegistryKey regstart = Registry.CurrentUser.CreateSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run");
-            string keyvalue = "1";
-            //string subkey = "Software\\ManhQuyen";
-            try
-            {
-                //chen gia tri key
-                regkey.SetValue("Index", keyvalue);
-                //regstart.SetValue("taoregistrytronghethong", "E:\\Studing\\Bai Tap\\CSharp\\Channel 4\\bai temp\\tao registry trong he thong\\tao registry trong he thong\\bin\\Debug\\tao registry trong he thong.exe");
-                regstart.SetValue("LapLich", Application.StartupPath + "\\Lập lịch.exe");
-                ////dong tien trinh ghi key
-                //regkey.Close();
-            }
-            catch (System.Exception ex)
-            {
-            }
-
             tmNotify.Start();
             appTime = 0;
             LoadMatrix();
@@ -119,14 +100,13 @@ namespace LIFE_MANAGER.FormUI
 
             SetDefaultDate();
         }
+
         void btn_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty((sender as Button).Text))
                 return;
             frm_Todo frm_Todo = new frm_Todo(new DateTime(dtpkDate.Value.Year, dtpkDate.Value.Month, Convert.ToInt32((sender as Button).Text)), Job);
-            if (this.ActiveMdiChild != null)
-                this.ActiveMdiChild.Close();
-            frm_Dashboard frm_Dashboard = new frm_Dashboard();
+            frm_Todo.ShowDialog();
         }
 
         int DayOfMonth(DateTime date)
@@ -202,7 +182,6 @@ namespace LIFE_MANAGER.FormUI
         void SetDefaultDate()
         {
             dtpkDate.Value = DateTime.Now;
-
         }
 
         private void dtpkDate_ValueChanged(object sender, EventArgs e)
@@ -253,7 +232,7 @@ namespace LIFE_MANAGER.FormUI
             }
         }
 
-        private void frm_Diary_FormClosing(object sender, FormClosingEventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             SerializeToXML(Job, filePath);
         }
@@ -286,6 +265,13 @@ namespace LIFE_MANAGER.FormUI
         private void ckbNotify_CheckedChanged(object sender, EventArgs e)
         {
             nmNotify.Enabled = ckbNotify.Checked;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            SerializeToXML(Job, filePath);
+
         }
     }
 }

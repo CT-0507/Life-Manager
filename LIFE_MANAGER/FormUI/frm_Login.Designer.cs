@@ -73,6 +73,7 @@ namespace LIFE_MANAGER.FormUI
             this.tb_Pass.PasswordChar = '*';
             this.tb_Pass.Size = new System.Drawing.Size(209, 38);
             this.tb_Pass.TabIndex = 2;
+            this.tb_Pass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_Pass_KeyDown);
             // 
             // tb_User
             // 
@@ -107,11 +108,11 @@ namespace LIFE_MANAGER.FormUI
             // 
             this.lb_OpenRegister.AutoSize = true;
             this.lb_OpenRegister.ForeColor = System.Drawing.Color.DarkBlue;
-            this.lb_OpenRegister.Location = new System.Drawing.Point(124, 299);
+            this.lb_OpenRegister.Location = new System.Drawing.Point(92, 299);
             this.lb_OpenRegister.Name = "lb_OpenRegister";
-            this.lb_OpenRegister.Size = new System.Drawing.Size(192, 16);
+            this.lb_OpenRegister.Size = new System.Drawing.Size(233, 17);
             this.lb_OpenRegister.TabIndex = 13;
-            this.lb_OpenRegister.Text = "Bạn chưa có tài khoản : Đăng kí";
+            this.lb_OpenRegister.Text = "You don\'t have an account: Sign up";
             this.lb_OpenRegister.Click += new System.EventHandler(this.lb_OpenRegister_Click);
             // 
             // lb_WrongUser
@@ -161,6 +162,7 @@ namespace LIFE_MANAGER.FormUI
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frm_Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

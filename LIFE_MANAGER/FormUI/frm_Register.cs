@@ -81,6 +81,17 @@ namespace LIFE_MANAGER.FormUI
             string savedPasswordHash = Convert.ToBase64String(hashBytes);
             return savedPasswordHash;
         }
-        
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.ShowDialog();
+            string filepath;
+            Bitmap image;
+            filepath = openFileDialog.FileName;
+            image = new Bitmap(filepath, true);
+            pictureBox1.Image = image;
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
     }
 }

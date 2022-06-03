@@ -77,5 +77,13 @@ namespace LIFE_MANAGER.FormUI
         {
 
         }
+
+        private void tb_Pass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Enter)
+            {
+                btn_Login.PerformClick();
+            }
+        }
     }
 }

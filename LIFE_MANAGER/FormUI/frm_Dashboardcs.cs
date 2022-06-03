@@ -25,24 +25,7 @@ namespace LIFE_MANAGER.FormUI
         private Form activeForm;
 
         //Constructor
-        private object DeserializeFromXML(string filePath)
-        {
-            FileStream fs = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-            try
-            {
-                XmlSerializer sr = new XmlSerializer(typeof(PlanData));
-
-                object result = sr.Deserialize(fs);
-                fs.Close();
-                return result;
-            }
-            catch (Exception e)
-            {
-                fs.Close();
-                throw new NotImplementedException();
-            }
-        }
-        private string filePath = "data.xml";
+        
 
         public frm_Dashboard()
         {
@@ -52,31 +35,8 @@ namespace LIFE_MANAGER.FormUI
             this.Text = string.Empty;
             this.ControlBox = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-            try
-            {
-                Job = DeserializeFromXML(filePath) as PlanData;
-            }
-            catch
-            {
-                SetDefaultJob();
-            }
+         
         }
-
-        void SetDefaultJob()
-        {
-            Job = new PlanData();
-            Job.Job = new List<PlanItem>();
-            Job.Job.Add(new PlanItem()
-            {
-                Date = DateTime.Now,
-                FromTime = new Point(4, 0),
-                ToTime = new Point(5, 0),
-                Job = "Thử nghiệm thôi",
-                Status = PlanItem.ListStatus[(int)EPlanItem.COMING]
-            });
-        }
-
-
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -165,22 +125,9 @@ namespace LIFE_MANAGER.FormUI
 
 
 
-        private PlanData job;
-
-        public PlanData Job
-        {
-            get { return job; }
-            set { job = value; }
-        }
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (this.ActiveMdiChild != null)
-                this.ActiveMdiChild.Close();
-            OpenChildForm(new FormUI.frm_Todo(new DateTime(dtpkDate.Value.Year, dtpkDate.Value.Month, dtpkDate.Value.Day), Job),sender);
-
-        }
+      
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -243,6 +190,7 @@ namespace LIFE_MANAGER.FormUI
 
         private void btn_Close_Click(object sender, EventArgs e)
         {
+            //this.ActiveMdiChild.Close();
             Reset();
         }
 
@@ -267,6 +215,8 @@ namespace LIFE_MANAGER.FormUI
             {
                 this.Close();
             }
+            
         }
+
     }
 }
