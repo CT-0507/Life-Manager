@@ -267,10 +267,17 @@ namespace LIFE_MANAGER.FormUI
             nmNotify.Enabled = ckbNotify.Checked;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+       
+
+        private void btn_Close_Click(object sender, EventArgs e)
         {
-            
             SerializeToXML(Job, filePath);
+            this.Close();
+        }
+
+        private void frm_Diary_Load(object sender, EventArgs e)
+        {
+            dtpkDate.Value = DateTime.Now;
 
         }
     }

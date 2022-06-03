@@ -111,5 +111,10 @@ namespace LIFE_MANAGER.FormUI
         {
             dtpkDate.Value = DateTime.Now;
         }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Todo));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnPrevioursDay = new System.Windows.Forms.Button();
@@ -37,6 +38,7 @@
             this.mnsMain = new System.Windows.Forms.MenuStrip();
             this.mnsiAddJob = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsiToDay = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_Close = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.mnsMain.SuspendLayout();
@@ -47,9 +49,9 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.pnlJob);
             this.panel1.Location = new System.Drawing.Point(16, 33);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1091, 513);
+            this.panel1.Size = new System.Drawing.Size(1246, 513);
             this.panel1.TabIndex = 0;
             // 
             // panel3
@@ -58,15 +60,15 @@
             this.panel3.Controls.Add(this.btnNextDay);
             this.panel3.Controls.Add(this.dtpkDate);
             this.panel3.Location = new System.Drawing.Point(4, 4);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1083, 33);
+            this.panel3.Size = new System.Drawing.Size(1222, 33);
             this.panel3.TabIndex = 1;
             // 
             // btnPrevioursDay
             // 
             this.btnPrevioursDay.Location = new System.Drawing.Point(4, 1);
-            this.btnPrevioursDay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrevioursDay.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrevioursDay.Name = "btnPrevioursDay";
             this.btnPrevioursDay.Size = new System.Drawing.Size(100, 28);
             this.btnPrevioursDay.TabIndex = 3;
@@ -76,10 +78,10 @@
             // 
             // btnNextDay
             // 
-            this.btnNextDay.Location = new System.Drawing.Point(981, 5);
-            this.btnNextDay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNextDay.Location = new System.Drawing.Point(1119, 4);
+            this.btnNextDay.Margin = new System.Windows.Forms.Padding(4);
             this.btnNextDay.Name = "btnNextDay";
-            this.btnNextDay.Size = new System.Drawing.Size(100, 28);
+            this.btnNextDay.Size = new System.Drawing.Size(99, 28);
             this.btnNextDay.TabIndex = 2;
             this.btnNextDay.Text = "Tomorow";
             this.btnNextDay.UseVisualStyleBackColor = true;
@@ -87,8 +89,8 @@
             // 
             // dtpkDate
             // 
-            this.dtpkDate.Location = new System.Drawing.Point(417, 5);
-            this.dtpkDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpkDate.Location = new System.Drawing.Point(485, 5);
+            this.dtpkDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtpkDate.Name = "dtpkDate";
             this.dtpkDate.Size = new System.Drawing.Size(265, 22);
             this.dtpkDate.TabIndex = 1;
@@ -97,9 +99,9 @@
             // pnlJob
             // 
             this.pnlJob.Location = new System.Drawing.Point(4, 39);
-            this.pnlJob.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlJob.Margin = new System.Windows.Forms.Padding(4);
             this.pnlJob.Name = "pnlJob";
-            this.pnlJob.Size = new System.Drawing.Size(1085, 470);
+            this.pnlJob.Size = new System.Drawing.Size(1222, 470);
             this.pnlJob.TabIndex = 0;
             // 
             // mnsMain
@@ -110,8 +112,7 @@
             this.mnsiToDay});
             this.mnsMain.Location = new System.Drawing.Point(0, 0);
             this.mnsMain.Name = "mnsMain";
-            this.mnsMain.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.mnsMain.Size = new System.Drawing.Size(1133, 28);
+            this.mnsMain.Size = new System.Drawing.Size(1274, 28);
             this.mnsMain.TabIndex = 1;
             this.mnsMain.Text = "menuStrip1";
             // 
@@ -129,16 +130,29 @@
             this.mnsiToDay.Text = "Today";
             this.mnsiToDay.Click += new System.EventHandler(this.mnsiToDay_Click);
             // 
+            // btn_Close
+            // 
+            this.btn_Close.FlatAppearance.BorderSize = 0;
+            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Close.Image = ((System.Drawing.Image)(resources.GetObject("btn_Close.Image")));
+            this.btn_Close.Location = new System.Drawing.Point(1187, 3);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(75, 23);
+            this.btn_Close.TabIndex = 5;
+            this.btn_Close.UseVisualStyleBackColor = true;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            // 
             // frm_Todo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1133, 559);
+            this.ClientSize = new System.Drawing.Size(1274, 559);
+            this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.mnsMain);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.mnsMain;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Todo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Todo";
@@ -162,5 +176,6 @@
         private System.Windows.Forms.MenuStrip mnsMain;
         private System.Windows.Forms.ToolStripMenuItem mnsiAddJob;
         private System.Windows.Forms.ToolStripMenuItem mnsiToDay;
+        private System.Windows.Forms.Button btn_Close;
     }
 }

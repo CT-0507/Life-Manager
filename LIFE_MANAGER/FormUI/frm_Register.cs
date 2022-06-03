@@ -93,5 +93,11 @@ namespace LIFE_MANAGER.FormUI
             pictureBox1.Image = image;
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
         }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

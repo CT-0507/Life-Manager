@@ -201,6 +201,9 @@
     <EmbeddedResource Include="Custom_Control\AJob.resx">
       <DependentUpon>AJob.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\frm_Chart.resx">
+      <DependentUpon>frm_Chart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormUI\frm_Dashboardcs.resx">
       <DependentUpon>frm_Dashboardcs.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,7 +274,9 @@
     <Content Include="Resource\image\3005766_account_door_exit_logout_icon.png" />
     <Content Include="Resource\image\5120884_dairy_grocery_milk_organic_product_icon.png" />
     <Content Include="Resource\image\chart.png" />
+    <Content Include="Resource\image\kisspng-computer-icons-zooming-user-interface-icon-design-5ae2110c23e013.488467331524764940147.jpg" />
     <Content Include="Resource\image\phai.png" />
+    <Content Include="Resource\image\poster.png" />
     <Content Include="Resource\image\trai.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

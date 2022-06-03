@@ -83,6 +83,7 @@ namespace LIFE_MANAGER.FormUI
             if (e.KeyCode==Keys.Enter)
             {
                 btn_Login.PerformClick();
+                btn_Login.Text = string.Empty;
             }
         }
     }

@@ -31,7 +31,6 @@ namespace LIFE_MANAGER.FormUI
         {
             InitializeComponent();
             random = new Random();
-            btn_Close.Visible = false;
             this.Text = string.Empty;
             this.ControlBox = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
@@ -72,7 +71,6 @@ namespace LIFE_MANAGER.FormUI
                     panelTitleBar.BackColor = color;
                     LIFE_MANAGER.ThemeColor.PrimaryColor = color;
                     ThemeColor.SecondaryColor = ThemeColor.ChangeColorBrightness(color, -0.3);
-                    btn_Close.Visible = true;
                 }
             }
         }
@@ -103,7 +101,6 @@ namespace LIFE_MANAGER.FormUI
             this.panelDesktopPane.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-            lblTitle.Text = childForm.Text;
 
         }
 
@@ -111,10 +108,8 @@ namespace LIFE_MANAGER.FormUI
         private void Reset()
         {
             DisableButton();
-            lblTitle.Text = "HOME";
             panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
             currentButton = null;
-            btn_Close.Visible = false;
         }
 
         private void PanelTitleBar_MouseDown(object sender, MouseEventArgs e)
@@ -190,7 +185,6 @@ namespace LIFE_MANAGER.FormUI
 
         private void btn_Close_Click(object sender, EventArgs e)
         {
-            //this.ActiveMdiChild.Close();
             Reset();
         }
 

@@ -37,22 +37,30 @@ namespace LIFE_MANAGER.FormUI
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btn_Logout = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btn_Quit = new System.Windows.Forms.Button();
             this.btn_Maximize = new System.Windows.Forms.Button();
             this.bnt_Minimize = new System.Windows.Forms.Button();
-            this.btn_Close = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelDesktopPane.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelDesktopPane
             // 
+            this.panelDesktopPane.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelDesktopPane.Controls.Add(this.pictureBox2);
+            this.panelDesktopPane.Controls.Add(this.pictureBox1);
+            this.panelDesktopPane.Controls.Add(this.label1);
             this.panelDesktopPane.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDesktopPane.Location = new System.Drawing.Point(228, 84);
+            this.panelDesktopPane.Location = new System.Drawing.Point(228, 38);
             this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(1092, 551);
+            this.panelDesktopPane.Size = new System.Drawing.Size(1092, 597);
             this.panelDesktopPane.TabIndex = 6;
             // 
             // button5
@@ -121,9 +129,9 @@ namespace LIFE_MANAGER.FormUI
             this.panelMenu.Controls.Add(this.button3);
             this.panelMenu.Controls.Add(this.button2);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMenu.Location = new System.Drawing.Point(0, 84);
+            this.panelMenu.Location = new System.Drawing.Point(0, 38);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(228, 551);
+            this.panelMenu.Size = new System.Drawing.Size(228, 597);
             this.panelMenu.TabIndex = 4;
             // 
             // btn_Logout
@@ -135,7 +143,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Logout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_Logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_Logout.Image")));
-            this.btn_Logout.Location = new System.Drawing.Point(0, 467);
+            this.btn_Logout.Location = new System.Drawing.Point(0, 513);
             this.btn_Logout.Name = "btn_Logout";
             this.btn_Logout.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btn_Logout.Size = new System.Drawing.Size(228, 84);
@@ -163,29 +171,16 @@ namespace LIFE_MANAGER.FormUI
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // lblTitle
-            // 
-            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(668, 22);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(99, 32);
-            this.lblTitle.TabIndex = 3;
-            this.lblTitle.Text = "label1";
-            // 
             // panelTitleBar
             // 
             this.panelTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.panelTitleBar.Controls.Add(this.btn_Quit);
             this.panelTitleBar.Controls.Add(this.btn_Maximize);
             this.panelTitleBar.Controls.Add(this.bnt_Minimize);
-            this.panelTitleBar.Controls.Add(this.btn_Close);
-            this.panelTitleBar.Controls.Add(this.lblTitle);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(0, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1320, 84);
+            this.panelTitleBar.Size = new System.Drawing.Size(1320, 38);
             this.panelTitleBar.TabIndex = 5;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelTitleBar_MouseDown);
             // 
@@ -196,7 +191,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Quit.FlatAppearance.BorderSize = 0;
             this.btn_Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Quit.Location = new System.Drawing.Point(1267, 12);
+            this.btn_Quit.Location = new System.Drawing.Point(1276, 0);
             this.btn_Quit.Name = "btn_Quit";
             this.btn_Quit.Size = new System.Drawing.Size(30, 30);
             this.btn_Quit.TabIndex = 9;
@@ -211,7 +206,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Maximize.FlatAppearance.BorderSize = 0;
             this.btn_Maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Maximize.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Maximize.Location = new System.Drawing.Point(1221, 12);
+            this.btn_Maximize.Location = new System.Drawing.Point(1230, 0);
             this.btn_Maximize.Name = "btn_Maximize";
             this.btn_Maximize.Size = new System.Drawing.Size(30, 30);
             this.btn_Maximize.TabIndex = 8;
@@ -226,7 +221,7 @@ namespace LIFE_MANAGER.FormUI
             this.bnt_Minimize.FlatAppearance.BorderSize = 0;
             this.bnt_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bnt_Minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnt_Minimize.Location = new System.Drawing.Point(1173, 12);
+            this.bnt_Minimize.Location = new System.Drawing.Point(1182, 0);
             this.bnt_Minimize.Name = "bnt_Minimize";
             this.bnt_Minimize.Size = new System.Drawing.Size(30, 30);
             this.bnt_Minimize.TabIndex = 7;
@@ -234,17 +229,36 @@ namespace LIFE_MANAGER.FormUI
             this.bnt_Minimize.UseVisualStyleBackColor = true;
             this.bnt_Minimize.Click += new System.EventHandler(this.bntMinimizeClick);
             // 
-            // btn_Close
+            // label1
             // 
-            this.btn_Close.FlatAppearance.BorderSize = 0;
-            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Close.Image = ((System.Drawing.Image)(resources.GetObject("btn_Close.Image")));
-            this.btn_Close.Location = new System.Drawing.Point(270, 32);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(75, 23);
-            this.btn_Close.TabIndex = 4;
-            this.btn_Close.UseVisualStyleBackColor = true;
-            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Green;
+            this.label1.Location = new System.Drawing.Point(390, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(291, 39);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Application Diary";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 119);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(634, 466);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(660, 119);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(418, 466);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // frm_Dashboard
             // 
@@ -259,10 +273,14 @@ namespace LIFE_MANAGER.FormUI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Dashboardcs";
             this.Load += new System.EventHandler(this.frm_Dashboard_Load);
+            this.panelDesktopPane.ResumeLayout(false);
+            this.panelDesktopPane.PerformLayout();
             this.panelMenu.ResumeLayout(false);
             this.panelMenu.PerformLayout();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,12 +293,13 @@ namespace LIFE_MANAGER.FormUI
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel panelTitleBar;
-        private System.Windows.Forms.Button btn_Close;
         private System.Windows.Forms.Button btn_Quit;
         private System.Windows.Forms.Button btn_Maximize;
         private System.Windows.Forms.Button bnt_Minimize;
         private System.Windows.Forms.Button btn_Logout;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

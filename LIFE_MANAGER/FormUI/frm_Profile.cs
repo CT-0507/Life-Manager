@@ -98,5 +98,11 @@ namespace LIFE_MANAGER.FormUI
             tb_Date.Text = OriginalDate;
             rtb_Bio.Text = OriginalBiography;
         }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }
