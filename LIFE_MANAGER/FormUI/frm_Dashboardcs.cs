@@ -25,7 +25,7 @@ namespace LIFE_MANAGER.FormUI
         private Form activeForm;
 
         //Constructor
-        
+
 
         public frm_Dashboard()
         {
@@ -33,8 +33,9 @@ namespace LIFE_MANAGER.FormUI
             random = new Random();
             this.Text = string.Empty;
             this.ControlBox = true;
+            this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-         
+
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -122,7 +123,7 @@ namespace LIFE_MANAGER.FormUI
 
 
 
-      
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -172,7 +173,7 @@ namespace LIFE_MANAGER.FormUI
         DateTimePicker dtpkDate = new DateTimePicker();
         private void frm_Dashboard_Load(object sender, EventArgs e)
         {
-            
+
             dtpkDate.Value = DateTime.Now;
             Reset();
         }
@@ -199,18 +200,21 @@ namespace LIFE_MANAGER.FormUI
                 a.Start();
                 this.Close();
             }
-            
+
         }
 
         private void btn_Quit_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Are you sure you want to quit", "Quit ?",MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to quit", "Quit ?", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
                 this.Close();
             }
-            
+
         }
 
     }
+
+
+
 }

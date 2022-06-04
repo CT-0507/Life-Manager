@@ -1,5 +1,4 @@
-﻿using Microsoft.Win32;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,16 +14,7 @@ namespace LIFE_MANAGER.FormUI
 {
     public partial class frm_Diary : Form
     {
-        #region Peoperties   
-
-        private int appTime;
-
-        public int AppTime
-        {
-            get { return appTime; }
-            set { appTime = value; }
-        }
-
+        #region Peoperties
         private string filePath = "data.xml";
 
         private List<List<Button>> matrix;
@@ -48,8 +38,7 @@ namespace LIFE_MANAGER.FormUI
         public frm_Diary()
         {
             InitializeComponent();
-            tmNotify.Start();
-            appTime = 0;
+
             LoadMatrix();
 
             try
@@ -105,8 +94,8 @@ namespace LIFE_MANAGER.FormUI
         {
             if (string.IsNullOrEmpty((sender as Button).Text))
                 return;
-            frm_Todo frm_Todo = new frm_Todo(new DateTime(dtpkDate.Value.Year, dtpkDate.Value.Month, Convert.ToInt32((sender as Button).Text)), Job);
-            frm_Todo.ShowDialog();
+            frm_Todo daily = new frm_Todo(new DateTime(dtpkDate.Value.Year, dtpkDate.Value.Month, Convert.ToInt32((sender as Button).Text)), Job);
+            daily.ShowDialog();
         }
 
         int DayOfMonth(DateTime date)
@@ -235,50 +224,6 @@ namespace LIFE_MANAGER.FormUI
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             SerializeToXML(Job, filePath);
-        }
-
-        private void tmNotify_Tick(object sender, EventArgs e)
-        {
-            if (!ckbNotify.Checked)
-                return;
-
-            AppTime++;
-
-            if (AppTime < Cons.notifyTime)
-                return;
-
-            if (Job == null || Job.Job == null)
-                return;
-
-            DateTime currentDate = DateTime.Now;
-            List<PlanItem> todayjobs = Job.Job.Where(p => p.Date.Year == currentDate.Year && p.Date.Month == currentDate.Month && p.Date.Day == currentDate.Day).ToList();
-            Notify.ShowBalloonTip(Cons.notifyTimeOut, "Lịch công việc", string.Format("Bạn có {0} việc trong ngày hôm nay", todayjobs.Count), ToolTipIcon.Info);
-
-            AppTime = 0;
-        }
-
-        private void nmNotify_ValueChanged(object sender, EventArgs e)
-        {
-            Cons.notifyTime = (int)nmNotify.Value;
-        }
-
-        private void ckbNotify_CheckedChanged(object sender, EventArgs e)
-        {
-            nmNotify.Enabled = ckbNotify.Checked;
-        }
-
-       
-
-        private void btn_Close_Click(object sender, EventArgs e)
-        {
-            SerializeToXML(Job, filePath);
-            this.Close();
-        }
-
-        private void frm_Diary_Load(object sender, EventArgs e)
-        {
-            dtpkDate.Value = DateTime.Now;
-
         }
     }
 }

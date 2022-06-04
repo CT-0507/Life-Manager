@@ -39,10 +39,10 @@ namespace LIFE_MANAGER.FormUI
             this.tb_Id = new System.Windows.Forms.TextBox();
             this.tb_Date = new System.Windows.Forms.TextBox();
             this.rtb_Bio = new System.Windows.Forms.RichTextBox();
-            this.btn_SaveChanges = new LIFE_MANAGER.Custom_Control.RoundedButton();
-            this.btn_DeleteUser = new LIFE_MANAGER.Custom_Control.RoundedButton();
             this.btn_Close = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_DeleteUser = new LIFE_MANAGER.Custom_Control.RoundedButton();
+            this.btn_SaveChanges = new LIFE_MANAGER.Custom_Control.RoundedButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,46 +132,6 @@ namespace LIFE_MANAGER.FormUI
             this.rtb_Bio.TabIndex = 9;
             this.rtb_Bio.Text = "";
             // 
-            // btn_SaveChanges
-            // 
-            this.btn_SaveChanges.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_SaveChanges.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_SaveChanges.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_SaveChanges.BorderRadius = 40;
-            this.btn_SaveChanges.BorderSize = 0;
-            this.btn_SaveChanges.FlatAppearance.BorderSize = 0;
-            this.btn_SaveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_SaveChanges.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SaveChanges.ForeColor = System.Drawing.Color.White;
-            this.btn_SaveChanges.Location = new System.Drawing.Point(759, 439);
-            this.btn_SaveChanges.Name = "btn_SaveChanges";
-            this.btn_SaveChanges.Size = new System.Drawing.Size(137, 46);
-            this.btn_SaveChanges.TabIndex = 10;
-            this.btn_SaveChanges.Text = "Save changes";
-            this.btn_SaveChanges.TextColor = System.Drawing.Color.White;
-            this.btn_SaveChanges.UseVisualStyleBackColor = false;
-            this.btn_SaveChanges.Click += new System.EventHandler(this.btn_SaveChanges_Click);
-            // 
-            // btn_DeleteUser
-            // 
-            this.btn_DeleteUser.BackColor = System.Drawing.Color.Red;
-            this.btn_DeleteUser.BackgroundColor = System.Drawing.Color.Red;
-            this.btn_DeleteUser.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_DeleteUser.BorderRadius = 40;
-            this.btn_DeleteUser.BorderSize = 0;
-            this.btn_DeleteUser.FlatAppearance.BorderSize = 0;
-            this.btn_DeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_DeleteUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DeleteUser.ForeColor = System.Drawing.Color.White;
-            this.btn_DeleteUser.Location = new System.Drawing.Point(588, 439);
-            this.btn_DeleteUser.Name = "btn_DeleteUser";
-            this.btn_DeleteUser.Size = new System.Drawing.Size(165, 46);
-            this.btn_DeleteUser.TabIndex = 11;
-            this.btn_DeleteUser.Text = "Delete User";
-            this.btn_DeleteUser.TextColor = System.Drawing.Color.White;
-            this.btn_DeleteUser.UseVisualStyleBackColor = false;
-            this.btn_DeleteUser.Click += new System.EventHandler(this.btn_DeleteUser_Click);
-            // 
             // btn_Close
             // 
             this.btn_Close.FlatAppearance.BorderSize = 0;
@@ -190,15 +150,55 @@ namespace LIFE_MANAGER.FormUI
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(476, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 39);
+            this.label1.Size = new System.Drawing.Size(116, 38);
             this.label1.TabIndex = 13;
             this.label1.Text = "Profile";
+            // 
+            // btn_DeleteUser
+            // 
+            this.btn_DeleteUser.BackColor = System.Drawing.Color.DimGray;
+            this.btn_DeleteUser.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btn_DeleteUser.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_DeleteUser.BorderRadius = 40;
+            this.btn_DeleteUser.BorderSize = 0;
+            this.btn_DeleteUser.FlatAppearance.BorderSize = 0;
+            this.btn_DeleteUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_DeleteUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_DeleteUser.ForeColor = System.Drawing.Color.White;
+            this.btn_DeleteUser.Location = new System.Drawing.Point(588, 439);
+            this.btn_DeleteUser.Name = "btn_DeleteUser";
+            this.btn_DeleteUser.Size = new System.Drawing.Size(165, 46);
+            this.btn_DeleteUser.TabIndex = 11;
+            this.btn_DeleteUser.Text = "Delete User";
+            this.btn_DeleteUser.TextColor = System.Drawing.Color.White;
+            this.btn_DeleteUser.UseVisualStyleBackColor = false;
+            this.btn_DeleteUser.Click += new System.EventHandler(this.btn_DeleteUser_Click);
+            // 
+            // btn_SaveChanges
+            // 
+            this.btn_SaveChanges.BackColor = System.Drawing.Color.DimGray;
+            this.btn_SaveChanges.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btn_SaveChanges.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_SaveChanges.BorderRadius = 40;
+            this.btn_SaveChanges.BorderSize = 0;
+            this.btn_SaveChanges.FlatAppearance.BorderSize = 0;
+            this.btn_SaveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_SaveChanges.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SaveChanges.ForeColor = System.Drawing.Color.White;
+            this.btn_SaveChanges.Location = new System.Drawing.Point(759, 439);
+            this.btn_SaveChanges.Name = "btn_SaveChanges";
+            this.btn_SaveChanges.Size = new System.Drawing.Size(137, 46);
+            this.btn_SaveChanges.TabIndex = 10;
+            this.btn_SaveChanges.Text = "Save changes";
+            this.btn_SaveChanges.TextColor = System.Drawing.Color.White;
+            this.btn_SaveChanges.UseVisualStyleBackColor = false;
+            this.btn_SaveChanges.Click += new System.EventHandler(this.btn_SaveChanges_Click);
             // 
             // frm_Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1072, 585);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Close);
