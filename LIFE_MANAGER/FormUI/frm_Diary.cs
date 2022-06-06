@@ -225,5 +225,17 @@ namespace LIFE_MANAGER.FormUI
         {
             SerializeToXML(Job, filePath);
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            dtpkDate.Value = dtpkDate.Value.AddMonths(-1);
+
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            dtpkDate.Value = dtpkDate.Value.AddMonths(1);
+
+        }
     }
 }

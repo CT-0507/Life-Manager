@@ -48,10 +48,12 @@ namespace LIFE_MANAGER.FormUI
                     {
                         User = (Models.User)query.First();
                         lb_WrongUser.Visible = false;
-                        Thread a = new Thread(() => new frm_Dashboard().ShowDialog());
-                        a.SetApartmentState(ApartmentState.STA);
-                        a.Start();
-                        this.Close();
+                        frm_Dashboard frm_Dashboardnew = new frm_Dashboard();
+                        frm_Dashboardnew.ShowDialog();
+                        //Thread a = new Thread(() => new frm_Dashboardnew().ShowDialog());
+                        //a.SetApartmentState(ApartmentState.STA);
+                        //a.Start();
+                        //6this.Close();
                     }
                     else
                     {
@@ -85,6 +87,11 @@ namespace LIFE_MANAGER.FormUI
                 btn_Login.PerformClick();
                 btn_Login.Text = string.Empty;
             }
+        }
+
+        private void frm_Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

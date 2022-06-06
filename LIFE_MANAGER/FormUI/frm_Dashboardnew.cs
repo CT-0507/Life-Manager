@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FontAwesome.Sharp;
@@ -157,7 +158,18 @@ namespace LIFE_MANAGER.FormUI
 
         private void btn_logout_Click(object sender, EventArgs e)
         {
+
+
             ActivateButton(sender, RGBColors.color6);
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to logout", "Logout ?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                frm_Login.User = null;
+                Thread a = new Thread(() => new frm_Login().ShowDialog());
+                a.SetApartmentState(ApartmentState.STA);
+                a.Start();
+                this.Close();
+            }
         }
         //Drag Form
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -194,6 +206,38 @@ namespace LIFE_MANAGER.FormUI
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btn_Quit_Click(object sender, EventArgs e)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to quit", "Quit ?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void btn_Maximize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        private void bnt_Minimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void panelDeskTop_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
