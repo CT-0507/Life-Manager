@@ -33,7 +33,7 @@ namespace LIFE_MANAGER.FormUI
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pb_Avatar = new System.Windows.Forms.PictureBox();
             this.tb_Name = new System.Windows.Forms.TextBox();
             this.tb_Date = new System.Windows.Forms.TextBox();
             this.tb_Username = new System.Windows.Forms.TextBox();
@@ -47,7 +47,8 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Register = new LIFE_MANAGER.Custom_Control.RoundedButton();
             this.btn_Close = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btn_AvatarUpload = new LIFE_MANAGER.Custom_Control.RoundedButton();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -83,15 +84,14 @@ namespace LIFE_MANAGER.FormUI
             this.label2.TabIndex = 11;
             this.label2.Text = "Name* : ";
             // 
-            // pictureBox1
+            // pb_Avatar
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(24, 112);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(322, 356);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pb_Avatar.Image = ((System.Drawing.Image)(resources.GetObject("pb_Avatar.Image")));
+            this.pb_Avatar.Location = new System.Drawing.Point(24, 112);
+            this.pb_Avatar.Name = "pb_Avatar";
+            this.pb_Avatar.Size = new System.Drawing.Size(322, 356);
+            this.pb_Avatar.TabIndex = 10;
+            this.pb_Avatar.TabStop = false;
             // 
             // tb_Name
             // 
@@ -227,9 +227,29 @@ namespace LIFE_MANAGER.FormUI
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(487, 12);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(152, 39);
+            this.label7.Size = new System.Drawing.Size(147, 38);
             this.label7.TabIndex = 29;
             this.label7.Text = "Register";
+            // 
+            // btn_AvatarUpload
+            // 
+            this.btn_AvatarUpload.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_AvatarUpload.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_AvatarUpload.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_AvatarUpload.BorderRadius = 40;
+            this.btn_AvatarUpload.BorderSize = 0;
+            this.btn_AvatarUpload.FlatAppearance.BorderSize = 0;
+            this.btn_AvatarUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AvatarUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AvatarUpload.ForeColor = System.Drawing.Color.White;
+            this.btn_AvatarUpload.Location = new System.Drawing.Point(165, 564);
+            this.btn_AvatarUpload.Name = "btn_AvatarUpload";
+            this.btn_AvatarUpload.Size = new System.Drawing.Size(181, 40);
+            this.btn_AvatarUpload.TabIndex = 30;
+            this.btn_AvatarUpload.Text = "Upload Avatar";
+            this.btn_AvatarUpload.TextColor = System.Drawing.Color.White;
+            this.btn_AvatarUpload.UseVisualStyleBackColor = false;
+            this.btn_AvatarUpload.Click += new System.EventHandler(this.btn_AvatarUpload_Click);
             // 
             // frm_Register
             // 
@@ -237,6 +257,7 @@ namespace LIFE_MANAGER.FormUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(1097, 636);
+            this.Controls.Add(this.btn_AvatarUpload);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.label6);
@@ -253,12 +274,12 @@ namespace LIFE_MANAGER.FormUI
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pb_Avatar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -268,7 +289,7 @@ namespace LIFE_MANAGER.FormUI
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pb_Avatar;
         private System.Windows.Forms.TextBox tb_Name;
         private System.Windows.Forms.TextBox tb_Date;
         private Custom_Control.RoundedButton btn_Register;
@@ -282,5 +303,6 @@ namespace LIFE_MANAGER.FormUI
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btn_Close;
         private System.Windows.Forms.Label label7;
+        private Custom_Control.RoundedButton btn_AvatarUpload;
     }
 }

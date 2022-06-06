@@ -214,6 +214,7 @@
     <Compile Include="FormUI\frm_Todo.Designer.cs">
       <DependentUpon>frm_Todo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Setting.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="PlanData.cs" />
     <Compile Include="PlanItem.cs" />

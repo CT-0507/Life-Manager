@@ -30,7 +30,7 @@ namespace LIFE_MANAGER.FormUI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Profile));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pb_Avatar = new System.Windows.Forms.PictureBox();
             this.lb_Name = new System.Windows.Forms.Label();
             this.lb_Bio = new System.Windows.Forms.Label();
             this.lb_Date = new System.Windows.Forms.Label();
@@ -41,19 +41,21 @@ namespace LIFE_MANAGER.FormUI
             this.rtb_Bio = new System.Windows.Forms.RichTextBox();
             this.btn_Close = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_AvatarUpload = new LIFE_MANAGER.Custom_Control.RoundedButton();
             this.btn_DeleteUser = new LIFE_MANAGER.Custom_Control.RoundedButton();
             this.btn_SaveChanges = new LIFE_MANAGER.Custom_Control.RoundedButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pb_Avatar
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 82);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(322, 462);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pb_Avatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pb_Avatar.Image = ((System.Drawing.Image)(resources.GetObject("pb_Avatar.Image")));
+            this.pb_Avatar.Location = new System.Drawing.Point(12, 82);
+            this.pb_Avatar.Name = "pb_Avatar";
+            this.pb_Avatar.Size = new System.Drawing.Size(322, 462);
+            this.pb_Avatar.TabIndex = 0;
+            this.pb_Avatar.TabStop = false;
             // 
             // lb_Name
             // 
@@ -154,6 +156,26 @@ namespace LIFE_MANAGER.FormUI
             this.label1.TabIndex = 13;
             this.label1.Text = "Profile";
             // 
+            // btn_AvatarUpload
+            // 
+            this.btn_AvatarUpload.BackColor = System.Drawing.Color.DimGray;
+            this.btn_AvatarUpload.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btn_AvatarUpload.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_AvatarUpload.BorderRadius = 40;
+            this.btn_AvatarUpload.BorderSize = 0;
+            this.btn_AvatarUpload.FlatAppearance.BorderSize = 0;
+            this.btn_AvatarUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_AvatarUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AvatarUpload.ForeColor = System.Drawing.Color.White;
+            this.btn_AvatarUpload.Location = new System.Drawing.Point(417, 439);
+            this.btn_AvatarUpload.Name = "btn_AvatarUpload";
+            this.btn_AvatarUpload.Size = new System.Drawing.Size(165, 46);
+            this.btn_AvatarUpload.TabIndex = 14;
+            this.btn_AvatarUpload.Text = "Upload Avatar";
+            this.btn_AvatarUpload.TextColor = System.Drawing.Color.White;
+            this.btn_AvatarUpload.UseVisualStyleBackColor = false;
+            this.btn_AvatarUpload.Click += new System.EventHandler(this.btn_AvatarUpload_Click);
+            // 
             // btn_DeleteUser
             // 
             this.btn_DeleteUser.BackColor = System.Drawing.Color.DimGray;
@@ -185,11 +207,12 @@ namespace LIFE_MANAGER.FormUI
             this.btn_SaveChanges.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SaveChanges.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SaveChanges.ForeColor = System.Drawing.Color.White;
+            this.btn_SaveChanges.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_SaveChanges.Location = new System.Drawing.Point(759, 439);
             this.btn_SaveChanges.Name = "btn_SaveChanges";
             this.btn_SaveChanges.Size = new System.Drawing.Size(137, 46);
             this.btn_SaveChanges.TabIndex = 10;
-            this.btn_SaveChanges.Text = "Save changes";
+            this.btn_SaveChanges.Text = "Save";
             this.btn_SaveChanges.TextColor = System.Drawing.Color.White;
             this.btn_SaveChanges.UseVisualStyleBackColor = false;
             this.btn_SaveChanges.Click += new System.EventHandler(this.btn_SaveChanges_Click);
@@ -200,6 +223,7 @@ namespace LIFE_MANAGER.FormUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1072, 585);
+            this.Controls.Add(this.btn_AvatarUpload);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.btn_DeleteUser);
@@ -212,12 +236,12 @@ namespace LIFE_MANAGER.FormUI
             this.Controls.Add(this.lb_Date);
             this.Controls.Add(this.lb_Bio);
             this.Controls.Add(this.lb_Name);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pb_Avatar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Profile";
             this.Text = "Profile";
             this.Load += new System.EventHandler(this.frm_Profile_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Avatar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,7 +249,7 @@ namespace LIFE_MANAGER.FormUI
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pb_Avatar;
         private System.Windows.Forms.Label lb_Name;
         private System.Windows.Forms.Label lb_Bio;
         private System.Windows.Forms.Label lb_Date;
@@ -238,5 +262,6 @@ namespace LIFE_MANAGER.FormUI
         private Custom_Control.RoundedButton btn_DeleteUser;
         private System.Windows.Forms.Button btn_Close;
         private System.Windows.Forms.Label label1;
+        private Custom_Control.RoundedButton btn_AvatarUpload;
     }
 }

@@ -44,6 +44,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Quit = new System.Windows.Forms.Button();
             this.btn_Maximize = new System.Windows.Forms.Button();
             this.bnt_Minimize = new System.Windows.Forms.Button();
+            this.btn_User = new System.Windows.Forms.Button();
             this.panelDesktopPane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -154,6 +155,7 @@ namespace LIFE_MANAGER.FormUI
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.panelMenu.Controls.Add(this.btn_User);
             this.panelMenu.Controls.Add(this.btn_Logout);
             this.panelMenu.Controls.Add(this.button5);
             this.panelMenu.Controls.Add(this.button4);
@@ -260,6 +262,24 @@ namespace LIFE_MANAGER.FormUI
             this.bnt_Minimize.UseVisualStyleBackColor = true;
             this.bnt_Minimize.Click += new System.EventHandler(this.bntMinimizeClick);
             // 
+            // btn_User
+            // 
+            this.btn_User.AutoSize = true;
+            this.btn_User.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_User.FlatAppearance.BorderSize = 0;
+            this.btn_User.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_User.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_User.Image = ((System.Drawing.Image)(resources.GetObject("btn_User.Image")));
+            this.btn_User.Location = new System.Drawing.Point(0, 435);
+            this.btn_User.Name = "btn_User";
+            this.btn_User.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btn_User.Size = new System.Drawing.Size(228, 84);
+            this.btn_User.TabIndex = 8;
+            this.btn_User.Text = "Logout";
+            this.btn_User.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_User.UseVisualStyleBackColor = true;
+            // 
             // frm_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -301,5 +321,6 @@ namespace LIFE_MANAGER.FormUI
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_User;
     }
 }
