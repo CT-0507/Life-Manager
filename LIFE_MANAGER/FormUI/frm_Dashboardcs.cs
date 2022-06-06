@@ -42,10 +42,11 @@ namespace LIFE_MANAGER.FormUI
                 Image resizeimage = resizeImage(img, new Size(64 ,64));
                 this.btn_User.Image = OvalImage(resizeimage);
                 this.btn_User.ImageAlign = ContentAlignment.MiddleLeft;
-                this.btn_User.Text = frm_Login.User.Name;
-                this.btn_User.TextAlign = ContentAlignment.MiddleRight;
+                
             }
-            
+            this.btn_User.Text = frm_Login.User.Name;
+            this.btn_User.TextAlign = ContentAlignment.MiddleRight;
+
         }
         public void ChangeUserAvatar()
         {

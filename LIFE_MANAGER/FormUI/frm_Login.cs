@@ -17,7 +17,9 @@ namespace LIFE_MANAGER.FormUI
         public static MongoClient mongoClient = new MongoClient("mongodb+srv://tranquocc123:Quoccuong1@maincluster.fmpjzgz.mongodb.net/?retryWrites=true&w=majority");
         public static IMongoDatabase db = mongoClient.GetDatabase("DiaryApp");
         public static IMongoCollection<Models.User> Users = db.GetCollection<Models.User>("Users");
+        public static IMongoCollection<Models.Setting> Settings = db.GetCollection<Models.Setting>("Settings");
         public static Models.User User;
+        public static Models.Setting Setting;
         public frm_Login()
         {
             InitializeComponent();
@@ -48,10 +50,20 @@ namespace LIFE_MANAGER.FormUI
                     {
                         User = (Models.User)query.First();
                         lb_WrongUser.Visible = false;
-                        Thread a = new Thread(() => new frm_Dashboard().ShowDialog());
-                        a.SetApartmentState(ApartmentState.STA);
-                        a.Start();
-                        this.Close();
+                        try
+                        {
+                            var UserSetting = Settings.Find(setting => setting.UserId == User._id);
+                            Setting = (Models.Setting)UserSetting.First();
+                            Thread a = new Thread(() => new frm_Dashboard().ShowDialog());
+                            a.SetApartmentState(ApartmentState.STA);
+                            a.Start();
+                            this.Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        
                     }
                     else
                     {

@@ -15,7 +15,6 @@ namespace LIFE_MANAGER.FormUI
 {
     public partial class frm_Register : Form
     {
-
         public frm_Register()
         {
             InitializeComponent();
@@ -54,11 +53,30 @@ namespace LIFE_MANAGER.FormUI
                         {
                             user.Avatar = null;
                         }
+                        
                         var options = new CreateIndexOptions { Unique = true };
 #pragma warning disable CS0618 // Type or member is obsolete
                         frm_Login.Users.Indexes.CreateOne("{ Username : 1 }", options);
 #pragma warning restore CS0618 // Type or member is obsolete
                         frm_Login.Users.InsertOne(user);
+                        try
+                        {
+                            var query = frm_Login.Users.Find(x => x.Username == strUsername);
+                            Models.User user1 = (Models.User)query.First();
+                            Models.Setting setting = new Models.Setting()
+                            {
+                                isBackgroundMusicVolume = true,
+                                isNotification = true,
+                                BackgroundImage = null,
+                                StartWithWindows = true,
+                                UserId = user1._id,
+                            };
+                            frm_Login.Settings.InsertOne(setting);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                         Thread a = new Thread(() => new frm_Login().ShowDialog());
                         a.SetApartmentState(ApartmentState.STA);
                         a.Start();

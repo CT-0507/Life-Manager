@@ -64,7 +64,6 @@ namespace LIFE_MANAGER.FormUI
                         FormLoad();
                         frm_Dashboard frm = Application.OpenForms.OfType<frm_Dashboard>().FirstOrDefault();
                         frm.ChangeUserAvatar();
-                        //frm_Dashboard.
                     }
                     catch (Exception ex)
                     {
