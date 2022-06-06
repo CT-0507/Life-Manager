@@ -86,5 +86,10 @@ namespace LIFE_MANAGER.FormUI
                 btn_Login.Text = string.Empty;
             }
         }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

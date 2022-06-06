@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -35,9 +36,31 @@ namespace LIFE_MANAGER.FormUI
             this.ControlBox = true;
             this.DoubleBuffered = true;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-
+            if (frm_Login.User.Avatar != null)
+            {
+                var img = Image.FromStream(new MemoryStream(Convert.FromBase64String(frm_Login.User.Avatar)));
+                Image resizeimage = resizeImage(img, new Size(64 ,64));
+                this.btn_User.Image = OvalImage(resizeimage);
+                this.btn_User.ImageAlign = ContentAlignment.MiddleLeft;
+                this.btn_User.Text = frm_Login.User.Name;
+                this.btn_User.TextAlign = ContentAlignment.MiddleRight;
+            }
+            
         }
-
+        public void ChangeUserAvatar()
+        {
+            var img = Image.FromStream(new MemoryStream(Convert.FromBase64String(frm_Login.User.Avatar)));
+            Image resizeimage = resizeImage(img, new Size(64, 64));
+            this.btn_User.Image = OvalImage(resizeimage);
+            this.btn_User.ImageAlign = ContentAlignment.MiddleLeft;
+            this.btn_User.Text = frm_Login.User.Name;
+            this.btn_User.TextAlign = ContentAlignment.MiddleRight;
+            btn_User.Invalidate();
+        }
+        public Image resizeImage(Image imgToResize, Size size)
+        {
+            return (Image)(new Bitmap(imgToResize, size));
+        }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -212,7 +235,20 @@ namespace LIFE_MANAGER.FormUI
             }
 
         }
-
+        public static Image OvalImage(Image img)
+        {
+            Bitmap bmp = new Bitmap(img.Width, img.Height);
+            using (GraphicsPath gp = new GraphicsPath())
+            {
+                gp.AddEllipse(0, 0, img.Width, img.Height);
+                using (Graphics gr = Graphics.FromImage(bmp))
+                {
+                    gr.SetClip(gp);
+                    gr.DrawImage(img, Point.Empty);
+                }
+            }
+            return bmp;
+        }
     }
 
 

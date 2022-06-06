@@ -39,6 +39,7 @@ namespace LIFE_MANAGER.FormUI
             this.lb_OpenRegister = new System.Windows.Forms.Label();
             this.lb_WrongUser = new System.Windows.Forms.Label();
             this.btn_Login = new LIFE_MANAGER.Custom_Control.RoundedButton();
+            this.btn_Close = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -110,7 +111,7 @@ namespace LIFE_MANAGER.FormUI
             this.lb_OpenRegister.ForeColor = System.Drawing.Color.DarkBlue;
             this.lb_OpenRegister.Location = new System.Drawing.Point(92, 299);
             this.lb_OpenRegister.Name = "lb_OpenRegister";
-            this.lb_OpenRegister.Size = new System.Drawing.Size(233, 17);
+            this.lb_OpenRegister.Size = new System.Drawing.Size(215, 16);
             this.lb_OpenRegister.TabIndex = 13;
             this.lb_OpenRegister.Text = "You don\'t have an account: Sign up";
             this.lb_OpenRegister.Click += new System.EventHandler(this.lb_OpenRegister_Click);
@@ -147,12 +148,25 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Login.UseVisualStyleBackColor = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
+            // btn_Close
+            // 
+            this.btn_Close.FlatAppearance.BorderSize = 0;
+            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Close.Image = ((System.Drawing.Image)(resources.GetObject("btn_Close.Image")));
+            this.btn_Close.Location = new System.Drawing.Point(345, 90);
+            this.btn_Close.Name = "btn_Close";
+            this.btn_Close.Size = new System.Drawing.Size(75, 23);
+            this.btn_Close.TabIndex = 29;
+            this.btn_Close.UseVisualStyleBackColor = true;
+            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
+            // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.ForestGreen;
             this.ClientSize = new System.Drawing.Size(432, 334);
+            this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.lb_WrongUser);
             this.Controls.Add(this.lb_OpenRegister);
             this.Controls.Add(this.btn_Login);
@@ -185,5 +199,6 @@ namespace LIFE_MANAGER.FormUI
         private Custom_Control.RoundedButton btn_Login;
         private System.Windows.Forms.Label lb_OpenRegister;
         private System.Windows.Forms.Label lb_WrongUser;
+        private System.Windows.Forms.Button btn_Close;
     }
 }

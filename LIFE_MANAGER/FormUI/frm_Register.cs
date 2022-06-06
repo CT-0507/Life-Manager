@@ -20,7 +20,7 @@ namespace LIFE_MANAGER.FormUI
         {
             InitializeComponent();
         }
-
+        private string imagePath;
         private void btn_Register_Click(object sender, EventArgs e)
         {
             string strName = tb_Name.Text;
@@ -44,6 +44,16 @@ namespace LIFE_MANAGER.FormUI
                             Biography = strBiography,
                             Date = strDate,
                         };
+                        if (imagePath != null)
+                        {
+                            byte[] imageArray = System.IO.File.ReadAllBytes(imagePath);
+                            string base64ImageRepresentation = Convert.ToBase64String(imageArray);
+                            user.Avatar = base64ImageRepresentation;
+                        }
+                        else
+                        {
+                            user.Avatar = null;
+                        }
                         var options = new CreateIndexOptions { Unique = true };
 #pragma warning disable CS0618 // Type or member is obsolete
                         frm_Login.Users.Indexes.CreateOne("{ Username : 1 }", options);
@@ -82,22 +92,23 @@ namespace LIFE_MANAGER.FormUI
             return savedPasswordHash;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.ShowDialog();
-            string filepath;
-            Bitmap image;
-            filepath = openFileDialog.FileName;
-            image = new Bitmap(filepath, true);
-            pictureBox1.Image = image;
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-        }
-
         private void btn_Close_Click(object sender, EventArgs e)
         {
             this.Close();
 
+        }
+
+        private void btn_AvatarUpload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image File (*.jpg;*.png)|*.jpg;*.png";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                pb_Avatar.Image = null;
+                pb_Avatar.Image = Image.FromFile(ofd.FileName);
+                pb_Avatar.SizeMode = PictureBoxSizeMode.StretchImage;
+                imagePath = ofd.FileName;
+            }
         }
     }
 }

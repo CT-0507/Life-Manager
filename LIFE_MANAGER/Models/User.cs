@@ -24,6 +24,8 @@ namespace LIFE_MANAGER.Models
         public string Date { get; set; }
         [BsonElement("Biography")]
         public string Biography { get; set; }
+        [BsonElement("Avatar")]
+        public string Avatar { get; set; }
         public DateTime createdAt = DateTime.Now;
         public DateTime updatedAt = DateTime.Now;
         public override string ToString()
