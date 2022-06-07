@@ -26,10 +26,14 @@ namespace LIFE_MANAGER.FormUI
             tgb_Volume.Checked = OriginalStateVolume;
             ViewBtnWidth = btn_ViewBackground.Width;
             this.BackgroundImageLayout = ImageLayout.Stretch;
-            if(frm_Login.Setting.BackgroundImage != null)
+            if(frm_Login.Setting.BackgroundImage != "")
             {
-                var img = Image.FromStream(new MemoryStream(Convert.FromBase64String(frm_Login.User.Avatar)));
+                var img = Image.FromStream(new MemoryStream(Convert.FromBase64String(frm_Login.Setting.BackgroundImage)));
                 this.BackgroundImage = img;
+            }
+            else
+            {
+                this.BackgroundImage = null;
             }
         }
 
@@ -38,7 +42,7 @@ namespace LIFE_MANAGER.FormUI
             this.Close();
 
         }
-        private string backgroundImagePath = null;
+        private string backgroundImagePath = "";
         private void btn_BackgroundUpload_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -47,6 +51,12 @@ namespace LIFE_MANAGER.FormUI
             {
                 backgroundImagePath = ofd.FileName;
                 this.BackgroundImage = Image.FromFile(backgroundImagePath);
+                byte[] imageArray = System.IO.File.ReadAllBytes(backgroundImagePath);
+                string base64ImageRepresentation = Convert.ToBase64String(imageArray);
+                var update = Builders<Models.Setting>.Update
+                            .Set("BackgroundImage", base64ImageRepresentation);
+                var query = frm_Login.Settings.UpdateOne(setting => setting._id == frm_Login.Setting._id, update);
+                frm_Login.Setting.BackgroundImage = base64ImageRepresentation;
             }
         }
         private bool isView = false;
@@ -130,13 +140,22 @@ namespace LIFE_MANAGER.FormUI
                     var update = Builders<Models.Setting>.Update
                             .Set("isBackgroundMusicVolume", OriginalStateStartWithWindows);
                     var query = frm_Login.Settings.UpdateOne(setting => setting._id == frm_Login.Setting._id, update);
-                    frm_Login.Setting.isBackgroundMusicVolume = OriginalStateStartWithWindows;
+                    frm_Login.Setting.isBackgroundMusicVolume = OriginalStateVolume;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void btn_RemoveBackgroundImage_Click(object sender, EventArgs e)
+        {
+            this.BackgroundImage = null;
+            var update = Builders<Models.Setting>.Update
+                            .Set("BackgroundImage", String.Empty);
+            var query = frm_Login.Settings.UpdateOne(setting => setting._id == frm_Login.Setting._id, update);
+            frm_Login.Setting.BackgroundImage = "";
         }
     }
 }

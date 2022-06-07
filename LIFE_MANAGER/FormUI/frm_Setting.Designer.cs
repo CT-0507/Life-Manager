@@ -41,6 +41,7 @@ namespace LIFE_MANAGER.FormUI
             this.rjToggleButton1 = new LIFE_MANAGER.Custom_Control.RJToggleButton();
             this.btn_BackgroundUpload = new LIFE_MANAGER.Custom_Control.RoundedButton();
             this.btn_ViewBackground = new LIFE_MANAGER.Custom_Control.RoundedButton();
+            this.btn_RemoveBackgroundImage = new LIFE_MANAGER.Custom_Control.RoundedButton();
             this.SuspendLayout();
             // 
             // btn_Close
@@ -197,11 +198,32 @@ namespace LIFE_MANAGER.FormUI
             this.btn_ViewBackground.UseVisualStyleBackColor = false;
             this.btn_ViewBackground.Click += new System.EventHandler(this.btn_ViewBackground_Click);
             // 
+            // btn_RemoveBackgroundImage
+            // 
+            this.btn_RemoveBackgroundImage.BackColor = System.Drawing.Color.DimGray;
+            this.btn_RemoveBackgroundImage.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btn_RemoveBackgroundImage.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_RemoveBackgroundImage.BorderRadius = 40;
+            this.btn_RemoveBackgroundImage.BorderSize = 0;
+            this.btn_RemoveBackgroundImage.FlatAppearance.BorderSize = 0;
+            this.btn_RemoveBackgroundImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_RemoveBackgroundImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RemoveBackgroundImage.ForeColor = System.Drawing.Color.White;
+            this.btn_RemoveBackgroundImage.Location = new System.Drawing.Point(155, 375);
+            this.btn_RemoveBackgroundImage.Name = "btn_RemoveBackgroundImage";
+            this.btn_RemoveBackgroundImage.Size = new System.Drawing.Size(284, 46);
+            this.btn_RemoveBackgroundImage.TabIndex = 18;
+            this.btn_RemoveBackgroundImage.Text = "Remove Background Image";
+            this.btn_RemoveBackgroundImage.TextColor = System.Drawing.Color.White;
+            this.btn_RemoveBackgroundImage.UseVisualStyleBackColor = false;
+            this.btn_RemoveBackgroundImage.Click += new System.EventHandler(this.btn_RemoveBackgroundImage_Click);
+            // 
             // frm_Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 500);
+            this.Controls.Add(this.btn_RemoveBackgroundImage);
             this.Controls.Add(this.btn_ViewBackground);
             this.Controls.Add(this.btn_BackgroundUpload);
             this.Controls.Add(this.lb_Volume);
@@ -234,5 +256,6 @@ namespace LIFE_MANAGER.FormUI
         private System.Windows.Forms.Label lb_Volume;
         private Custom_Control.RoundedButton btn_BackgroundUpload;
         private Custom_Control.RoundedButton btn_ViewBackground;
+        private Custom_Control.RoundedButton btn_RemoveBackgroundImage;
     }
 }

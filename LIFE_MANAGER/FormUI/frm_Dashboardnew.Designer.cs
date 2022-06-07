@@ -49,6 +49,7 @@ namespace LIFE_MANAGER.FormUI
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_User = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -62,6 +63,7 @@ namespace LIFE_MANAGER.FormUI
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(64)))));
+            this.panelMenu.Controls.Add(this.btn_User);
             this.panelMenu.Controls.Add(this.btn_logout);
             this.panelMenu.Controls.Add(this.btn_setting);
             this.panelMenu.Controls.Add(this.btn_chart);
@@ -276,7 +278,7 @@ namespace LIFE_MANAGER.FormUI
             this.lblTitleChildForm.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.lblTitleChildForm.Location = new System.Drawing.Point(76, 57);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(62, 24);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(57, 22);
             this.lblTitleChildForm.TabIndex = 3;
             this.lblTitleChildForm.Text = "Home";
             // 
@@ -348,6 +350,28 @@ namespace LIFE_MANAGER.FormUI
             this.label1.TabIndex = 3;
             this.label1.Text = "Application Diary";
             // 
+            // btn_User
+            // 
+            this.btn_User.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_User.FlatAppearance.BorderSize = 0;
+            this.btn_User.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_User.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_User.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
+            this.btn_User.IconColor = System.Drawing.Color.Gainsboro;
+            this.btn_User.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_User.IconSize = 40;
+            this.btn_User.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_User.Location = new System.Drawing.Point(0, 650);
+            this.btn_User.Name = "btn_User";
+            this.btn_User.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btn_User.Size = new System.Drawing.Size(220, 70);
+            this.btn_User.TabIndex = 5;
+            this.btn_User.Text = "Logout";
+            this.btn_User.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_User.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_User.UseVisualStyleBackColor = true;
+            // 
             // frm_Dashboardnew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -399,5 +423,6 @@ namespace LIFE_MANAGER.FormUI
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Panel panelDeskTop;
+        private FontAwesome.Sharp.IconButton btn_User;
     }
 }

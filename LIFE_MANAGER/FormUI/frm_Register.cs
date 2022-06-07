@@ -71,6 +71,10 @@ namespace LIFE_MANAGER.FormUI
                                 StartWithWindows = true,
                                 UserId = user1._id,
                             };
+                            var settingoptions = new CreateIndexOptions { Unique = true };
+#pragma warning disable CS0618 // Type or member is obsolete
+                            frm_Login.Settings.Indexes.CreateOne("{ UserId : 1 }", settingoptions);
+#pragma warning restore CS0618 // Type or member is obsolete
                             frm_Login.Settings.InsertOne(setting);
                         }
                         catch (Exception ex)
