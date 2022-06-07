@@ -71,7 +71,7 @@ namespace LIFE_MANAGER.FormUI
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 705);
+            this.panelMenu.Size = new System.Drawing.Size(220, 790);
             this.panelMenu.TabIndex = 0;
             // 
             // btn_logout
@@ -86,7 +86,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_logout.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_logout.IconSize = 40;
             this.btn_logout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_logout.Location = new System.Drawing.Point(0, 635);
+            this.btn_logout.Location = new System.Drawing.Point(0, 720);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btn_logout.Size = new System.Drawing.Size(220, 70);
@@ -109,10 +109,10 @@ namespace LIFE_MANAGER.FormUI
             this.btn_setting.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_setting.IconSize = 40;
             this.btn_setting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_setting.Location = new System.Drawing.Point(0, 350);
+            this.btn_setting.Location = new System.Drawing.Point(0, 395);
             this.btn_setting.Name = "btn_setting";
             this.btn_setting.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btn_setting.Size = new System.Drawing.Size(220, 70);
+            this.btn_setting.Size = new System.Drawing.Size(220, 85);
             this.btn_setting.TabIndex = 3;
             this.btn_setting.Text = "Setting";
             this.btn_setting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -132,10 +132,10 @@ namespace LIFE_MANAGER.FormUI
             this.btn_chart.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_chart.IconSize = 40;
             this.btn_chart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_chart.Location = new System.Drawing.Point(0, 280);
+            this.btn_chart.Location = new System.Drawing.Point(0, 310);
             this.btn_chart.Name = "btn_chart";
             this.btn_chart.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btn_chart.Size = new System.Drawing.Size(220, 70);
+            this.btn_chart.Size = new System.Drawing.Size(220, 85);
             this.btn_chart.TabIndex = 2;
             this.btn_chart.Text = "Chart";
             this.btn_chart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -155,10 +155,10 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Diary.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Diary.IconSize = 40;
             this.btn_Diary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Diary.Location = new System.Drawing.Point(0, 210);
+            this.btn_Diary.Location = new System.Drawing.Point(0, 225);
             this.btn_Diary.Name = "btn_Diary";
             this.btn_Diary.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btn_Diary.Size = new System.Drawing.Size(220, 70);
+            this.btn_Diary.Size = new System.Drawing.Size(220, 85);
             this.btn_Diary.TabIndex = 1;
             this.btn_Diary.Text = "Diary";
             this.btn_Diary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -181,7 +181,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_profile.Location = new System.Drawing.Point(0, 140);
             this.btn_profile.Name = "btn_profile";
             this.btn_profile.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btn_profile.Size = new System.Drawing.Size(220, 70);
+            this.btn_profile.Size = new System.Drawing.Size(220, 85);
             this.btn_profile.TabIndex = 0;
             this.btn_profile.Text = "Profile";
             this.btn_profile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -220,7 +220,7 @@ namespace LIFE_MANAGER.FormUI
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(220, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(1169, 96);
+            this.panelTitleBar.Size = new System.Drawing.Size(1333, 96);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown_1);
             // 
@@ -231,7 +231,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Quit.FlatAppearance.BorderSize = 0;
             this.btn_Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Quit.Location = new System.Drawing.Point(1127, 12);
+            this.btn_Quit.Location = new System.Drawing.Point(1291, 12);
             this.btn_Quit.Name = "btn_Quit";
             this.btn_Quit.Size = new System.Drawing.Size(30, 30);
             this.btn_Quit.TabIndex = 12;
@@ -246,7 +246,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Maximize.FlatAppearance.BorderSize = 0;
             this.btn_Maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Maximize.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Maximize.Location = new System.Drawing.Point(1081, 12);
+            this.btn_Maximize.Location = new System.Drawing.Point(1245, 12);
             this.btn_Maximize.Name = "btn_Maximize";
             this.btn_Maximize.Size = new System.Drawing.Size(30, 30);
             this.btn_Maximize.TabIndex = 11;
@@ -261,7 +261,7 @@ namespace LIFE_MANAGER.FormUI
             this.bnt_Minimize.FlatAppearance.BorderSize = 0;
             this.bnt_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bnt_Minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bnt_Minimize.Location = new System.Drawing.Point(1033, 12);
+            this.bnt_Minimize.Location = new System.Drawing.Point(1197, 12);
             this.bnt_Minimize.Name = "bnt_Minimize";
             this.bnt_Minimize.Size = new System.Drawing.Size(30, 30);
             this.bnt_Minimize.TabIndex = 10;
@@ -300,22 +300,20 @@ namespace LIFE_MANAGER.FormUI
             this.panelsadown.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelsadown.Location = new System.Drawing.Point(220, 96);
             this.panelsadown.Name = "panelsadown";
-            this.panelsadown.Size = new System.Drawing.Size(1169, 10);
+            this.panelsadown.Size = new System.Drawing.Size(1333, 10);
             this.panelsadown.TabIndex = 2;
             // 
             // panelDeskTop
             // 
-            this.panelDeskTop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDeskTop.AutoSize = true;
             this.panelDeskTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(72)))));
             this.panelDeskTop.Controls.Add(this.pictureBox2);
             this.panelDeskTop.Controls.Add(this.pictureBox1);
             this.panelDeskTop.Controls.Add(this.label1);
-            this.panelDeskTop.Location = new System.Drawing.Point(228, 112);
+            this.panelDeskTop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDeskTop.Location = new System.Drawing.Point(220, 106);
             this.panelDeskTop.Name = "panelDeskTop";
-            this.panelDeskTop.Size = new System.Drawing.Size(1149, 547);
+            this.panelDeskTop.Size = new System.Drawing.Size(1333, 684);
             this.panelDeskTop.TabIndex = 6;
             this.panelDeskTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDeskTop_Paint);
             // 
@@ -324,7 +322,7 @@ namespace LIFE_MANAGER.FormUI
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(647, 106);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(379, 408);
+            this.pictureBox2.Size = new System.Drawing.Size(568, 488);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
@@ -334,7 +332,7 @@ namespace LIFE_MANAGER.FormUI
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(17, 106);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(591, 408);
+            this.pictureBox1.Size = new System.Drawing.Size(591, 488);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -354,17 +352,16 @@ namespace LIFE_MANAGER.FormUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1389, 705);
+            this.ClientSize = new System.Drawing.Size(1553, 790);
             this.Controls.Add(this.panelDeskTop);
             this.Controls.Add(this.panelsadown);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Dashboardnew";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Dashboardnew";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
@@ -394,12 +391,12 @@ namespace LIFE_MANAGER.FormUI
         private FontAwesome.Sharp.IconPictureBox iconcurrentchildform;
         private System.Windows.Forms.Label lblTitleChildForm;
         private System.Windows.Forms.Panel panelsadown;
-        private System.Windows.Forms.Panel panelDeskTop;
         private System.Windows.Forms.Button btn_Quit;
         private System.Windows.Forms.Button btn_Maximize;
         private System.Windows.Forms.Button bnt_Minimize;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Panel panelDeskTop;
     }
 }

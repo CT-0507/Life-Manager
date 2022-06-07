@@ -50,20 +50,14 @@ namespace LIFE_MANAGER.FormUI
                     {
                         User = (Models.User)query.First();
                         lb_WrongUser.Visible = false;
-                        frm_Dashboard frm_Dashboardnew = new frm_Dashboard();
-                        frm_Dashboardnew.ShowDialog();
-                        //Thread a = new Thread(() => new frm_Dashboardnew().ShowDialog());
-                        //a.SetApartmentState(ApartmentState.STA);
-                        //a.Start();
-                        //6this.Close();
 
                         try
                         {
                             var UserSetting = Settings.Find(setting => setting.UserId == User._id);
                             Setting = (Models.Setting)UserSetting.First();
-                            Thread a = new Thread(() => new frm_Dashboard().ShowDialog());
-                            a.SetApartmentState(ApartmentState.STA);
-                            a.Start();
+                            Thread abc = new Thread(() => new frm_Dashboardnew().ShowDialog());
+                            abc.SetApartmentState(ApartmentState.STA);
+                            abc.Start();
                             this.Close();
                         }
                         catch (Exception ex)
@@ -92,17 +86,14 @@ namespace LIFE_MANAGER.FormUI
             a.Start();
             this.Close();
         }
-        private void Login()
-        {
-
-        }
+  
 
         private void tb_Pass_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode==Keys.Enter)
             {
                 btn_Login.PerformClick();
-                btn_Login.Text = string.Empty;
+                tb_Pass.Text = string.Empty;
             }
         }
 
