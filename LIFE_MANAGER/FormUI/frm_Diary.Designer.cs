@@ -57,9 +57,10 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(16, 15);
+            this.panel1.Location = new System.Drawing.Point(16, 40);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1323, 732);
@@ -70,7 +71,7 @@
             this.panel3.Controls.Add(this.panel6);
             this.panel3.Controls.Add(this.btnToDay);
             this.panel3.Controls.Add(this.dtpkDate);
-            this.panel3.Location = new System.Drawing.Point(4, 4);
+            this.panel3.Location = new System.Drawing.Point(4, 22);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1285, 73);
@@ -80,7 +81,7 @@
             // 
             this.panel6.Controls.Add(this.nmNotify);
             this.panel6.Controls.Add(this.ckbNotify);
-            this.panel6.Location = new System.Drawing.Point(9, 0);
+            this.panel6.Location = new System.Drawing.Point(9, 15);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(353, 69);
@@ -117,26 +118,26 @@
             this.ckbNotify.Location = new System.Drawing.Point(15, 12);
             this.ckbNotify.Margin = new System.Windows.Forms.Padding(4);
             this.ckbNotify.Name = "ckbNotify";
-            this.ckbNotify.Size = new System.Drawing.Size(129, 29);
+            this.ckbNotify.Size = new System.Drawing.Size(83, 29);
             this.ckbNotify.TabIndex = 0;
-            this.ckbNotify.Text = "Thông báo";
+            this.ckbNotify.Text = "Notify";
             this.ckbNotify.UseVisualStyleBackColor = true;
             // 
             // btnToDay
             // 
-            this.btnToDay.Location = new System.Drawing.Point(875, 7);
+            this.btnToDay.Location = new System.Drawing.Point(875, 22);
             this.btnToDay.Margin = new System.Windows.Forms.Padding(4);
             this.btnToDay.Name = "btnToDay";
             this.btnToDay.Size = new System.Drawing.Size(122, 49);
             this.btnToDay.TabIndex = 1;
-            this.btnToDay.Text = "Hôm nay";
+            this.btnToDay.Text = "Today";
             this.btnToDay.UseVisualStyleBackColor = true;
             this.btnToDay.Click += new System.EventHandler(this.btnToDay_Click);
             // 
             // dtpkDate
             // 
             this.dtpkDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpkDate.Location = new System.Drawing.Point(457, 12);
+            this.dtpkDate.Location = new System.Drawing.Point(457, 27);
             this.dtpkDate.Margin = new System.Windows.Forms.Padding(4);
             this.dtpkDate.Name = "dtpkDate";
             this.dtpkDate.Size = new System.Drawing.Size(356, 30);
@@ -147,18 +148,18 @@
             // 
             this.panel2.Controls.Add(this.pnlMatrix);
             this.panel2.Controls.Add(this.panel4);
-            this.panel2.Location = new System.Drawing.Point(4, 85);
+            this.panel2.Location = new System.Drawing.Point(4, 114);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1305, 643);
+            this.panel2.Size = new System.Drawing.Size(1305, 614);
             this.panel2.TabIndex = 0;
             // 
             // pnlMatrix
             // 
-            this.pnlMatrix.Location = new System.Drawing.Point(171, 115);
+            this.pnlMatrix.Location = new System.Drawing.Point(171, 149);
             this.pnlMatrix.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMatrix.Name = "pnlMatrix";
-            this.pnlMatrix.Size = new System.Drawing.Size(946, 506);
+            this.pnlMatrix.Size = new System.Drawing.Size(952, 455);
             this.pnlMatrix.TabIndex = 1;
             // 
             // panel4
@@ -172,7 +173,7 @@
             this.panel4.Controls.Add(this.btnWednesday);
             this.panel4.Controls.Add(this.btnTuesday);
             this.panel4.Controls.Add(this.btnMonday);
-            this.panel4.Location = new System.Drawing.Point(4, 13);
+            this.panel4.Location = new System.Drawing.Point(4, 33);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1281, 90);
@@ -209,7 +210,7 @@
             this.btnSunday.Name = "btnSunday";
             this.btnSunday.Size = new System.Drawing.Size(129, 65);
             this.btnSunday.TabIndex = 6;
-            this.btnSunday.Text = "Chủ nhật";
+            this.btnSunday.Text = "Sunday";
             this.btnSunday.UseVisualStyleBackColor = true;
             // 
             // btnSaturday
@@ -219,7 +220,7 @@
             this.btnSaturday.Name = "btnSaturday";
             this.btnSaturday.Size = new System.Drawing.Size(129, 65);
             this.btnSaturday.TabIndex = 5;
-            this.btnSaturday.Text = "Thứ 7";
+            this.btnSaturday.Text = "Saturday";
             this.btnSaturday.UseVisualStyleBackColor = true;
             // 
             // btnFriday
@@ -229,7 +230,7 @@
             this.btnFriday.Name = "btnFriday";
             this.btnFriday.Size = new System.Drawing.Size(129, 65);
             this.btnFriday.TabIndex = 4;
-            this.btnFriday.Text = "Thứ 6";
+            this.btnFriday.Text = "Friday";
             this.btnFriday.UseVisualStyleBackColor = true;
             // 
             // btnThusday
@@ -239,7 +240,7 @@
             this.btnThusday.Name = "btnThusday";
             this.btnThusday.Size = new System.Drawing.Size(129, 65);
             this.btnThusday.TabIndex = 3;
-            this.btnThusday.Text = "Thứ 5";
+            this.btnThusday.Text = "Thusday";
             this.btnThusday.UseVisualStyleBackColor = true;
             // 
             // btnWednesday
@@ -249,7 +250,7 @@
             this.btnWednesday.Name = "btnWednesday";
             this.btnWednesday.Size = new System.Drawing.Size(129, 65);
             this.btnWednesday.TabIndex = 2;
-            this.btnWednesday.Text = "Thứ 4";
+            this.btnWednesday.Text = "Wednesday";
             this.btnWednesday.UseVisualStyleBackColor = true;
             // 
             // btnTuesday
@@ -259,7 +260,7 @@
             this.btnTuesday.Name = "btnTuesday";
             this.btnTuesday.Size = new System.Drawing.Size(129, 65);
             this.btnTuesday.TabIndex = 1;
-            this.btnTuesday.Text = "Thứ 3";
+            this.btnTuesday.Text = "Tuesday";
             this.btnTuesday.UseVisualStyleBackColor = true;
             // 
             // btnMonday
@@ -269,20 +270,20 @@
             this.btnMonday.Name = "btnMonday";
             this.btnMonday.Size = new System.Drawing.Size(129, 65);
             this.btnMonday.TabIndex = 0;
-            this.btnMonday.Text = "Thứ 2";
+            this.btnMonday.Text = "Monday";
             this.btnMonday.UseVisualStyleBackColor = true;
             // 
             // frm_Diary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1352, 760);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.ClientSize = new System.Drawing.Size(1352, 810);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frm_Diary";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Lập lịch công việc";
+            this.Text = "Diary";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

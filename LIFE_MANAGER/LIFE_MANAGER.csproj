@@ -226,6 +226,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\frm_Dashboardnew.resx">
       <DependentUpon>frm_Dashboardnew.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>frm_Dashboardnew1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\frm_Diary.resx">
       <DependentUpon>frm_Diary.cs</DependentUpon>

@@ -177,7 +177,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AJob";
-            this.Size = new System.Drawing.Size(1140, 41);
+            this.Size = new System.Drawing.Size(1140, 46);
             this.Load += new System.EventHandler(this.AJob_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

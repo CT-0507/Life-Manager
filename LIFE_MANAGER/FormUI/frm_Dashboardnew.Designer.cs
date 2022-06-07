@@ -292,11 +292,11 @@ namespace LIFE_MANAGER.FormUI
             // lblTitleChildForm
             // 
             this.lblTitleChildForm.AutoSize = true;
-            this.lblTitleChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitleChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleChildForm.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(76, 57);
+            this.lblTitleChildForm.Location = new System.Drawing.Point(91, 52);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(62, 24);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(90, 32);
             this.lblTitleChildForm.TabIndex = 3;
             this.lblTitleChildForm.Text = "Home";
             // 
@@ -339,30 +339,36 @@ namespace LIFE_MANAGER.FormUI
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(647, 106);
+            this.pictureBox2.Location = new System.Drawing.Point(672, 106);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(568, 488);
+            this.pictureBox2.Size = new System.Drawing.Size(649, 540);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 5;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(17, 106);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(591, 488);
+            this.pictureBox1.Size = new System.Drawing.Size(622, 540);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(382, 24);
+            this.label1.Location = new System.Drawing.Point(475, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(279, 38);
             this.label1.TabIndex = 3;

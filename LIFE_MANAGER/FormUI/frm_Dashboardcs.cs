@@ -250,6 +250,11 @@ namespace LIFE_MANAGER.FormUI
             }
             return bmp;
         }
+
+        private void btn_User_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

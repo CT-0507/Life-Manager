@@ -255,7 +255,7 @@ namespace LIFE_MANAGER.FormUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.ForestGreen;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1097, 636);
             this.Controls.Add(this.btn_AvatarUpload);
             this.Controls.Add(this.label7);

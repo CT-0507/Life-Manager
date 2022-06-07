@@ -31,7 +31,6 @@ namespace LIFE_MANAGER.FormUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Setting));
             this.btn_Close = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.lb_Notification = new System.Windows.Forms.Label();
             this.lb_StartWithWindows = new System.Windows.Forms.Label();
             this.lb_Volume = new System.Windows.Forms.Label();
@@ -55,16 +54,6 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Close.TabIndex = 5;
             this.btn_Close.UseVisualStyleBackColor = true;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(481, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 38);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Setting";
             // 
             // lb_Notification
             // 
@@ -222,6 +211,7 @@ namespace LIFE_MANAGER.FormUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1067, 500);
             this.Controls.Add(this.btn_RemoveBackgroundImage);
             this.Controls.Add(this.btn_ViewBackground);
@@ -233,7 +223,6 @@ namespace LIFE_MANAGER.FormUI
             this.Controls.Add(this.lb_Notification);
             this.Controls.Add(this.tgb_Notification);
             this.Controls.Add(this.rjToggleButton1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Close);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Setting";
@@ -246,7 +235,6 @@ namespace LIFE_MANAGER.FormUI
         #endregion
 
         private System.Windows.Forms.Button btn_Close;
-        private System.Windows.Forms.Label label1;
         private Custom_Control.RJToggleButton rjToggleButton1;
         private Custom_Control.RJToggleButton tgb_Notification;
         private System.Windows.Forms.Label lb_Notification;

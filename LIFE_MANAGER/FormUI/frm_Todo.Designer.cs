@@ -38,6 +38,7 @@
             this.mnsMain = new System.Windows.Forms.MenuStrip();
             this.mnsiAddJob = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsiToDay = new System.Windows.Forms.ToolStripMenuItem();
+            this.diaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Close = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -109,26 +110,33 @@
             this.mnsMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnsMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnsiAddJob,
-            this.mnsiToDay});
+            this.mnsiToDay,
+            this.diaryToolStripMenuItem});
             this.mnsMain.Location = new System.Drawing.Point(0, 0);
             this.mnsMain.Name = "mnsMain";
-            this.mnsMain.Size = new System.Drawing.Size(1274, 28);
+            this.mnsMain.Size = new System.Drawing.Size(1274, 30);
             this.mnsMain.TabIndex = 1;
             this.mnsMain.Text = "menuStrip1";
             // 
             // mnsiAddJob
             // 
             this.mnsiAddJob.Name = "mnsiAddJob";
-            this.mnsiAddJob.Size = new System.Drawing.Size(78, 24);
+            this.mnsiAddJob.Size = new System.Drawing.Size(78, 26);
             this.mnsiAddJob.Text = "Add Job";
             this.mnsiAddJob.Click += new System.EventHandler(this.mnsiAddJob_Click);
             // 
             // mnsiToDay
             // 
             this.mnsiToDay.Name = "mnsiToDay";
-            this.mnsiToDay.Size = new System.Drawing.Size(63, 24);
+            this.mnsiToDay.Size = new System.Drawing.Size(63, 26);
             this.mnsiToDay.Text = "Today";
             this.mnsiToDay.Click += new System.EventHandler(this.mnsiToDay_Click);
+            // 
+            // diaryToolStripMenuItem
+            // 
+            this.diaryToolStripMenuItem.Name = "diaryToolStripMenuItem";
+            this.diaryToolStripMenuItem.Size = new System.Drawing.Size(58, 26);
+            this.diaryToolStripMenuItem.Text = "Diary";
             // 
             // btn_Close
             // 
@@ -146,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1274, 559);
             this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.panel1);
@@ -178,5 +186,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnsiAddJob;
         private System.Windows.Forms.ToolStripMenuItem mnsiToDay;
         private System.Windows.Forms.Button btn_Close;
+        private System.Windows.Forms.ToolStripMenuItem diaryToolStripMenuItem;
     }
 }
