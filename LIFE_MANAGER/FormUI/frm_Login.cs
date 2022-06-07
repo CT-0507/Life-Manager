@@ -59,7 +59,6 @@ namespace LIFE_MANAGER.FormUI
                             Thread abc = new Thread(() => new frm_Dashboardnew().ShowDialog());
                             abc.SetApartmentState(ApartmentState.STA);
                             abc.Start();
-                            abc.Start();
                             this.Close();
                         }
                         catch (Exception ex)

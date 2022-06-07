@@ -112,14 +112,7 @@ namespace LIFE_MANAGER.FormUI
         }
         //Events
         //Reset
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close();
-            }
-            Reset();
-        }
+     
         //Menu Button_Clicks
         private void btnHome_Click_1(object sender, EventArgs e)
         {
@@ -159,7 +152,10 @@ namespace LIFE_MANAGER.FormUI
         private void btn_logout_Click(object sender, EventArgs e)
         {
 
-
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
             ActivateButton(sender, RGBColors.color6);
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to logout", "Logout ?", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
@@ -178,21 +174,8 @@ namespace LIFE_MANAGER.FormUI
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
      
         //Close-Maximize-Minimize
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-        private void btnMaximize_Click(object sender, EventArgs e)
-        {
-            if (WindowState == FormWindowState.Normal)
-                WindowState = FormWindowState.Maximized;
-            else
-                WindowState = FormWindowState.Normal;
-        }
-        private void btnMinimize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
+     
+     
         //Remove transparent border in maximized state
         private void FormMainMenu_Resize(object sender, EventArgs e)
         {

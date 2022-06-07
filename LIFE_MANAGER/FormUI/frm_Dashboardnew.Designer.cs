@@ -362,6 +362,7 @@ namespace LIFE_MANAGER.FormUI
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Dashboardnew";
+            this.Resize += new System.EventHandler(this.FormMainMenu_Resize);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
