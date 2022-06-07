@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MongoDB.Bson.IO;
+using MongoDB.Driver;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using System.Xml.Serialization;
 
 namespace LIFE_MANAGER.FormUI
@@ -34,15 +37,37 @@ namespace LIFE_MANAGER.FormUI
         }
 
         private List<string> dateOfWeek = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+        private IMongoCollection<Models.Plan> Plans = frm_Login.db.GetCollection<Models.Plan>("Plans");
+        private Models.Plan plan;
         #endregion
         public frm_Diary()
         {
             InitializeComponent();
 
             LoadMatrix();
-
             try
             {
+                var query = Plans.Find(planD => planD.UserId == frm_Login.User._id);
+                plan = query.First();
+            }
+            catch (Exception ex)
+            {
+                plan = new Models.Plan()
+                {
+                    Data = "",
+                    UserId = frm_Login.User._id,
+                };
+                var settingoptions = new CreateIndexOptions { Unique = true };
+#pragma warning disable CS0618 // Type or member is obsolete
+                Plans.Indexes.CreateOne("{ UserId : 1 }", settingoptions);
+#pragma warning restore CS0618 // Type or member is obsolete
+                Plans.InsertOne(plan);
+            }
+            try
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.LoadXml(plan.Data);
+                doc.Save(filePath);
                 Job = DeserializeFromXML(filePath) as PlanData;
             }
             catch
@@ -199,8 +224,20 @@ namespace LIFE_MANAGER.FormUI
             XmlSerializer sr = new XmlSerializer(typeof(PlanData));
 
             sr.Serialize(fs, data);
-
             fs.Close();
+            StreamReader streamReader = new StreamReader(filePath);
+            string xml = streamReader.ReadToEnd();
+            var update = Builders<Models.Plan>.Update
+                        .Set("Data", xml);
+            try
+            {
+                var updateDataQuery = Plans.UpdateOne(planD => planD._id == plan._id, update);
+                plan.Data = xml;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private object DeserializeFromXML(string filePath)
@@ -209,7 +246,6 @@ namespace LIFE_MANAGER.FormUI
             try
             {
                 XmlSerializer sr = new XmlSerializer(typeof(PlanData));
-
                 object result = sr.Deserialize(fs);
                 fs.Close();
                 return result;
