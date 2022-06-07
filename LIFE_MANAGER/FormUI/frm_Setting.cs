@@ -42,6 +42,7 @@ namespace LIFE_MANAGER.FormUI
             this.Close();
 
         }
+        public static Image a;
         private string backgroundImagePath = "";
         private void btn_BackgroundUpload_Click(object sender, EventArgs e)
         {
@@ -50,7 +51,8 @@ namespace LIFE_MANAGER.FormUI
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 backgroundImagePath = ofd.FileName;
-                this.BackgroundImage = Image.FromFile(backgroundImagePath);
+                a= Image.FromFile(backgroundImagePath);
+                this.BackgroundImage = a;    
                 byte[] imageArray = System.IO.File.ReadAllBytes(backgroundImagePath);
                 string base64ImageRepresentation = Convert.ToBase64String(imageArray);
                 var update = Builders<Models.Setting>.Update
@@ -75,6 +77,7 @@ namespace LIFE_MANAGER.FormUI
                 btn_BackgroundUpload.Visible = false;
                 btn_ViewBackground.Text = "Close";
                 btn_ViewBackground.Width = 100;
+                btn_RemoveBackgroundImage.Visible = false;
             }
             else
             {
@@ -87,8 +90,10 @@ namespace LIFE_MANAGER.FormUI
                 btn_BackgroundUpload.Visible = true;
                 btn_ViewBackground.Text = "View Background";
                 btn_ViewBackground.Width = ViewBtnWidth;
+                btn_RemoveBackgroundImage.Visible = true;
+
             }
-            
+
         }
 
         private void tgb_Notification_CheckedChanged(object sender, EventArgs e)

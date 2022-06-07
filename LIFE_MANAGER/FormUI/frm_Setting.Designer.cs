@@ -29,36 +29,24 @@ namespace LIFE_MANAGER.FormUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Setting));
-            this.btn_Close = new System.Windows.Forms.Button();
             this.lb_Notification = new System.Windows.Forms.Label();
             this.lb_StartWithWindows = new System.Windows.Forms.Label();
             this.lb_Volume = new System.Windows.Forms.Label();
+            this.btn_RemoveBackgroundImage = new LIFE_MANAGER.Custom_Control.RoundedButton();
+            this.btn_ViewBackground = new LIFE_MANAGER.Custom_Control.RoundedButton();
+            this.btn_BackgroundUpload = new LIFE_MANAGER.Custom_Control.RoundedButton();
             this.tgb_Volume = new LIFE_MANAGER.Custom_Control.RJToggleButton();
             this.tgb_StartWithWindows = new LIFE_MANAGER.Custom_Control.RJToggleButton();
             this.tgb_Notification = new LIFE_MANAGER.Custom_Control.RJToggleButton();
             this.rjToggleButton1 = new LIFE_MANAGER.Custom_Control.RJToggleButton();
-            this.btn_BackgroundUpload = new LIFE_MANAGER.Custom_Control.RoundedButton();
-            this.btn_ViewBackground = new LIFE_MANAGER.Custom_Control.RoundedButton();
-            this.btn_RemoveBackgroundImage = new LIFE_MANAGER.Custom_Control.RoundedButton();
             this.SuspendLayout();
-            // 
-            // btn_Close
-            // 
-            this.btn_Close.FlatAppearance.BorderSize = 0;
-            this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Close.Image = ((System.Drawing.Image)(resources.GetObject("btn_Close.Image")));
-            this.btn_Close.Location = new System.Drawing.Point(980, 9);
-            this.btn_Close.Name = "btn_Close";
-            this.btn_Close.Size = new System.Drawing.Size(75, 23);
-            this.btn_Close.TabIndex = 5;
-            this.btn_Close.UseVisualStyleBackColor = true;
-            this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
             // lb_Notification
             // 
+            this.lb_Notification.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_Notification.AutoSize = true;
             this.lb_Notification.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Notification.ForeColor = System.Drawing.Color.Gainsboro;
             this.lb_Notification.Location = new System.Drawing.Point(278, 141);
             this.lb_Notification.Name = "lb_Notification";
             this.lb_Notification.Size = new System.Drawing.Size(150, 31);
@@ -67,8 +55,10 @@ namespace LIFE_MANAGER.FormUI
             // 
             // lb_StartWithWindows
             // 
+            this.lb_StartWithWindows.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_StartWithWindows.AutoSize = true;
             this.lb_StartWithWindows.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_StartWithWindows.ForeColor = System.Drawing.Color.Gainsboro;
             this.lb_StartWithWindows.Location = new System.Drawing.Point(278, 203);
             this.lb_StartWithWindows.Name = "lb_StartWithWindows";
             this.lb_StartWithWindows.Size = new System.Drawing.Size(240, 31);
@@ -77,16 +67,82 @@ namespace LIFE_MANAGER.FormUI
             // 
             // lb_Volume
             // 
+            this.lb_Volume.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_Volume.AutoSize = true;
             this.lb_Volume.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Volume.ForeColor = System.Drawing.Color.Gainsboro;
             this.lb_Volume.Location = new System.Drawing.Point(278, 257);
             this.lb_Volume.Name = "lb_Volume";
             this.lb_Volume.Size = new System.Drawing.Size(105, 31);
             this.lb_Volume.TabIndex = 15;
             this.lb_Volume.Text = "Volume";
             // 
+            // btn_RemoveBackgroundImage
+            // 
+            this.btn_RemoveBackgroundImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_RemoveBackgroundImage.BackColor = System.Drawing.Color.DimGray;
+            this.btn_RemoveBackgroundImage.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btn_RemoveBackgroundImage.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_RemoveBackgroundImage.BorderRadius = 40;
+            this.btn_RemoveBackgroundImage.BorderSize = 0;
+            this.btn_RemoveBackgroundImage.FlatAppearance.BorderSize = 0;
+            this.btn_RemoveBackgroundImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_RemoveBackgroundImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_RemoveBackgroundImage.ForeColor = System.Drawing.Color.White;
+            this.btn_RemoveBackgroundImage.Location = new System.Drawing.Point(155, 375);
+            this.btn_RemoveBackgroundImage.Name = "btn_RemoveBackgroundImage";
+            this.btn_RemoveBackgroundImage.Size = new System.Drawing.Size(284, 46);
+            this.btn_RemoveBackgroundImage.TabIndex = 18;
+            this.btn_RemoveBackgroundImage.Text = "Remove Background Image";
+            this.btn_RemoveBackgroundImage.TextColor = System.Drawing.Color.White;
+            this.btn_RemoveBackgroundImage.UseVisualStyleBackColor = false;
+            this.btn_RemoveBackgroundImage.Click += new System.EventHandler(this.btn_RemoveBackgroundImage_Click);
+            // 
+            // btn_ViewBackground
+            // 
+            this.btn_ViewBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_ViewBackground.BackColor = System.Drawing.Color.DimGray;
+            this.btn_ViewBackground.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btn_ViewBackground.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_ViewBackground.BorderRadius = 40;
+            this.btn_ViewBackground.BorderSize = 0;
+            this.btn_ViewBackground.FlatAppearance.BorderSize = 0;
+            this.btn_ViewBackground.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ViewBackground.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ViewBackground.ForeColor = System.Drawing.Color.White;
+            this.btn_ViewBackground.Location = new System.Drawing.Point(755, 418);
+            this.btn_ViewBackground.Name = "btn_ViewBackground";
+            this.btn_ViewBackground.Size = new System.Drawing.Size(284, 46);
+            this.btn_ViewBackground.TabIndex = 17;
+            this.btn_ViewBackground.Text = "View Background";
+            this.btn_ViewBackground.TextColor = System.Drawing.Color.White;
+            this.btn_ViewBackground.UseVisualStyleBackColor = false;
+            this.btn_ViewBackground.Click += new System.EventHandler(this.btn_ViewBackground_Click);
+            // 
+            // btn_BackgroundUpload
+            // 
+            this.btn_BackgroundUpload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_BackgroundUpload.BackColor = System.Drawing.Color.DimGray;
+            this.btn_BackgroundUpload.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btn_BackgroundUpload.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_BackgroundUpload.BorderRadius = 40;
+            this.btn_BackgroundUpload.BorderSize = 0;
+            this.btn_BackgroundUpload.FlatAppearance.BorderSize = 0;
+            this.btn_BackgroundUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BackgroundUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BackgroundUpload.ForeColor = System.Drawing.Color.White;
+            this.btn_BackgroundUpload.Location = new System.Drawing.Point(155, 323);
+            this.btn_BackgroundUpload.Name = "btn_BackgroundUpload";
+            this.btn_BackgroundUpload.Size = new System.Drawing.Size(284, 46);
+            this.btn_BackgroundUpload.TabIndex = 16;
+            this.btn_BackgroundUpload.Text = "Upload Background Image";
+            this.btn_BackgroundUpload.TextColor = System.Drawing.Color.White;
+            this.btn_BackgroundUpload.UseVisualStyleBackColor = false;
+            this.btn_BackgroundUpload.Click += new System.EventHandler(this.btn_BackgroundUpload_Click);
+            // 
             // tgb_Volume
             // 
+            this.tgb_Volume.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tgb_Volume.AutoSize = true;
             this.tgb_Volume.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tgb_Volume.Location = new System.Drawing.Point(155, 253);
@@ -103,6 +159,7 @@ namespace LIFE_MANAGER.FormUI
             // 
             // tgb_StartWithWindows
             // 
+            this.tgb_StartWithWindows.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tgb_StartWithWindows.AutoSize = true;
             this.tgb_StartWithWindows.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tgb_StartWithWindows.Location = new System.Drawing.Point(155, 194);
@@ -119,6 +176,7 @@ namespace LIFE_MANAGER.FormUI
             // 
             // tgb_Notification
             // 
+            this.tgb_Notification.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tgb_Notification.AutoSize = true;
             this.tgb_Notification.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tgb_Notification.Location = new System.Drawing.Point(155, 137);
@@ -147,66 +205,6 @@ namespace LIFE_MANAGER.FormUI
             this.rjToggleButton1.TabIndex = 8;
             this.rjToggleButton1.UseVisualStyleBackColor = true;
             // 
-            // btn_BackgroundUpload
-            // 
-            this.btn_BackgroundUpload.BackColor = System.Drawing.Color.DimGray;
-            this.btn_BackgroundUpload.BackgroundColor = System.Drawing.Color.DimGray;
-            this.btn_BackgroundUpload.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_BackgroundUpload.BorderRadius = 40;
-            this.btn_BackgroundUpload.BorderSize = 0;
-            this.btn_BackgroundUpload.FlatAppearance.BorderSize = 0;
-            this.btn_BackgroundUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_BackgroundUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_BackgroundUpload.ForeColor = System.Drawing.Color.White;
-            this.btn_BackgroundUpload.Location = new System.Drawing.Point(155, 323);
-            this.btn_BackgroundUpload.Name = "btn_BackgroundUpload";
-            this.btn_BackgroundUpload.Size = new System.Drawing.Size(284, 46);
-            this.btn_BackgroundUpload.TabIndex = 16;
-            this.btn_BackgroundUpload.Text = "Upload Background Image";
-            this.btn_BackgroundUpload.TextColor = System.Drawing.Color.White;
-            this.btn_BackgroundUpload.UseVisualStyleBackColor = false;
-            this.btn_BackgroundUpload.Click += new System.EventHandler(this.btn_BackgroundUpload_Click);
-            // 
-            // btn_ViewBackground
-            // 
-            this.btn_ViewBackground.BackColor = System.Drawing.Color.DimGray;
-            this.btn_ViewBackground.BackgroundColor = System.Drawing.Color.DimGray;
-            this.btn_ViewBackground.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_ViewBackground.BorderRadius = 40;
-            this.btn_ViewBackground.BorderSize = 0;
-            this.btn_ViewBackground.FlatAppearance.BorderSize = 0;
-            this.btn_ViewBackground.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ViewBackground.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ViewBackground.ForeColor = System.Drawing.Color.White;
-            this.btn_ViewBackground.Location = new System.Drawing.Point(755, 418);
-            this.btn_ViewBackground.Name = "btn_ViewBackground";
-            this.btn_ViewBackground.Size = new System.Drawing.Size(284, 46);
-            this.btn_ViewBackground.TabIndex = 17;
-            this.btn_ViewBackground.Text = "View Background";
-            this.btn_ViewBackground.TextColor = System.Drawing.Color.White;
-            this.btn_ViewBackground.UseVisualStyleBackColor = false;
-            this.btn_ViewBackground.Click += new System.EventHandler(this.btn_ViewBackground_Click);
-            // 
-            // btn_RemoveBackgroundImage
-            // 
-            this.btn_RemoveBackgroundImage.BackColor = System.Drawing.Color.DimGray;
-            this.btn_RemoveBackgroundImage.BackgroundColor = System.Drawing.Color.DimGray;
-            this.btn_RemoveBackgroundImage.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btn_RemoveBackgroundImage.BorderRadius = 40;
-            this.btn_RemoveBackgroundImage.BorderSize = 0;
-            this.btn_RemoveBackgroundImage.FlatAppearance.BorderSize = 0;
-            this.btn_RemoveBackgroundImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_RemoveBackgroundImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_RemoveBackgroundImage.ForeColor = System.Drawing.Color.White;
-            this.btn_RemoveBackgroundImage.Location = new System.Drawing.Point(155, 375);
-            this.btn_RemoveBackgroundImage.Name = "btn_RemoveBackgroundImage";
-            this.btn_RemoveBackgroundImage.Size = new System.Drawing.Size(284, 46);
-            this.btn_RemoveBackgroundImage.TabIndex = 18;
-            this.btn_RemoveBackgroundImage.Text = "Remove Background Image";
-            this.btn_RemoveBackgroundImage.TextColor = System.Drawing.Color.White;
-            this.btn_RemoveBackgroundImage.UseVisualStyleBackColor = false;
-            this.btn_RemoveBackgroundImage.Click += new System.EventHandler(this.btn_RemoveBackgroundImage_Click);
-            // 
             // frm_Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -223,7 +221,6 @@ namespace LIFE_MANAGER.FormUI
             this.Controls.Add(this.lb_Notification);
             this.Controls.Add(this.tgb_Notification);
             this.Controls.Add(this.rjToggleButton1);
-            this.Controls.Add(this.btn_Close);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Setting";
             this.Text = "Setting";
@@ -233,8 +230,6 @@ namespace LIFE_MANAGER.FormUI
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_Close;
         private Custom_Control.RJToggleButton rjToggleButton1;
         private Custom_Control.RJToggleButton tgb_Notification;
         private System.Windows.Forms.Label lb_Notification;

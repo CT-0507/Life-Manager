@@ -225,7 +225,12 @@ namespace LIFE_MANAGER.FormUI
         {
             SerializeToXML(Job, filePath);
         }
-
        
+        private void frm_Diary_Load(object sender, EventArgs e)
+        {
+            panel1.BackgroundImage = this.BackgroundImage;
+            panel2.BackgroundImage = this.BackgroundImage;
+
+        }
     }
 }

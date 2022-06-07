@@ -38,7 +38,6 @@
             this.mnsMain = new System.Windows.Forms.MenuStrip();
             this.mnsiAddJob = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsiToDay = new System.Windows.Forms.ToolStripMenuItem();
-            this.diaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Close = new System.Windows.Forms.Button();
             this.mnsiDiary = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
@@ -135,9 +134,7 @@
             // 
             // diaryToolStripMenuItem
             // 
-            this.diaryToolStripMenuItem.Name = "diaryToolStripMenuItem";
-            this.diaryToolStripMenuItem.Size = new System.Drawing.Size(58, 26);
-            this.diaryToolStripMenuItem.Text = "Diary";
+           
             // 
             // btn_Close
             // 

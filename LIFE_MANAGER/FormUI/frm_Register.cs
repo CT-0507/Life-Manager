@@ -132,5 +132,10 @@ namespace LIFE_MANAGER.FormUI
                 imagePath = ofd.FileName;
             }
         }
+
+        private void pb_Avatar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

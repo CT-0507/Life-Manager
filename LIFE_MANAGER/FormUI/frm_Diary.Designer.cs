@@ -156,6 +156,7 @@
             // 
             // pnlMatrix
             // 
+            this.pnlMatrix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlMatrix.Location = new System.Drawing.Point(171, 149);
             this.pnlMatrix.Margin = new System.Windows.Forms.Padding(4);
             this.pnlMatrix.Name = "pnlMatrix";
@@ -278,6 +279,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1352, 810);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -285,6 +287,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Diary";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.frm_Diary_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);

@@ -92,6 +92,7 @@ namespace LIFE_MANAGER.FormUI
             this.pb_Avatar.Size = new System.Drawing.Size(322, 356);
             this.pb_Avatar.TabIndex = 10;
             this.pb_Avatar.TabStop = false;
+            this.pb_Avatar.Click += new System.EventHandler(this.pb_Avatar_Click);
             // 
             // tb_Name
             // 

@@ -93,7 +93,12 @@ namespace LIFE_MANAGER.FormUI
         }
         private void OpenChildForm(Form childForm)
         {
-          
+            if (frm_Setting.a != null)
+            {
+                childForm.BackgroundImage = frm_Setting.a;
+              
+            }
+            
             childForm.TopLevel = false;
             //open only form
             if (currentChildForm != null)
