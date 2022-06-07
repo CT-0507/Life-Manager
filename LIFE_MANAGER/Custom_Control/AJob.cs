@@ -76,5 +76,16 @@ namespace LIFE_MANAGER.Custom_Control
         {
             cbStatus.SelectedIndex = ckbDone.Checked ? (int)EPlanItem.DONE : (int)EPlanItem.DOING;
         }
+
+        private void cbStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnEdit.Enabled = true;
+            btnEdit.Visible = true;
+        }
+
+        private void AJob_Load(object sender, EventArgs e)
+        {
+            btnEdit.Visible = false;
+        }
     }
 }

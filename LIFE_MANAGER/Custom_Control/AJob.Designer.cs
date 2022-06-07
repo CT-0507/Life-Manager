@@ -57,7 +57,7 @@
             this.panel1.Controls.Add(this.txbJob);
             this.panel1.Controls.Add(this.ckbDone);
             this.panel1.Location = new System.Drawing.Point(4, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1132, 37);
             this.panel1.TabIndex = 0;
@@ -65,7 +65,7 @@
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(1050, 2);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(60, 28);
             this.btnDelete.TabIndex = 5;
@@ -75,23 +75,26 @@
             // 
             // btnEdit
             // 
+            this.btnEdit.Enabled = false;
             this.btnEdit.Location = new System.Drawing.Point(982, 2);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(60, 28);
             this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Visible = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // cbStatus
             // 
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Location = new System.Drawing.Point(795, 4);
-            this.cbStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(4);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(166, 24);
             this.cbStatus.TabIndex = 3;
+            this.cbStatus.SelectedIndexChanged += new System.EventHandler(this.cbStatus_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -101,7 +104,7 @@
             this.panel2.Controls.Add(this.nmFromMinute);
             this.panel2.Controls.Add(this.nmFromHours);
             this.panel2.Location = new System.Drawing.Point(451, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(336, 37);
             this.panel2.TabIndex = 2;
@@ -109,7 +112,7 @@
             // nmToMinute
             // 
             this.nmToMinute.Location = new System.Drawing.Point(258, 6);
-            this.nmToMinute.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nmToMinute.Margin = new System.Windows.Forms.Padding(4);
             this.nmToMinute.Name = "nmToMinute";
             this.nmToMinute.Size = new System.Drawing.Size(49, 22);
             this.nmToMinute.TabIndex = 4;
@@ -117,7 +120,7 @@
             // nmToHours
             // 
             this.nmToHours.Location = new System.Drawing.Point(201, 6);
-            this.nmToHours.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nmToHours.Margin = new System.Windows.Forms.Padding(4);
             this.nmToHours.Name = "nmToHours";
             this.nmToHours.Size = new System.Drawing.Size(49, 22);
             this.nmToHours.TabIndex = 3;
@@ -135,7 +138,7 @@
             // nmFromMinute
             // 
             this.nmFromMinute.Location = new System.Drawing.Point(90, 7);
-            this.nmFromMinute.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nmFromMinute.Margin = new System.Windows.Forms.Padding(4);
             this.nmFromMinute.Name = "nmFromMinute";
             this.nmFromMinute.Size = new System.Drawing.Size(49, 22);
             this.nmFromMinute.TabIndex = 1;
@@ -143,7 +146,7 @@
             // nmFromHours
             // 
             this.nmFromHours.Location = new System.Drawing.Point(16, 8);
-            this.nmFromHours.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nmFromHours.Margin = new System.Windows.Forms.Padding(4);
             this.nmFromHours.Name = "nmFromHours";
             this.nmFromHours.Size = new System.Drawing.Size(49, 22);
             this.nmFromHours.TabIndex = 0;
@@ -151,7 +154,7 @@
             // txbJob
             // 
             this.txbJob.Location = new System.Drawing.Point(30, 8);
-            this.txbJob.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbJob.Margin = new System.Windows.Forms.Padding(4);
             this.txbJob.Name = "txbJob";
             this.txbJob.Size = new System.Drawing.Size(409, 22);
             this.txbJob.TabIndex = 1;
@@ -160,7 +163,7 @@
             // 
             this.ckbDone.AutoSize = true;
             this.ckbDone.Location = new System.Drawing.Point(4, 10);
-            this.ckbDone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ckbDone.Margin = new System.Windows.Forms.Padding(4);
             this.ckbDone.Name = "ckbDone";
             this.ckbDone.Size = new System.Drawing.Size(18, 17);
             this.ckbDone.TabIndex = 0;
@@ -172,9 +175,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AJob";
             this.Size = new System.Drawing.Size(1140, 41);
+            this.Load += new System.EventHandler(this.AJob_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

@@ -31,6 +31,7 @@ namespace LIFE_MANAGER.FormUI
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Dashboardnew));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btn_User = new FontAwesome.Sharp.IconButton();
             this.btn_logout = new FontAwesome.Sharp.IconButton();
             this.btn_setting = new FontAwesome.Sharp.IconButton();
             this.btn_chart = new FontAwesome.Sharp.IconButton();
@@ -49,7 +50,6 @@ namespace LIFE_MANAGER.FormUI
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_User = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -76,6 +76,28 @@ namespace LIFE_MANAGER.FormUI
             this.panelMenu.Size = new System.Drawing.Size(220, 790);
             this.panelMenu.TabIndex = 0;
             // 
+            // btn_User
+            // 
+            this.btn_User.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_User.FlatAppearance.BorderSize = 0;
+            this.btn_User.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_User.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_User.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btn_User.IconColor = System.Drawing.Color.Gainsboro;
+            this.btn_User.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_User.IconSize = 40;
+            this.btn_User.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_User.Location = new System.Drawing.Point(0, 140);
+            this.btn_User.Name = "btn_User";
+            this.btn_User.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.btn_User.Size = new System.Drawing.Size(220, 70);
+            this.btn_User.TabIndex = 5;
+            this.btn_User.Text = "GUEST";
+            this.btn_User.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_User.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_User.UseVisualStyleBackColor = true;
+            // 
             // btn_logout
             // 
             this.btn_logout.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -101,7 +123,6 @@ namespace LIFE_MANAGER.FormUI
             // 
             // btn_setting
             // 
-            this.btn_setting.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_setting.FlatAppearance.BorderSize = 0;
             this.btn_setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_setting.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -111,7 +132,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_setting.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_setting.IconSize = 40;
             this.btn_setting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_setting.Location = new System.Drawing.Point(0, 395);
+            this.btn_setting.Location = new System.Drawing.Point(0, 502);
             this.btn_setting.Name = "btn_setting";
             this.btn_setting.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btn_setting.Size = new System.Drawing.Size(220, 85);
@@ -124,7 +145,6 @@ namespace LIFE_MANAGER.FormUI
             // 
             // btn_chart
             // 
-            this.btn_chart.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_chart.FlatAppearance.BorderSize = 0;
             this.btn_chart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_chart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,7 +154,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_chart.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_chart.IconSize = 40;
             this.btn_chart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_chart.Location = new System.Drawing.Point(0, 310);
+            this.btn_chart.Location = new System.Drawing.Point(0, 417);
             this.btn_chart.Name = "btn_chart";
             this.btn_chart.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btn_chart.Size = new System.Drawing.Size(220, 85);
@@ -147,7 +167,6 @@ namespace LIFE_MANAGER.FormUI
             // 
             // btn_Diary
             // 
-            this.btn_Diary.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Diary.FlatAppearance.BorderSize = 0;
             this.btn_Diary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Diary.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,7 +176,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Diary.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_Diary.IconSize = 40;
             this.btn_Diary.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Diary.Location = new System.Drawing.Point(0, 225);
+            this.btn_Diary.Location = new System.Drawing.Point(0, 332);
             this.btn_Diary.Name = "btn_Diary";
             this.btn_Diary.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btn_Diary.Size = new System.Drawing.Size(220, 85);
@@ -170,7 +189,6 @@ namespace LIFE_MANAGER.FormUI
             // 
             // btn_profile
             // 
-            this.btn_profile.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_profile.FlatAppearance.BorderSize = 0;
             this.btn_profile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_profile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -180,7 +198,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_profile.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_profile.IconSize = 40;
             this.btn_profile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_profile.Location = new System.Drawing.Point(0, 140);
+            this.btn_profile.Location = new System.Drawing.Point(0, 247);
             this.btn_profile.Name = "btn_profile";
             this.btn_profile.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.btn_profile.Size = new System.Drawing.Size(220, 85);
@@ -278,7 +296,7 @@ namespace LIFE_MANAGER.FormUI
             this.lblTitleChildForm.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.lblTitleChildForm.Location = new System.Drawing.Point(76, 57);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(57, 22);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(62, 24);
             this.lblTitleChildForm.TabIndex = 3;
             this.lblTitleChildForm.Text = "Home";
             // 
@@ -349,28 +367,6 @@ namespace LIFE_MANAGER.FormUI
             this.label1.Size = new System.Drawing.Size(279, 38);
             this.label1.TabIndex = 3;
             this.label1.Text = "Application Diary";
-            // 
-            // btn_User
-            // 
-            this.btn_User.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_User.FlatAppearance.BorderSize = 0;
-            this.btn_User.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_User.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_User.IconChar = FontAwesome.Sharp.IconChar.SignOutAlt;
-            this.btn_User.IconColor = System.Drawing.Color.Gainsboro;
-            this.btn_User.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_User.IconSize = 40;
-            this.btn_User.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_User.Location = new System.Drawing.Point(0, 650);
-            this.btn_User.Name = "btn_User";
-            this.btn_User.Padding = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.btn_User.Size = new System.Drawing.Size(220, 70);
-            this.btn_User.TabIndex = 5;
-            this.btn_User.Text = "Logout";
-            this.btn_User.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_User.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_User.UseVisualStyleBackColor = true;
             // 
             // frm_Dashboardnew
             // 

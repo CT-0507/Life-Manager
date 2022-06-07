@@ -54,6 +54,7 @@ namespace LIFE_MANAGER.FormUI
             this.pb_Avatar.Location = new System.Drawing.Point(12, 82);
             this.pb_Avatar.Name = "pb_Avatar";
             this.pb_Avatar.Size = new System.Drawing.Size(322, 462);
+            this.pb_Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pb_Avatar.TabIndex = 0;
             this.pb_Avatar.TabStop = false;
             // 
