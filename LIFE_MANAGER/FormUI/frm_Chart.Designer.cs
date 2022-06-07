@@ -52,7 +52,7 @@ namespace LIFE_MANAGER.FormUI
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(472, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 39);
+            this.label1.Size = new System.Drawing.Size(102, 38);
             this.label1.TabIndex = 7;
             this.label1.Text = "Chart";
             // 
@@ -60,7 +60,7 @@ namespace LIFE_MANAGER.FormUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1062, 450);
+            this.ClientSize = new System.Drawing.Size(1062, 468);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Close);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -14,12 +14,14 @@ namespace LIFE_MANAGER.FormUI
 {
     public partial class frm_Login : Form
     {
+
         public static MongoClient mongoClient = new MongoClient("mongodb+srv://tranquocc123:Quoccuong1@maincluster.fmpjzgz.mongodb.net/?retryWrites=true&w=majority");
         public static IMongoDatabase db = mongoClient.GetDatabase("DiaryApp");
         public static IMongoCollection<Models.User> Users = db.GetCollection<Models.User>("Users");
         public static IMongoCollection<Models.Setting> Settings = db.GetCollection<Models.Setting>("Settings");
         public static Models.User User;
         public static Models.Setting Setting;
+
         public frm_Login()
         {
             InitializeComponent();
@@ -54,9 +56,9 @@ namespace LIFE_MANAGER.FormUI
                         try
                         {
                             var UserSetting = Settings.Find(setting => setting.UserId == User._id);
-                            Setting = (Models.Setting)UserSetting.First();
                             Thread abc = new Thread(() => new frm_Dashboardnew().ShowDialog());
                             abc.SetApartmentState(ApartmentState.STA);
+                            abc.Start();
                             abc.Start();
                             this.Close();
                         }
@@ -76,34 +78,30 @@ namespace LIFE_MANAGER.FormUI
                     MessageBox.Show("No user found");
                 }
             }
-            
-        }
 
+        }
         private void lb_OpenRegister_Click(object sender, EventArgs e)
         {
             Thread a = new Thread(() => new frm_Register().ShowDialog());
             a.SetApartmentState(ApartmentState.STA);
             a.Start();
             this.Close();
-        }
-  
 
-        private void tb_Pass_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode==Keys.Enter)
+        }
+
+            private void tb_Pass_KeyDown(object sender, KeyEventArgs e)
             {
-                btn_Login.PerformClick();
-                tb_Pass.Text = string.Empty;
+                if (e.KeyCode == Keys.Enter)
+                {
+                    btn_Login.PerformClick();
+                    tb_Pass.Text = string.Empty;
+                }
             }
-        }
+            private void btn_Close_Click(object sender, EventArgs e)
+            {
+                this.Close();
 
-
-    
-
-        private void btn_Close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-
-        }
-    }
-}
+            }
+          
+        } 
+  }
