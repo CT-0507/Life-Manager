@@ -116,5 +116,19 @@ namespace LIFE_MANAGER.FormUI
         {
             this.Close();
         }
+
+        private void mnsiDiary_Click(object sender, EventArgs e)
+        {
+
+            if (dtpkDate.Value <= DateTime.Now)
+            {
+                frm_DiaryWriting frm_DiaryWriting = new frm_DiaryWriting(dtpkDate.Value.Date);
+                frm_DiaryWriting.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Cannot Write on the future");
+            }
+        }
     }
 }

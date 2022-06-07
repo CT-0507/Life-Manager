@@ -178,6 +178,12 @@
     <Compile Include="FormUI\frm_Diary.Designer.cs">
       <DependentUpon>frm_Diary.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUI\frm_DiaryWriting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\frm_DiaryWriting.Designer.cs">
+      <DependentUpon>frm_DiaryWriting.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,7 @@
     <Compile Include="FormUI\frm_Todo.Designer.cs">
       <DependentUpon>frm_Todo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Diary.cs" />
     <Compile Include="Models\Setting.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="PlanData.cs" />
@@ -229,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\frm_Diary.resx">
       <DependentUpon>frm_Diary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\frm_DiaryWriting.resx">
+      <DependentUpon>frm_DiaryWriting.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
