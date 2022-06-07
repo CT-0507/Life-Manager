@@ -108,6 +108,7 @@ namespace LIFE_MANAGER.FormUI
                     Matrix[i].Add(btn);
 
                     oldBtn = btn;
+
                 }
                 oldBtn = new Button() { Width = 0, Height = 0, Location = new Point(-Cons.margin, oldBtn.Location.Y + Cons.dateButtonHeight) };
             }
@@ -227,8 +228,10 @@ namespace LIFE_MANAGER.FormUI
             fs.Close();
             StreamReader streamReader = new StreamReader(filePath);
             string xml = streamReader.ReadToEnd();
+            streamReader.Close();
             var update = Builders<Models.Plan>.Update
                         .Set("Data", xml);
+            
             try
             {
                 var updateDataQuery = Plans.UpdateOne(planD => planD._id == plan._id, update);

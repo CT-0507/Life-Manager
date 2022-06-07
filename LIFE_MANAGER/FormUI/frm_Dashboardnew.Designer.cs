@@ -294,7 +294,7 @@ namespace LIFE_MANAGER.FormUI
             this.lblTitleChildForm.AutoSize = true;
             this.lblTitleChildForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleChildForm.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(91, 52);
+            this.lblTitleChildForm.Location = new System.Drawing.Point(106, 51);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
             this.lblTitleChildForm.Size = new System.Drawing.Size(90, 32);
             this.lblTitleChildForm.TabIndex = 3;
@@ -307,10 +307,10 @@ namespace LIFE_MANAGER.FormUI
             this.iconcurrentchildform.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconcurrentchildform.IconColor = System.Drawing.Color.MediumOrchid;
             this.iconcurrentchildform.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconcurrentchildform.IconSize = 31;
+            this.iconcurrentchildform.IconSize = 40;
             this.iconcurrentchildform.Location = new System.Drawing.Point(34, 52);
             this.iconcurrentchildform.Name = "iconcurrentchildform";
-            this.iconcurrentchildform.Size = new System.Drawing.Size(38, 31);
+            this.iconcurrentchildform.Size = new System.Drawing.Size(50, 31);
             this.iconcurrentchildform.TabIndex = 2;
             this.iconcurrentchildform.TabStop = false;
             // 

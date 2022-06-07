@@ -130,5 +130,12 @@ namespace LIFE_MANAGER.FormUI
                 MessageBox.Show("Cannot Write on the future");
             }
         }
+
+      
+
+        private void frm_Todo_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
