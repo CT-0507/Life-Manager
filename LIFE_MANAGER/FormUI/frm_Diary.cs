@@ -227,6 +227,7 @@ namespace LIFE_MANAGER.FormUI
             fs.Close();
             StreamReader streamReader = new StreamReader(filePath);
             string xml = streamReader.ReadToEnd();
+            streamReader.Close();
             var update = Builders<Models.Plan>.Update
                         .Set("Data", xml);
             try
