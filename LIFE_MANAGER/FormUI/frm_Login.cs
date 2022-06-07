@@ -14,12 +14,14 @@ namespace LIFE_MANAGER.FormUI
 {
     public partial class frm_Login : Form
     {
+
         public static MongoClient mongoClient = new MongoClient("mongodb+srv://tranquocc123:Quoccuong1@maincluster.fmpjzgz.mongodb.net/?retryWrites=true&w=majority");
         public static IMongoDatabase db = mongoClient.GetDatabase("DiaryApp");
         public static IMongoCollection<Models.User> Users = db.GetCollection<Models.User>("Users");
         public static IMongoCollection<Models.Setting> Settings = db.GetCollection<Models.Setting>("Settings");
         public static Models.User User;
         public static Models.Setting Setting;
+
         public frm_Login()
         {
             InitializeComponent();
@@ -50,20 +52,20 @@ namespace LIFE_MANAGER.FormUI
                     {
                         User = (Models.User)query.First();
                         lb_WrongUser.Visible = false;
-                        frm_Dashboard frm_Dashboardnew = new frm_Dashboard();
-                        frm_Dashboardnew.ShowDialog();
-                        //Thread a = new Thread(() => new frm_Dashboardnew().ShowDialog());
-                        //a.SetApartmentState(ApartmentState.STA);
-                        //a.Start();
-                        //6this.Close();
+                    
+                        Thread a = new Thread(() => new frm_Dashboardnew().ShowDialog());
+                        a.SetApartmentState(ApartmentState.STA);
+                        a.Start();
+                        this.Close();
 
                         try
                         {
                             var UserSetting = Settings.Find(setting => setting.UserId == User._id);
                             Setting = (Models.Setting)UserSetting.First();
-                            Thread a = new Thread(() => new frm_Dashboard().ShowDialog());
-                            a.SetApartmentState(ApartmentState.STA);
-                            a.Start();
+                            Thread abc = new Thread(() => new frm_Dashboard().ShowDialog());
+                            abc.SetApartmentState(ApartmentState.STA);
+                            abc.Start();
+
                             this.Close();
                         }
                         catch (Exception ex)
@@ -84,7 +86,6 @@ namespace LIFE_MANAGER.FormUI
             }
             
         }
-
         private void lb_OpenRegister_Click(object sender, EventArgs e)
         {
             Thread a = new Thread(() => new frm_Register().ShowDialog());
@@ -96,7 +97,6 @@ namespace LIFE_MANAGER.FormUI
         {
 
         }
-
         private void tb_Pass_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode==Keys.Enter)
@@ -105,13 +105,13 @@ namespace LIFE_MANAGER.FormUI
                 btn_Login.Text = string.Empty;
             }
         }
-
-
-    
-
         private void btn_Close_Click(object sender, EventArgs e)
         {
             this.Close();
+
+        }
+        private void frm_Login_Load(object sender, EventArgs e)
+        {
 
         }
     }
