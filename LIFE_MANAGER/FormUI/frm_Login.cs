@@ -52,21 +52,34 @@ namespace LIFE_MANAGER.FormUI
                     {
                         User = (Models.User)query.First();
                         lb_WrongUser.Visible = false;
-
                         try
                         {
                             var UserSetting = Settings.Find(setting => setting.UserId == User._id);
-                            Thread abc = new Thread(() => new frm_Dashboardnew().ShowDialog());
-                            abc.SetApartmentState(ApartmentState.STA);
-                            abc.Start();
-                            abc.Start();
-                            this.Close();
+                            Setting = UserSetting.First();
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message);
+                            //MessageBox.Show(ex.Message);
+                            Models.Setting setting = new Models.Setting()
+                            {
+                                isBackgroundMusicVolume = true,
+                                isNotification = true,
+                                BackgroundImage = null,
+                                StartWithWindows = true,
+                                UserId = User._id,
+                            };
+                            var settingoptions = new CreateIndexOptions { Unique = true };
+#pragma warning disable CS0618 // Type or member is obsolete
+                            frm_Login.Settings.Indexes.CreateOne("{ UserId : 1 }", settingoptions);
+#pragma warning restore CS0618 // Type or member is obsolete
+                            frm_Login.Settings.InsertOne(setting);
+                            var UserSetting = Settings.Find(settingD => setting.UserId == User._id);
+                            Setting = UserSetting.First();
                         }
-
+                        Thread abc = new Thread(() => new frm_Dashboardnew().ShowDialog());
+                        abc.SetApartmentState(ApartmentState.STA);
+                        abc.Start();
+                        this.Close();
                     }
                     else
                     {
