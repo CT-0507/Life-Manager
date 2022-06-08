@@ -62,7 +62,7 @@ namespace LIFE_MANAGER.FormUI
                         MessageBox.Show("Your changes is successfully saved");
                         frm_Login.User = UserChanges;
                         FormLoad();
-                        frm_Dashboard frm = Application.OpenForms.OfType<frm_Dashboard>().FirstOrDefault();
+                        frm_Dashboardnew frm = Application.OpenForms.OfType<frm_Dashboardnew>().FirstOrDefault();
                         frm.ChangeUserAvatar();
                     }
                     catch (Exception ex)

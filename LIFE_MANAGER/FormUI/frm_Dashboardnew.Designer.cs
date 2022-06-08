@@ -251,6 +251,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Quit.FlatAppearance.BorderSize = 0;
             this.btn_Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Quit.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_Quit.Location = new System.Drawing.Point(1291, 12);
             this.btn_Quit.Name = "btn_Quit";
             this.btn_Quit.Size = new System.Drawing.Size(30, 30);
@@ -266,6 +267,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Maximize.FlatAppearance.BorderSize = 0;
             this.btn_Maximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Maximize.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Maximize.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_Maximize.Location = new System.Drawing.Point(1245, 12);
             this.btn_Maximize.Name = "btn_Maximize";
             this.btn_Maximize.Size = new System.Drawing.Size(30, 30);
@@ -281,6 +283,7 @@ namespace LIFE_MANAGER.FormUI
             this.bnt_Minimize.FlatAppearance.BorderSize = 0;
             this.bnt_Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bnt_Minimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bnt_Minimize.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.bnt_Minimize.Location = new System.Drawing.Point(1197, 12);
             this.bnt_Minimize.Name = "bnt_Minimize";
             this.bnt_Minimize.Size = new System.Drawing.Size(30, 30);
@@ -307,7 +310,7 @@ namespace LIFE_MANAGER.FormUI
             this.iconcurrentchildform.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconcurrentchildform.IconColor = System.Drawing.Color.MediumOrchid;
             this.iconcurrentchildform.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconcurrentchildform.IconSize = 40;
+            this.iconcurrentchildform.IconSize = 31;
             this.iconcurrentchildform.Location = new System.Drawing.Point(34, 52);
             this.iconcurrentchildform.Name = "iconcurrentchildform";
             this.iconcurrentchildform.Size = new System.Drawing.Size(50, 31);

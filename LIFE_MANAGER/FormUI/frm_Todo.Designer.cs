@@ -142,14 +142,15 @@
             // 
             // btn_Close
             // 
+            this.btn_Close.BackColor = System.Drawing.Color.Cyan;
             this.btn_Close.FlatAppearance.BorderSize = 0;
             this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Close.Image = ((System.Drawing.Image)(resources.GetObject("btn_Close.Image")));
-            this.btn_Close.Location = new System.Drawing.Point(1325, 0);
+            this.btn_Close.Location = new System.Drawing.Point(1333, 1);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(75, 23);
             this.btn_Close.TabIndex = 5;
-            this.btn_Close.UseVisualStyleBackColor = true;
+            this.btn_Close.UseVisualStyleBackColor = false;
             this.btn_Close.Click += new System.EventHandler(this.btn_Close_Click);
             // 
             // frm_Todo

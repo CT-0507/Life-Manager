@@ -86,8 +86,8 @@ namespace LIFE_MANAGER.FormUI
             // btn_AvatarUpload
             // 
             this.btn_AvatarUpload.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_AvatarUpload.BackColor = System.Drawing.Color.DimGray;
-            this.btn_AvatarUpload.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btn_AvatarUpload.BackColor = System.Drawing.Color.Blue;
+            this.btn_AvatarUpload.BackgroundColor = System.Drawing.Color.Blue;
             this.btn_AvatarUpload.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_AvatarUpload.BorderRadius = 40;
             this.btn_AvatarUpload.BorderSize = 0;
@@ -95,20 +95,22 @@ namespace LIFE_MANAGER.FormUI
             this.btn_AvatarUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_AvatarUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AvatarUpload.ForeColor = System.Drawing.Color.White;
-            this.btn_AvatarUpload.Location = new System.Drawing.Point(98, 377);
+            this.btn_AvatarUpload.Location = new System.Drawing.Point(110, 377);
             this.btn_AvatarUpload.Name = "btn_AvatarUpload";
-            this.btn_AvatarUpload.Size = new System.Drawing.Size(133, 46);
+            this.btn_AvatarUpload.Size = new System.Drawing.Size(121, 46);
             this.btn_AvatarUpload.TabIndex = 36;
             this.btn_AvatarUpload.Text = "Upload Avatar";
+            this.btn_AvatarUpload.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_AvatarUpload.TextColor = System.Drawing.Color.White;
+            this.btn_AvatarUpload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btn_AvatarUpload.UseVisualStyleBackColor = false;
             this.btn_AvatarUpload.Click += new System.EventHandler(this.btn_AvatarUpload_Click);
             // 
             // btn_DeleteUser
             // 
             this.btn_DeleteUser.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_DeleteUser.BackColor = System.Drawing.Color.DimGray;
-            this.btn_DeleteUser.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btn_DeleteUser.BackColor = System.Drawing.Color.Blue;
+            this.btn_DeleteUser.BackgroundColor = System.Drawing.Color.Blue;
             this.btn_DeleteUser.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_DeleteUser.BorderRadius = 40;
             this.btn_DeleteUser.BorderSize = 0;
@@ -128,8 +130,8 @@ namespace LIFE_MANAGER.FormUI
             // btn_SaveChanges
             // 
             this.btn_SaveChanges.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_SaveChanges.BackColor = System.Drawing.Color.DimGray;
-            this.btn_SaveChanges.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btn_SaveChanges.BackColor = System.Drawing.Color.Blue;
+            this.btn_SaveChanges.BackgroundColor = System.Drawing.Color.Blue;
             this.btn_SaveChanges.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_SaveChanges.BorderRadius = 40;
             this.btn_SaveChanges.BorderSize = 0;

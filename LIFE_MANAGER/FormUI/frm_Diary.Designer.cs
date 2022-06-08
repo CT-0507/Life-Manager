@@ -81,10 +81,10 @@
             // 
             this.panel6.Controls.Add(this.nmNotify);
             this.panel6.Controls.Add(this.ckbNotify);
-            this.panel6.Location = new System.Drawing.Point(9, 15);
+            this.panel6.Location = new System.Drawing.Point(9, 11);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(353, 69);
+            this.panel6.Size = new System.Drawing.Size(353, 54);
             this.panel6.TabIndex = 2;
             // 
             // nmNotify
@@ -110,11 +110,13 @@
             0,
             0,
             0});
+            this.nmNotify.ValueChanged += new System.EventHandler(this.nmNotify_ValueChanged);
             // 
             // ckbNotify
             // 
             this.ckbNotify.AutoSize = true;
             this.ckbNotify.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbNotify.ForeColor = System.Drawing.Color.Gainsboro;
             this.ckbNotify.Location = new System.Drawing.Point(15, 12);
             this.ckbNotify.Margin = new System.Windows.Forms.Padding(4);
             this.ckbNotify.Name = "ckbNotify";
@@ -122,6 +124,7 @@
             this.ckbNotify.TabIndex = 0;
             this.ckbNotify.Text = "Notify";
             this.ckbNotify.UseVisualStyleBackColor = true;
+            this.ckbNotify.CheckedChanged += new System.EventHandler(this.ckbNotify_CheckedChanged);
             // 
             // btnToDay
             // 
@@ -136,6 +139,9 @@
             // 
             // dtpkDate
             // 
+            this.dtpkDate.CalendarForeColor = System.Drawing.Color.Gainsboro;
+            this.dtpkDate.CalendarTitleBackColor = System.Drawing.Color.AntiqueWhite;
+            this.dtpkDate.CalendarTrailingForeColor = System.Drawing.Color.Gainsboro;
             this.dtpkDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpkDate.Location = new System.Drawing.Point(457, 27);
             this.dtpkDate.Margin = new System.Windows.Forms.Padding(4);

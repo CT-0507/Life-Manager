@@ -160,12 +160,6 @@
     <Compile Include="FormUI\frm_Chart.Designer.cs">
       <DependentUpon>frm_Chart.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\frm_Dashboardcs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormUI\frm_Dashboardcs.Designer.cs">
-      <DependentUpon>frm_Dashboardcs.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormUI\frm_Dashboardnew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +208,11 @@
     <Compile Include="FormUI\frm_Todo.Designer.cs">
       <DependentUpon>frm_Todo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Dashboardnew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frm_Dashboardnew.resx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Diary.cs" />
     <Compile Include="Models\Plan.cs" />
     <Compile Include="Models\Setting.cs" />
@@ -229,13 +228,8 @@
     <EmbeddedResource Include="FormUI\frm_Chart.resx">
       <DependentUpon>frm_Chart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\frm_Dashboardcs.resx">
-      <DependentUpon>frm_Dashboardcs.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormUI\frm_Dashboardnew.resx">
       <DependentUpon>frm_Dashboardnew.cs</DependentUpon>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>frm_Dashboardnew1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\frm_Diary.resx">
       <DependentUpon>frm_Diary.cs</DependentUpon>
@@ -257,6 +251,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\frm_Todo.resx">
       <DependentUpon>frm_Todo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Dashboardnew.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frm_Dashboardnew.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

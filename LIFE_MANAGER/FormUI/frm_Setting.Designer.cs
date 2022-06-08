@@ -80,8 +80,8 @@ namespace LIFE_MANAGER.FormUI
             // btn_RemoveBackgroundImage
             // 
             this.btn_RemoveBackgroundImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_RemoveBackgroundImage.BackColor = System.Drawing.Color.DimGray;
-            this.btn_RemoveBackgroundImage.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btn_RemoveBackgroundImage.BackColor = System.Drawing.Color.Blue;
+            this.btn_RemoveBackgroundImage.BackgroundColor = System.Drawing.Color.Blue;
             this.btn_RemoveBackgroundImage.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_RemoveBackgroundImage.BorderRadius = 40;
             this.btn_RemoveBackgroundImage.BorderSize = 0;
@@ -101,8 +101,8 @@ namespace LIFE_MANAGER.FormUI
             // btn_ViewBackground
             // 
             this.btn_ViewBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_ViewBackground.BackColor = System.Drawing.Color.DimGray;
-            this.btn_ViewBackground.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btn_ViewBackground.BackColor = System.Drawing.Color.Blue;
+            this.btn_ViewBackground.BackgroundColor = System.Drawing.Color.Blue;
             this.btn_ViewBackground.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_ViewBackground.BorderRadius = 40;
             this.btn_ViewBackground.BorderSize = 0;
@@ -122,8 +122,8 @@ namespace LIFE_MANAGER.FormUI
             // btn_BackgroundUpload
             // 
             this.btn_BackgroundUpload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btn_BackgroundUpload.BackColor = System.Drawing.Color.DimGray;
-            this.btn_BackgroundUpload.BackgroundColor = System.Drawing.Color.DimGray;
+            this.btn_BackgroundUpload.BackColor = System.Drawing.Color.Blue;
+            this.btn_BackgroundUpload.BackgroundColor = System.Drawing.Color.Blue;
             this.btn_BackgroundUpload.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_BackgroundUpload.BorderRadius = 40;
             this.btn_BackgroundUpload.BorderSize = 0;

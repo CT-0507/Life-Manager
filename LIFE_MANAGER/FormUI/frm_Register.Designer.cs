@@ -192,8 +192,8 @@ namespace LIFE_MANAGER.FormUI
             // 
             // btn_Register
             // 
-            this.btn_Register.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_Register.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_Register.BackColor = System.Drawing.Color.Blue;
+            this.btn_Register.BackgroundColor = System.Drawing.Color.Blue;
             this.btn_Register.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_Register.BorderRadius = 40;
             this.btn_Register.BorderSize = 0;
@@ -234,8 +234,8 @@ namespace LIFE_MANAGER.FormUI
             // 
             // btn_AvatarUpload
             // 
-            this.btn_AvatarUpload.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_AvatarUpload.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_AvatarUpload.BackColor = System.Drawing.Color.Blue;
+            this.btn_AvatarUpload.BackgroundColor = System.Drawing.Color.Blue;
             this.btn_AvatarUpload.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_AvatarUpload.BorderRadius = 40;
             this.btn_AvatarUpload.BorderSize = 0;

@@ -108,7 +108,7 @@ namespace LIFE_MANAGER.FormUI
             // lb_OpenRegister
             // 
             this.lb_OpenRegister.AutoSize = true;
-            this.lb_OpenRegister.ForeColor = System.Drawing.Color.DarkBlue;
+            this.lb_OpenRegister.ForeColor = System.Drawing.Color.Gainsboro;
             this.lb_OpenRegister.Location = new System.Drawing.Point(92, 299);
             this.lb_OpenRegister.Name = "lb_OpenRegister";
             this.lb_OpenRegister.Size = new System.Drawing.Size(233, 17);
@@ -120,7 +120,7 @@ namespace LIFE_MANAGER.FormUI
             // 
             this.lb_WrongUser.AutoSize = true;
             this.lb_WrongUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_WrongUser.ForeColor = System.Drawing.Color.IndianRed;
+            this.lb_WrongUser.ForeColor = System.Drawing.Color.Gainsboro;
             this.lb_WrongUser.Location = new System.Drawing.Point(51, 228);
             this.lb_WrongUser.Name = "lb_WrongUser";
             this.lb_WrongUser.Size = new System.Drawing.Size(292, 25);
@@ -142,8 +142,8 @@ namespace LIFE_MANAGER.FormUI
             // 
             // btn_Login
             // 
-            this.btn_Login.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btn_Login.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btn_Login.BackColor = System.Drawing.Color.Blue;
+            this.btn_Login.BackgroundColor = System.Drawing.Color.Blue;
             this.btn_Login.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btn_Login.BorderRadius = 40;
             this.btn_Login.BorderSize = 0;
