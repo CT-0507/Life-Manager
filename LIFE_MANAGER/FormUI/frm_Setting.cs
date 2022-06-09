@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace LIFE_MANAGER.FormUI
 {
@@ -20,10 +21,12 @@ namespace LIFE_MANAGER.FormUI
         private bool OriginalStateStartWithWindows = frm_Login.Setting.StartWithWindows;
         private bool OriginalStateVolume = frm_Login.Setting.isBackgroundMusicVolume;
         private bool OriginalDarkMode = frm_Login.Setting.isDarkMode;
+        WMPLib.WindowsMediaPlayer player = new WMPLib.WindowsMediaPlayer();
+
         public frm_Setting()
         {
             InitializeComponent();
-       
+            player.controls.stop();
             tgb_Notification.Checked = OriginalStateNotification;
             tgb_StartWithWindows.Checked = OriginalStateStartWithWindows;
             tgb_Volume.Checked = OriginalStateVolume;
@@ -188,6 +191,16 @@ namespace LIFE_MANAGER.FormUI
                     MessageBox.Show(ex.Message);
                 }
             }
+            if (tgb_Volume.Checked == true)
+            {
+                player.controls.play();
+                player.URL = "1.mp3";
+            }
+            else
+            {
+                player.controls.stop();
+
+            }
         }
 
         private void btn_RemoveBackgroundImage_Click(object sender, EventArgs e)
@@ -228,6 +241,9 @@ namespace LIFE_MANAGER.FormUI
                 frm_Dashboardnew frm = Application.OpenForms.OfType<frm_Dashboardnew>().FirstOrDefault();
                 frm.setbackclor1(Color.LightGreen);
             }
+
+
+
         }
     }
 }

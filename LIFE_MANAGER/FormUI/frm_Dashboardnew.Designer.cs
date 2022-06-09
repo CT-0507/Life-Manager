@@ -82,7 +82,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_User.FlatAppearance.BorderSize = 0;
             this.btn_User.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_User.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_User.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_User.ForeColor = System.Drawing.Color.Orange;
             this.btn_User.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btn_User.IconColor = System.Drawing.Color.Gainsboro;
             this.btn_User.IconFont = FontAwesome.Sharp.IconFont.Auto;
