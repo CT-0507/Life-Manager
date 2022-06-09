@@ -271,5 +271,15 @@ namespace LIFE_MANAGER.FormUI
             panel2.BackgroundImage = this.BackgroundImage;
 
         }
+
+        private void nmNotify_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ckbNotify_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

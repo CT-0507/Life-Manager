@@ -1,4 +1,5 @@
-﻿using MongoDB.Driver;
+﻿using Microsoft.Win32;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,7 @@ namespace LIFE_MANAGER.FormUI
         public frm_Setting()
         {
             InitializeComponent();
+       
             tgb_Notification.Checked = OriginalStateNotification;
             tgb_StartWithWindows.Checked = OriginalStateStartWithWindows;
             tgb_Volume.Checked = OriginalStateVolume;
@@ -46,7 +48,7 @@ namespace LIFE_MANAGER.FormUI
         private string backgroundImagePath = "";
         private void btn_BackgroundUpload_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
+            System.Windows.Forms.OpenFileDialog ofd = new System.Windows.Forms.OpenFileDialog();
             ofd.Filter = "Image File (*.jpg;*.png)|*.jpg;*.png";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
@@ -115,6 +117,8 @@ namespace LIFE_MANAGER.FormUI
                 }
             }
         }
+        RegistryKey regstart = Registry.CurrentUser.CreateSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run");
+
 
         private void tgb_StartWithWindows_CheckedChanged(object sender, EventArgs e)
         {
@@ -133,6 +137,33 @@ namespace LIFE_MANAGER.FormUI
                     MessageBox.Show(ex.Message);
                 }
             }
+
+
+            //hàm khỏi động cùng windows
+            if (tgb_StartWithWindows.Checked==true)
+            {
+                RegistryKey regkey = Registry.CurrentUser.CreateSubKey("Software\\LIFE_MANAGER");
+                //mo registry khoi dong cung win
+                string keyvalue = "1";
+
+                try
+                {
+                    //chen gia tri key
+                    regkey.SetValue("Index", keyvalue);
+                    regstart.SetValue("LIFE_MANAGER", Application.StartupPath + "\\LIFE_MANAGER.exe");
+                    regkey.Close();
+
+                }
+                catch (System.Exception ex)
+                {
+                }
+            }
+            else
+            {
+                regstart.DeleteValue("LIFE_MANAGER");
+
+            }
+
         }
 
         private void tgb_Volume_CheckedChanged(object sender, EventArgs e)
@@ -161,6 +192,11 @@ namespace LIFE_MANAGER.FormUI
                             .Set("BackgroundImage", String.Empty);
             var query = frm_Login.Settings.UpdateOne(setting => setting._id == frm_Login.Setting._id, update);
             frm_Login.Setting.BackgroundImage = "";
+        }
+
+        private void tgb_DarkMode_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -41,7 +41,9 @@ namespace LIFE_MANAGER.FormUI
                 Diaries.InsertOne(diary);
                 var diaryquery = Diaries.Find(date => date.Date == Date.ToString("yyyyMMdd"));
                 diary = diaryquery.First();
+               
             }           
+            
             lb_Date.Text = diary.Date;
             rtb_Diary.Text = diary.DiaryNote;
             if (diary.Images.Count != 0)
@@ -128,6 +130,11 @@ namespace LIFE_MANAGER.FormUI
         {
             pnl_Images.Controls.Clear();
             imagePaths.Clear();
+        }
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -14,6 +14,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +48,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Setting.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DnsClient, Version=1.6.0.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
@@ -160,12 +178,6 @@
     <Compile Include="FormUI\frm_Chart.Designer.cs">
       <DependentUpon>frm_Chart.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUI\frm_Dashboardcs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormUI\frm_Dashboardcs.Designer.cs">
-      <DependentUpon>frm_Dashboardcs.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormUI\frm_Dashboardnew.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +226,11 @@
     <Compile Include="FormUI\frm_Todo.Designer.cs">
       <DependentUpon>frm_Todo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Dashboardnew.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frm_Dashboardnew.resx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Diary.cs" />
     <Compile Include="Models\Plan.cs" />
     <Compile Include="Models\Setting.cs" />
@@ -229,13 +246,8 @@
     <EmbeddedResource Include="FormUI\frm_Chart.resx">
       <DependentUpon>frm_Chart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUI\frm_Dashboardcs.resx">
-      <DependentUpon>frm_Dashboardcs.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormUI\frm_Dashboardnew.resx">
       <DependentUpon>frm_Dashboardnew.cs</DependentUpon>
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>frm_Dashboardnew1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\frm_Diary.resx">
       <DependentUpon>frm_Diary.cs</DependentUpon>
@@ -257,6 +269,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\frm_Todo.resx">
       <DependentUpon>frm_Todo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Dashboardnew.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frm_Dashboardnew.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -353,9 +369,22 @@
     <Content Include="Scripts\fontawesome\solid.min.js" />
     <Content Include="Scripts\fontawesome\v4-shims.js" />
     <Content Include="Scripts\fontawesome\v4-shims.min.js" />
+    <Content Include="Setting.ico" />
     <Content Include="webfonts\fa-brands-400.svg" />
     <Content Include="webfonts\fa-regular-400.svg" />
     <Content Include="webfonts\fa-solid-900.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.3.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.3.0\build\MongoDB.Libmongocrypt.targets')" />
