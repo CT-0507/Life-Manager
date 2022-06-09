@@ -18,34 +18,52 @@ namespace LIFE_MANAGER.FormUI
         private Models.Diary diary;
         public frm_DiaryWriting(DateTime Date)
         {
-            InitializeComponent();        
+            InitializeComponent();
+            List<string> moods = new List<string>
+            {
+                "Happy",
+                "Neutral",
+                "Sad"
+            };
+            cb_Mood.DataSource = moods;
+            cb_Mood.SelectedIndex = 0;
+            var DateMDY = Date.ToString("M/d/yyyy");
+            var DateSplited = DateMDY.Split(new char[] {'/'}, StringSplitOptions.RemoveEmptyEntries);
             try
             {
+                
                 var query = Diaries.Find(x => x.Date == Date.ToString("yyyyMMdd") && x.UserId == frm_Login.User._id);
                 diary = query.First();
             }
-            catch (Exception ex)
+            catch
             {
                 diary = new Models.Diary()
                 {
                     Date = Date.ToString("yyyyMMdd"),
+                    DateSplit = new List<string>(3) 
+                    {
+                        DateSplited[2],
+                        DateSplited[0],
+                        DateSplited[1],
+                    },
                     DiaryNote = "",
                     DrawingImage = "",
                     Images = new List<string>(),
+                    Mood = "Happy",
                     UserId = frm_Login.User._id,
                 };
                 var settingoptions = new CreateIndexOptions { Unique = true };
 #pragma warning disable CS0618 // Type or member is obsolete
-                Diaries.Indexes.CreateOne("{ Date : 1 }", settingoptions);
+                Diaries.Indexes.CreateOne("{ Date : 1}", settingoptions);
 #pragma warning restore CS0618 // Type or member is obsolete
                 Diaries.InsertOne(diary);
                 var diaryquery = Diaries.Find(date => date.Date == Date.ToString("yyyyMMdd"));
                 diary = diaryquery.First();
-               
             }           
             
-            lb_Date.Text = diary.Date;
+            lb_Date.Text = $"Date: {diary.DateSplit[2]}/{diary.DateSplit[1]}/{diary.DateSplit[0]}";
             rtb_Diary.Text = diary.DiaryNote;
+            cb_Mood.Text = diary.Mood;
             if (diary.Images.Count != 0)
             {
                 for (int i = 0; i < diary.Images.Count; i++)
@@ -81,12 +99,17 @@ namespace LIFE_MANAGER.FormUI
                     diary.Images.Add(base64ImageRepresentation);
                 }
             }
+            diary.Mood = cb_Mood.Text;
             try
             {
                 var update = Builders<Models.Diary>.Update
                     .Set("DiaryNote", diary.DiaryNote)
-                    .Set("Images", diary.Images);
+                    .Set("Images", diary.Images)
+                    .Set("Mood", diary.Mood);
                 var updateQuery = Diaries.UpdateOne(diaryD => diaryD._id == diary._id, update);
+                frm_Diary frm = Application.OpenForms.OfType<frm_Diary>().FirstOrDefault();
+                //frm.Form_Lo;
+                frm.AddNumberIntoMatrixByDate(DateTime.Now);
             }
             catch (Exception ex)
             {

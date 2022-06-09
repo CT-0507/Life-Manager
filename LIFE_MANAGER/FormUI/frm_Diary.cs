@@ -18,7 +18,7 @@ namespace LIFE_MANAGER.FormUI
     public partial class frm_Diary : Form
     {
         #region Peoperties
-        private string filePath = "data.xml";
+        private readonly string filePath = "data.xml";
 
         private List<List<Button>> matrix;
 
@@ -38,7 +38,9 @@ namespace LIFE_MANAGER.FormUI
 
         private List<string> dateOfWeek = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
         private IMongoCollection<Models.Plan> Plans = frm_Login.db.GetCollection<Models.Plan>("Plans");
+        private IMongoCollection<Models.Diary> Diaries = frm_Login.db.GetCollection<Models.Diary>("Diaries");
         private Models.Plan plan;
+        private DateTime Today = DateTime.Now;
         #endregion
         public frm_Diary()
         {
@@ -50,7 +52,7 @@ namespace LIFE_MANAGER.FormUI
                 var query = Plans.Find(planD => planD.UserId == frm_Login.User._id);
                 plan = query.First();
             }
-            catch (Exception ex)
+            catch
             {
                 plan = new Models.Plan()
                 {
@@ -74,6 +76,7 @@ namespace LIFE_MANAGER.FormUI
             {
                 SetDefaultJob();
             }
+            
         }
 
         void SetDefaultJob()
@@ -82,7 +85,7 @@ namespace LIFE_MANAGER.FormUI
             Job.Job = new List<PlanItem>();
             Job.Job.Add(new PlanItem()
             {
-                Date = DateTime.Now,
+                Date = Today,
                 FromTime = new Point(4, 0),
                 ToTime = new Point(5, 0),
                 Job = "Thử nghiệm thôi",
@@ -146,34 +149,63 @@ namespace LIFE_MANAGER.FormUI
             }
         }
 
-        void AddNumberIntoMatrixByDate(DateTime date)
+        public void AddNumberIntoMatrixByDate(DateTime date)
         {
             ClearMatrix();
             DateTime useDate = new DateTime(date.Year, date.Month, 1);
-
-            int line = 0;
-
-            for (int i = 1; i <= DayOfMonth(date); i++)
+            try
             {
-                int column = dateOfWeek.IndexOf(useDate.DayOfWeek.ToString());
-                Button btn = Matrix[line][column];
-                btn.Text = i.ToString();
+                var DateMDY = Today.ToString("M/d/yyyy");
+                var DateSplited = DateMDY.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
+                var MoodQuery = Diaries.Find(dateD => dateD.DateSplit[0] == DateSplited[2] && dateD.DateSplit[1] == DateSplited[0] && dateD.UserId == frm_Login.User._id).ToList();
+                int line = 0;
 
-                if (isEqualDate(useDate, DateTime.Now))
+                for (int i = 1; i <= DayOfMonth(date); i++)
                 {
-                    btn.BackColor = Color.Yellow;
+                    int column = dateOfWeek.IndexOf(useDate.DayOfWeek.ToString());
+                    Button btn = Matrix[line][column];
+                    btn.Text = i.ToString();
+                    
+                    //if (isEqualDate(useDate, DateTime.Now))
+                    //{
+                    //    btn.BackColor = Color.Yellow;
+                    //}
+
+                    //if (isEqualDate(useDate, date))
+                    //{
+                    //    btn.BackColor = Color.Aqua;
+                    //}
+                    for (int z = 0; z < MoodQuery.Count; z++)
+                    {
+                        if (btn.Text == MoodQuery[z].DateSplit[2])
+                        {
+                            if(MoodQuery[z].Mood == "Happy")
+                            {
+                                btn.BackColor = Color.Aqua;
+                            }
+                            if(MoodQuery[z].Mood == "Neutral")
+                            {
+                                btn.BackColor = Color.Yellow;
+                            }
+                            if(MoodQuery[z].Mood == "Sad")
+                            {
+                                btn.BackColor= Color.Red;
+                            }
+                        }
+                    }
+                    if (column >= 6)
+                        line++;
+
+                    useDate = useDate.AddDays(1);
                 }
 
-                if (isEqualDate(useDate, date))
-                {
-                    btn.BackColor = Color.Aqua;
-                }
-
-                if (column >= 6)
-                    line++;
-
-                useDate = useDate.AddDays(1);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+            
         }
 
         bool isEqualDate(DateTime dateA, DateTime dateB)
@@ -253,7 +285,7 @@ namespace LIFE_MANAGER.FormUI
                 fs.Close();
                 return result;
             }
-            catch (Exception e)
+            catch
             {
                 fs.Close();
                 throw new NotImplementedException();

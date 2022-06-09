@@ -34,7 +34,7 @@
             this.pnl_Images = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cb_Mood = new System.Windows.Forms.ComboBox();
             this.lb_Date = new System.Windows.Forms.Label();
             this.btn_Close = new System.Windows.Forms.Button();
             this.btn_Clear = new LIFE_MANAGER.Custom_Control.RoundedButton();
@@ -95,18 +95,13 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Feeling";
             // 
-            // comboBox1
+            // cb_Mood
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Happy",
-            "Sad",
-            "Despair",
-            "Proud"});
-            this.comboBox1.Location = new System.Drawing.Point(230, 587);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 10;
+            this.cb_Mood.FormattingEnabled = true;
+            this.cb_Mood.Location = new System.Drawing.Point(230, 587);
+            this.cb_Mood.Name = "cb_Mood";
+            this.cb_Mood.Size = new System.Drawing.Size(121, 24);
+            this.cb_Mood.TabIndex = 10;
             // 
             // lb_Date
             // 
@@ -210,7 +205,7 @@
             this.ClientSize = new System.Drawing.Size(1436, 689);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lb_Date);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cb_Mood);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Clear);
@@ -239,7 +234,7 @@
         private Custom_Control.RoundedButton btn_Clear;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cb_Mood;
         private System.Windows.Forms.Label lb_Date;
         private System.Windows.Forms.Button btn_Close;
         private System.Windows.Forms.Panel panel1;
