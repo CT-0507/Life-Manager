@@ -21,6 +21,7 @@ namespace LIFE_MANAGER.FormUI
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+        public static int a;
         //Constructor
         public frm_Dashboardnew()
         {
@@ -43,11 +44,18 @@ namespace LIFE_MANAGER.FormUI
             }
             this.btn_User.Text = frm_Login.User.Name;
             this.btn_User.TextAlign = ContentAlignment.MiddleRight;
-            setbackclor(Color.Black);
-            
+            if (a==1)
+            {
+                setbackclor(BackColor);
+            }
+            else
+            {
+                setbackclor1(Color.LightGreen);
+            }
+
         }
         //Structs
-        int a = 1;
+        
         public void setbackclor (Color clor)
         {
             panelDeskTop.BackColor = clor;
@@ -59,7 +67,39 @@ namespace LIFE_MANAGER.FormUI
             btn_Diary.BackColor = clor;
             btn_profile.BackColor = clor;
             btn_setting.BackColor = clor;
+            btnHome.ForeColor = Color.White;
+            btn_chart.ForeColor = Color.White;
+            btn_Diary.ForeColor = Color.White;
+            btn_profile.ForeColor = Color.White;
+            btn_setting.ForeColor = Color.White;
 
+            btn_chart.IconColor = Color.White;
+            btn_Diary.IconColor = Color.White;
+            btn_profile.IconColor = Color.White;
+            btn_setting.IconColor = Color.White;
+        }
+        public void setbackclor1(Color clor)
+        {
+
+
+            panelDeskTop.BackColor = clor;
+            panelLogo.BackColor = clor;
+            panelMenu.BackColor = clor;
+            panelTitleBar.BackColor = clor;
+            btn_chart.BackColor = clor;
+            btn_Diary.BackColor = clor;
+            btn_profile.BackColor = clor;
+            btn_setting.BackColor = clor;
+
+            btn_chart.ForeColor = Color.Black;
+            btn_Diary.ForeColor = Color.Black;
+            btn_profile.ForeColor = Color.Black;
+            btn_setting.ForeColor = Color.Black;
+
+            btn_chart.IconColor = Color.Black;
+            btn_Diary.IconColor = Color.Black;
+            btn_profile.IconColor = Color.Black;
+            btn_setting.IconColor = Color.Black;
 
         }
         private struct RGBColors
@@ -79,21 +119,13 @@ namespace LIFE_MANAGER.FormUI
                 DisableButton();
                 //Button
                 currentBtn = (IconButton)senderBtn;
-                if (a==1)
-                {
-                    currentBtn.BackColor = Color.Black;
-                    leftBorderBtn.BackColor = Color.Black;
+            
+                    //currentBtn.BackColor = Color.FromArgb(37, 36, 81);
+                    //leftBorderBtn.BackColor = color;
 
-                }
-                else
-                {
-                    currentBtn.BackColor = Color.FromArgb(37, 36, 81);
-                    leftBorderBtn.BackColor = color;
-
-                }
-                currentBtn.ForeColor = color;
+                //currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
-                currentBtn.IconColor = color;
+               //currentBtn.IconColor = color;
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
                 currentBtn.ImageAlign = ContentAlignment.MiddleRight;
                 //Left border button;
@@ -111,15 +143,16 @@ namespace LIFE_MANAGER.FormUI
             if (currentBtn != null)
             {
                 //currentBtn.BackColor = Color.FromArgb(31, 30, 68);
-                currentBtn.ForeColor = Color.Gainsboro;
+                //currentBtn.ForeColor = Color.Gainsboro;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
-                currentBtn.IconColor = Color.Gainsboro;
+                //currentBtn.IconColor = Color.Gainsboro;
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
         }
         private void OpenChildForm(Form childForm)
         {
+          
             try
             {
                 if (frm_Setting.a != null)
