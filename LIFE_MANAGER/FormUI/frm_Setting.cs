@@ -216,6 +216,18 @@ namespace LIFE_MANAGER.FormUI
                     MessageBox.Show(ex.Message);
                 }
             }
+            if (tgb_DarkMode.Checked==true)
+            {
+                frm_Dashboardnew.a = 1;
+                frm_Dashboardnew frm = Application.OpenForms.OfType<frm_Dashboardnew>().FirstOrDefault();
+                frm.setbackclor(Color.Black);
+            }
+            if (tgb_DarkMode.Checked == false)
+            {
+                frm_Dashboardnew.a = 0;
+                frm_Dashboardnew frm = Application.OpenForms.OfType<frm_Dashboardnew>().FirstOrDefault();
+                frm.setbackclor1(Color.LightGreen);
+            }
         }
     }
 }
