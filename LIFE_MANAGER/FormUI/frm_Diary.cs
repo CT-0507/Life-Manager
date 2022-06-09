@@ -157,11 +157,10 @@ namespace LIFE_MANAGER.FormUI
             DateTime useDate = new DateTime(date.Year, date.Month, 1);
             try
             {
-                var DateMDY = Today.ToString("M/d/yyyy");
+                var DateMDY = date.ToString("M/d/yyyy");
                 var DateSplited = DateMDY.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
                 var MoodQuery = Diaries.Find(dateD => dateD.DateSplit[0] == DateSplited[2] && dateD.DateSplit[1] == DateSplited[0] && dateD.UserId == frm_Login.User._id).ToList();
                 int line = 0;
-
                 for (int i = 1; i <= DayOfMonth(date); i++)
                 {
                     int column = dateOfWeek.IndexOf(useDate.DayOfWeek.ToString());
@@ -179,7 +178,10 @@ namespace LIFE_MANAGER.FormUI
                     //}
                     for (int z = 0; z < MoodQuery.Count; z++)
                     {
-                        if (btn.Text == MoodQuery[z].DateSplit[2])
+                        
+                        var result = Int32.TryParse(MoodQuery[z].DateSplit[0], out var Year);
+                        result = Int32.TryParse(MoodQuery[z].DateSplit[1], out var Month);
+                        if (btn.Text == MoodQuery[z].DateSplit[2] && date.Year == Year && date.Month == Month)
                         {
                             if(MoodQuery[z].Mood == "Happy")
                             {

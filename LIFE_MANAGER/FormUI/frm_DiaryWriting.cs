@@ -16,9 +16,11 @@ namespace LIFE_MANAGER.FormUI
     {
         private IMongoCollection<Models.Diary> Diaries = frm_Login.db.GetCollection<Models.Diary>("Diaries");
         private Models.Diary diary;
+        private DateTime thisDay;
         public frm_DiaryWriting(DateTime Date)
         {
             InitializeComponent();
+            thisDay = Date;
             List<string> moods = new List<string>
             {
                 "Happy",
@@ -52,12 +54,8 @@ namespace LIFE_MANAGER.FormUI
                     Mood = "Happy",
                     UserId = frm_Login.User._id,
                 };
-                //var settingoptions = new CreateIndexOptions { Unique = true };
-#pragma warning disable CS0618 // Type or member is obsolete
-                //Diaries.Indexes.CreateOne("{ UserId : 1}", settingoptions);
-#pragma warning restore CS0618 // Type or member is obsolete
                 Diaries.InsertOne(diary);
-                var diaryquery = Diaries.Find(date => date.Date == Date.ToString("yyyyMMdd"));
+                var diaryquery = Diaries.Find(date => date.Date == Date.ToString("yyyyMMdd") && date.UserId == frm_Login.User._id);
                 diary = diaryquery.First();
             }           
             
@@ -109,7 +107,7 @@ namespace LIFE_MANAGER.FormUI
                 var updateQuery = Diaries.UpdateOne(diaryD => diaryD._id == diary._id, update);
                 frm_Diary frm = Application.OpenForms.OfType<frm_Diary>().FirstOrDefault();
                 //frm.Form_Lo;
-                frm.AddNumberIntoMatrixByDate(DateTime.Now);
+                frm.AddNumberIntoMatrixByDate(thisDay);
             }
             catch (Exception ex)
             {
