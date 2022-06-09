@@ -299,7 +299,7 @@ namespace LIFE_MANAGER.FormUI
             this.lblTitleChildForm.ForeColor = System.Drawing.SystemColors.AppWorkspace;
             this.lblTitleChildForm.Location = new System.Drawing.Point(106, 51);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
-            this.lblTitleChildForm.Size = new System.Drawing.Size(90, 32);
+            this.lblTitleChildForm.Size = new System.Drawing.Size(89, 32);
             this.lblTitleChildForm.TabIndex = 3;
             this.lblTitleChildForm.Text = "Home";
             // 
@@ -392,6 +392,7 @@ namespace LIFE_MANAGER.FormUI
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_Dashboardnew";
+            this.Load += new System.EventHandler(this.frm_Dashboardnew_Load);
             this.Resize += new System.EventHandler(this.FormMainMenu_Resize);
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);

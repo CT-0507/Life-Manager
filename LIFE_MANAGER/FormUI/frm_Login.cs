@@ -103,19 +103,29 @@ namespace LIFE_MANAGER.FormUI
 
         }
 
-            private void tb_Pass_KeyDown(object sender, KeyEventArgs e)
+        private void tb_Pass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
             {
-                if (e.KeyCode == Keys.Enter)
+                btn_Login.PerformClick();
+                tb_Pass.Text = string.Empty;
+            }
+        }
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void tb_User_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                if (tb_Pass.Text != "" && tb_User.Text != "")
                 {
                     btn_Login.PerformClick();
-                    tb_Pass.Text = string.Empty;
+                    tb_User.Clear();
+                    tb_Pass.Clear();
                 }
-            }
-            private void btn_Close_Click(object sender, EventArgs e)
-            {
-                this.Close();
-
-            }
-          
-        } 
+        }
+    } 
   }

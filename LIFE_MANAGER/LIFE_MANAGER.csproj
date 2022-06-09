@@ -197,6 +197,12 @@
     <Compile Include="FormUI\frm_DiaryWriting.Designer.cs">
       <DependentUpon>frm_DiaryWriting.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUI\frm_FileBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUI\frm_FileBrowser.Designer.cs">
+      <DependentUpon>frm_FileBrowser.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormUI\frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +261,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\frm_DiaryWriting.resx">
       <DependentUpon>frm_DiaryWriting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUI\frm_FileBrowser.resx">
+      <DependentUpon>frm_FileBrowser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormUI\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
@@ -339,6 +348,15 @@
     <Content Include="Core\Compression\Snappy\lib\win\snappy64.dll" />
     <Content Include="Core\Compression\Zstandard\lib\win\libzstd.dll" />
     <Content Include="mongocrypt.dll" />
+    <Content Include="Resource\backgroundmusic\03 The Clicker.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\backgroundmusic\08 The Well-Lit Room.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resource\backgroundmusic\BackgroundMusic.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resource\icon\Login.ico" />
     <Content Include="Resource\icon\Setting.ico" />
     <Content Include="Resource\image\1291754_document_file_notes_reminder_todo_icon.png" />

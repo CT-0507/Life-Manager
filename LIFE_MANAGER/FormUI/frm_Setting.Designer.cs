@@ -29,12 +29,10 @@ namespace LIFE_MANAGER.FormUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Setting));
             this.lb_Notification = new System.Windows.Forms.Label();
             this.lb_StartWithWindows = new System.Windows.Forms.Label();
             this.lb_Volume = new System.Windows.Forms.Label();
             this.lb_Darkmode = new System.Windows.Forms.Label();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.tgb_DarkMode = new LIFE_MANAGER.Custom_Control.RJToggleButton();
             this.btn_RemoveBackgroundImage = new LIFE_MANAGER.Custom_Control.RoundedButton();
             this.btn_ViewBackground = new LIFE_MANAGER.Custom_Control.RoundedButton();
@@ -43,7 +41,7 @@ namespace LIFE_MANAGER.FormUI
             this.tgb_StartWithWindows = new LIFE_MANAGER.Custom_Control.RJToggleButton();
             this.tgb_Notification = new LIFE_MANAGER.Custom_Control.RJToggleButton();
             this.rjToggleButton1 = new LIFE_MANAGER.Custom_Control.RJToggleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
+            this.btn_ChooseSong = new LIFE_MANAGER.Custom_Control.RoundedButton();
             this.SuspendLayout();
             // 
             // lb_Notification
@@ -93,15 +91,6 @@ namespace LIFE_MANAGER.FormUI
             this.lb_Darkmode.Size = new System.Drawing.Size(146, 31);
             this.lb_Darkmode.TabIndex = 20;
             this.lb_Darkmode.Text = "Dark Mode";
-            // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(418, 257);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(47, 36);
-            this.axWindowsMediaPlayer1.TabIndex = 21;
             // 
             // tgb_DarkMode
             // 
@@ -248,13 +237,34 @@ namespace LIFE_MANAGER.FormUI
             this.rjToggleButton1.TabIndex = 8;
             this.rjToggleButton1.UseVisualStyleBackColor = true;
             // 
+            // btn_ChooseSong
+            // 
+            this.btn_ChooseSong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_ChooseSong.BackColor = System.Drawing.Color.Blue;
+            this.btn_ChooseSong.BackgroundColor = System.Drawing.Color.Blue;
+            this.btn_ChooseSong.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_ChooseSong.BorderRadius = 40;
+            this.btn_ChooseSong.BorderSize = 0;
+            this.btn_ChooseSong.FlatAppearance.BorderSize = 0;
+            this.btn_ChooseSong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ChooseSong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ChooseSong.ForeColor = System.Drawing.Color.White;
+            this.btn_ChooseSong.Location = new System.Drawing.Point(452, 257);
+            this.btn_ChooseSong.Name = "btn_ChooseSong";
+            this.btn_ChooseSong.Size = new System.Drawing.Size(284, 46);
+            this.btn_ChooseSong.TabIndex = 21;
+            this.btn_ChooseSong.Text = "Choose background Music";
+            this.btn_ChooseSong.TextColor = System.Drawing.Color.White;
+            this.btn_ChooseSong.UseVisualStyleBackColor = false;
+            this.btn_ChooseSong.Click += new System.EventHandler(this.btn_ChooseSong_Click);
+            // 
             // frm_Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1067, 500);
-            this.Controls.Add(this.axWindowsMediaPlayer1);
+            this.Controls.Add(this.btn_ChooseSong);
             this.Controls.Add(this.lb_Darkmode);
             this.Controls.Add(this.tgb_DarkMode);
             this.Controls.Add(this.btn_RemoveBackgroundImage);
@@ -270,7 +280,6 @@ namespace LIFE_MANAGER.FormUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Setting";
             this.Text = "Setting";
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,6 +298,6 @@ namespace LIFE_MANAGER.FormUI
         private Custom_Control.RoundedButton btn_RemoveBackgroundImage;
         private System.Windows.Forms.Label lb_Darkmode;
         private Custom_Control.RJToggleButton tgb_DarkMode;
-        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
+        private Custom_Control.RoundedButton btn_ChooseSong;
     }
 }

@@ -21,12 +21,10 @@ namespace LIFE_MANAGER.FormUI
         private bool OriginalStateStartWithWindows = frm_Login.Setting.StartWithWindows;
         private bool OriginalStateVolume = frm_Login.Setting.isBackgroundMusicVolume;
         private bool OriginalDarkMode = frm_Login.Setting.isDarkMode;
-        WMPLib.WindowsMediaPlayer player = new WMPLib.WindowsMediaPlayer();
 
         public frm_Setting()
         {
             InitializeComponent();
-            player.controls.stop();
             tgb_Notification.Checked = OriginalStateNotification;
             tgb_StartWithWindows.Checked = OriginalStateStartWithWindows;
             tgb_Volume.Checked = OriginalStateVolume;
@@ -193,13 +191,11 @@ namespace LIFE_MANAGER.FormUI
             }
             if (tgb_Volume.Checked == true)
             {
-                player.controls.play();
-                player.URL = "1.mp3";
+                frm_Dashboardnew.Player.controls.play();
             }
             else
             {
-                player.controls.stop();
-
+                frm_Dashboardnew.Player.controls.pause();
             }
         }
 
@@ -244,6 +240,13 @@ namespace LIFE_MANAGER.FormUI
 
 
 
+        }
+
+        private void btn_ChooseSong_Click(object sender, EventArgs e)
+        {
+            string path = "..\\..\\Resource\\backgroundmusic";
+            frm_FileBrowser frm = new frm_FileBrowser(path);
+            frm.ShowDialog();
         }
     }
 }

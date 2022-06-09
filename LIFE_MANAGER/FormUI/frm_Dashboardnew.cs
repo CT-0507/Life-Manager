@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
+using System.Media;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
@@ -17,7 +18,7 @@ namespace LIFE_MANAGER.FormUI
 {
     public partial class frm_Dashboardnew : Form
     {
-       
+        public static WMPLib.WindowsMediaPlayer Player;
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
@@ -27,6 +28,10 @@ namespace LIFE_MANAGER.FormUI
         {
             InitializeComponent();
             leftBorderBtn = new Panel();
+            // Media Player 
+
+            
+            
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
             //Form
@@ -334,6 +339,28 @@ namespace LIFE_MANAGER.FormUI
                 }
             }
             return bmp;
+        }
+
+        private void frm_Dashboardnew_Load(object sender, EventArgs e)
+        {
+            this.Activated += AfterLoading;
+            
+        }
+        private void AfterLoading(object sender, EventArgs e)
+        {
+            this.Activated -= AfterLoading;
+            Player = new WMPLib.WindowsMediaPlayer();
+            Player.controls.pause();
+            Player.URL = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Resource\\backgroundmusic\\BackgroundMusic.mp3");
+            if (frm_Login.Setting.isBackgroundMusicVolume == false)
+            {
+                Player.controls.pause();
+
+            }
+            else
+            {
+                Player.controls.play();
+            }
         }
     }
 }
