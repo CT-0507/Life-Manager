@@ -165,7 +165,7 @@
             this.btn_UploadImage.ForeColor = System.Drawing.Color.White;
             this.btn_UploadImage.Location = new System.Drawing.Point(1057, 579);
             this.btn_UploadImage.Name = "btn_UploadImage";
-            this.btn_UploadImage.Size = new System.Drawing.Size(103, 40);
+            this.btn_UploadImage.Size = new System.Drawing.Size(124, 40);
             this.btn_UploadImage.TabIndex = 5;
             this.btn_UploadImage.Text = "Upload";
             this.btn_UploadImage.TextColor = System.Drawing.Color.White;

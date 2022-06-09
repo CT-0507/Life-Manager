@@ -43,8 +43,25 @@ namespace LIFE_MANAGER.FormUI
             }
             this.btn_User.Text = frm_Login.User.Name;
             this.btn_User.TextAlign = ContentAlignment.MiddleRight;
+            setbackclor(Color.Black);
+            
         }
         //Structs
+        int a = 1;
+        public void setbackclor (Color clor)
+        {
+            panelDeskTop.BackColor = clor;
+            panelLogo.BackColor = clor;
+            panelMenu.BackColor = clor;
+            panelTitleBar.BackColor = clor;
+            btnHome.BackColor = clor;
+            btn_chart.BackColor = clor;
+            btn_Diary.BackColor = clor;
+            btn_profile.BackColor = clor;
+            btn_setting.BackColor = clor;
+
+
+        }
         private struct RGBColors
         {
             public static Color color1 = Color.FromArgb(172, 126, 241);
@@ -62,14 +79,24 @@ namespace LIFE_MANAGER.FormUI
                 DisableButton();
                 //Button
                 currentBtn = (IconButton)senderBtn;
-                currentBtn.BackColor = Color.FromArgb(37, 36, 81);
+                if (a==1)
+                {
+                    currentBtn.BackColor = Color.Black;
+                    leftBorderBtn.BackColor = Color.Black;
+
+                }
+                else
+                {
+                    currentBtn.BackColor = Color.FromArgb(37, 36, 81);
+                    leftBorderBtn.BackColor = color;
+
+                }
                 currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.IconColor = color;
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
                 currentBtn.ImageAlign = ContentAlignment.MiddleRight;
                 //Left border button;
-                leftBorderBtn.BackColor = color;
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
@@ -83,7 +110,7 @@ namespace LIFE_MANAGER.FormUI
         {
             if (currentBtn != null)
             {
-                currentBtn.BackColor = Color.FromArgb(31, 30, 68);
+                //currentBtn.BackColor = Color.FromArgb(31, 30, 68);
                 currentBtn.ForeColor = Color.Gainsboro;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = Color.Gainsboro;

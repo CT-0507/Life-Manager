@@ -39,6 +39,8 @@ namespace LIFE_MANAGER.FormUI
             this.tgb_StartWithWindows = new LIFE_MANAGER.Custom_Control.RJToggleButton();
             this.tgb_Notification = new LIFE_MANAGER.Custom_Control.RJToggleButton();
             this.rjToggleButton1 = new LIFE_MANAGER.Custom_Control.RJToggleButton();
+            this.lb_Darkmode = new System.Windows.Forms.Label();
+            this.tgb_DarkMode = new LIFE_MANAGER.Custom_Control.RJToggleButton();
             this.SuspendLayout();
             // 
             // lb_Notification
@@ -205,12 +207,43 @@ namespace LIFE_MANAGER.FormUI
             this.rjToggleButton1.TabIndex = 8;
             this.rjToggleButton1.UseVisualStyleBackColor = true;
             // 
+            // lb_Darkmode
+            // 
+            this.lb_Darkmode.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lb_Darkmode.AutoSize = true;
+            this.lb_Darkmode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Darkmode.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lb_Darkmode.Location = new System.Drawing.Point(278, 75);
+            this.lb_Darkmode.Name = "lb_Darkmode";
+            this.lb_Darkmode.Size = new System.Drawing.Size(146, 31);
+            this.lb_Darkmode.TabIndex = 20;
+            this.lb_Darkmode.Text = "Dark Mode";
+            // 
+            // tgb_DarkMode
+            // 
+            this.tgb_DarkMode.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tgb_DarkMode.AutoSize = true;
+            this.tgb_DarkMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tgb_DarkMode.Location = new System.Drawing.Point(155, 71);
+            this.tgb_DarkMode.MinimumSize = new System.Drawing.Size(90, 40);
+            this.tgb_DarkMode.Name = "tgb_DarkMode";
+            this.tgb_DarkMode.OffBackColor = System.Drawing.Color.Gray;
+            this.tgb_DarkMode.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.tgb_DarkMode.OnBackColor = System.Drawing.Color.MediumSlateBlue;
+            this.tgb_DarkMode.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.tgb_DarkMode.Size = new System.Drawing.Size(90, 40);
+            this.tgb_DarkMode.TabIndex = 19;
+            this.tgb_DarkMode.UseVisualStyleBackColor = true;
+            this.tgb_DarkMode.CheckedChanged += new System.EventHandler(this.tgb_DarkMode_CheckedChanged);
+            // 
             // frm_Setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(1067, 500);
+            this.Controls.Add(this.lb_Darkmode);
+            this.Controls.Add(this.tgb_DarkMode);
             this.Controls.Add(this.btn_RemoveBackgroundImage);
             this.Controls.Add(this.btn_ViewBackground);
             this.Controls.Add(this.btn_BackgroundUpload);
@@ -240,5 +273,7 @@ namespace LIFE_MANAGER.FormUI
         private Custom_Control.RoundedButton btn_BackgroundUpload;
         private Custom_Control.RoundedButton btn_ViewBackground;
         private Custom_Control.RoundedButton btn_RemoveBackgroundImage;
+        private System.Windows.Forms.Label lb_Darkmode;
+        private Custom_Control.RJToggleButton tgb_DarkMode;
     }
 }
