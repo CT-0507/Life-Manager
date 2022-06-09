@@ -52,9 +52,9 @@ namespace LIFE_MANAGER.FormUI
                     Mood = "Happy",
                     UserId = frm_Login.User._id,
                 };
-                var settingoptions = new CreateIndexOptions { Unique = true };
+                //var settingoptions = new CreateIndexOptions { Unique = true };
 #pragma warning disable CS0618 // Type or member is obsolete
-                Diaries.Indexes.CreateOne("{ Date : 1}", settingoptions);
+                //Diaries.Indexes.CreateOne("{ UserId : 1}", settingoptions);
 #pragma warning restore CS0618 // Type or member is obsolete
                 Diaries.InsertOne(diary);
                 var diaryquery = Diaries.Find(date => date.Date == Date.ToString("yyyyMMdd"));
