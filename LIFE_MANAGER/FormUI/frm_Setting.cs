@@ -19,6 +19,7 @@ namespace LIFE_MANAGER.FormUI
         private bool OriginalStateNotification = frm_Login.Setting.isNotification;
         private bool OriginalStateStartWithWindows = frm_Login.Setting.StartWithWindows;
         private bool OriginalStateVolume = frm_Login.Setting.isBackgroundMusicVolume;
+        private bool OriginalDarkMode = frm_Login.Setting.isDarkMode;
         public frm_Setting()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace LIFE_MANAGER.FormUI
             tgb_Notification.Checked = OriginalStateNotification;
             tgb_StartWithWindows.Checked = OriginalStateStartWithWindows;
             tgb_Volume.Checked = OriginalStateVolume;
+            tgb_DarkMode.Checked = OriginalDarkMode;
             ViewBtnWidth = btn_ViewBackground.Width;
             this.BackgroundImageLayout = ImageLayout.Stretch;
             if(frm_Login.Setting.BackgroundImage != "")
@@ -80,6 +82,8 @@ namespace LIFE_MANAGER.FormUI
                 btn_ViewBackground.Text = "Close";
                 btn_ViewBackground.Width = 100;
                 btn_RemoveBackgroundImage.Visible = false;
+                tgb_DarkMode.Visible = false;
+                lb_Darkmode.Visible = false;
             }
             else
             {
@@ -93,7 +97,8 @@ namespace LIFE_MANAGER.FormUI
                 btn_ViewBackground.Text = "View Background";
                 btn_ViewBackground.Width = ViewBtnWidth;
                 btn_RemoveBackgroundImage.Visible = true;
-
+                tgb_DarkMode.Visible= true;
+                lb_Darkmode.Visible= true;
             }
 
         }
@@ -174,7 +179,7 @@ namespace LIFE_MANAGER.FormUI
                 try
                 {
                     var update = Builders<Models.Setting>.Update
-                            .Set("isBackgroundMusicVolume", OriginalStateStartWithWindows);
+                            .Set("isBackgroundMusicVolume", OriginalStateVolume);
                     var query = frm_Login.Settings.UpdateOne(setting => setting._id == frm_Login.Setting._id, update);
                     frm_Login.Setting.isBackgroundMusicVolume = OriginalStateVolume;
                 }
@@ -196,7 +201,21 @@ namespace LIFE_MANAGER.FormUI
 
         private void tgb_DarkMode_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (tgb_DarkMode.Checked != OriginalDarkMode)
+            {
+                OriginalDarkMode = tgb_DarkMode.Checked;
+                try
+                {
+                    var update = Builders<Models.Setting>.Update
+                            .Set("isDarkMode", OriginalDarkMode);
+                    var query = frm_Login.Settings.UpdateOne(setting => setting._id == frm_Login.Setting._id, update);
+                    frm_Login.Setting.isDarkMode = OriginalDarkMode;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
     }
 }

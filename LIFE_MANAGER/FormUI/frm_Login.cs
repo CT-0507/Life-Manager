@@ -64,8 +64,9 @@ namespace LIFE_MANAGER.FormUI
                             {
                                 isBackgroundMusicVolume = true,
                                 isNotification = true,
-                                BackgroundImage = null,
+                                BackgroundImage = "",
                                 StartWithWindows = true,
+                                isDarkMode = false,
                                 UserId = User._id,
                             };
                             var settingoptions = new CreateIndexOptions { Unique = true };

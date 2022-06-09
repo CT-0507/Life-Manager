@@ -20,6 +20,8 @@ namespace LIFE_MANAGER.Models
         public bool StartWithWindows { get; set; }
         [BsonElement("BackgroundImage")]
         public string BackgroundImage { get; set; }
+        [BsonElement("isDarkMode")]
+        public bool isDarkMode { get; set; }
         [BsonElement("UserId")]
         public ObjectId UserId { get; set; }
     }
