@@ -67,7 +67,7 @@ namespace LIFE_MANAGER.FormUI
                             {
                                 isBackgroundMusicVolume = true,
                                 isNotification = true,
-                                BackgroundImage = null,
+                                BackgroundImage = "",
                                 StartWithWindows = true,
                                 UserId = user1._id,
                             };

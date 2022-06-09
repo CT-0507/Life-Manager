@@ -30,9 +30,12 @@ namespace LIFE_MANAGER.FormUI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Chart));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btn_Close = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpk_Time = new System.Windows.Forms.DateTimePicker();
@@ -42,7 +45,13 @@ namespace LIFE_MANAGER.FormUI
             this.lb_NeutralDays = new System.Windows.Forms.Label();
             this.lb_SadDays = new System.Windows.Forms.Label();
             this.lb_NotSet = new System.Windows.Forms.Label();
+            this.ColumnChart_Tasks = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lb_DONE = new System.Windows.Forms.Label();
+            this.lb_DOING = new System.Windows.Forms.Label();
+            this.lb_COMING = new System.Windows.Forms.Label();
+            this.lb_MISSED = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PieChart_Mood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ColumnChart_Tasks)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Close
@@ -90,17 +99,17 @@ namespace LIFE_MANAGER.FormUI
             // 
             // PieChart_Mood
             // 
-            chartArea1.Name = "ChartArea1";
-            this.PieChart_Mood.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.PieChart_Mood.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.PieChart_Mood.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.PieChart_Mood.Legends.Add(legend3);
             this.PieChart_Mood.Location = new System.Drawing.Point(41, 126);
             this.PieChart_Mood.Name = "PieChart_Mood";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.PieChart_Mood.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.PieChart_Mood.Series.Add(series3);
             this.PieChart_Mood.Size = new System.Drawing.Size(400, 300);
             this.PieChart_Mood.TabIndex = 10;
             this.PieChart_Mood.Text = "chart1";
@@ -109,7 +118,7 @@ namespace LIFE_MANAGER.FormUI
             // 
             this.lb_HappyDays.AutoSize = true;
             this.lb_HappyDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_HappyDays.Location = new System.Drawing.Point(447, 126);
+            this.lb_HappyDays.Location = new System.Drawing.Point(36, 445);
             this.lb_HappyDays.Name = "lb_HappyDays";
             this.lb_HappyDays.Size = new System.Drawing.Size(87, 29);
             this.lb_HappyDays.TabIndex = 11;
@@ -119,7 +128,7 @@ namespace LIFE_MANAGER.FormUI
             // 
             this.lb_NeutralDays.AutoSize = true;
             this.lb_NeutralDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_NeutralDays.Location = new System.Drawing.Point(447, 157);
+            this.lb_NeutralDays.Location = new System.Drawing.Point(269, 445);
             this.lb_NeutralDays.Name = "lb_NeutralDays";
             this.lb_NeutralDays.Size = new System.Drawing.Size(98, 29);
             this.lb_NeutralDays.TabIndex = 12;
@@ -129,7 +138,7 @@ namespace LIFE_MANAGER.FormUI
             // 
             this.lb_SadDays.AutoSize = true;
             this.lb_SadDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_SadDays.Location = new System.Drawing.Point(447, 188);
+            this.lb_SadDays.Location = new System.Drawing.Point(36, 498);
             this.lb_SadDays.Name = "lb_SadDays";
             this.lb_SadDays.Size = new System.Drawing.Size(59, 29);
             this.lb_SadDays.TabIndex = 13;
@@ -139,18 +148,79 @@ namespace LIFE_MANAGER.FormUI
             // 
             this.lb_NotSet.AutoSize = true;
             this.lb_NotSet.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_NotSet.Location = new System.Drawing.Point(447, 219);
+            this.lb_NotSet.Location = new System.Drawing.Point(267, 498);
             this.lb_NotSet.Name = "lb_NotSet";
             this.lb_NotSet.Size = new System.Drawing.Size(100, 29);
             this.lb_NotSet.TabIndex = 14;
             this.lb_NotSet.Text = "Not Set";
+            // 
+            // ColumnChart_Tasks
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.ColumnChart_Tasks.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.ColumnChart_Tasks.Legends.Add(legend4);
+            this.ColumnChart_Tasks.Location = new System.Drawing.Point(573, 126);
+            this.ColumnChart_Tasks.Name = "ColumnChart_Tasks";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.ColumnChart_Tasks.Series.Add(series4);
+            this.ColumnChart_Tasks.Size = new System.Drawing.Size(400, 300);
+            this.ColumnChart_Tasks.TabIndex = 15;
+            this.ColumnChart_Tasks.Text = "chart1";
+            // 
+            // lb_DONE
+            // 
+            this.lb_DONE.AutoSize = true;
+            this.lb_DONE.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_DONE.Location = new System.Drawing.Point(995, 126);
+            this.lb_DONE.Name = "lb_DONE";
+            this.lb_DONE.Size = new System.Drawing.Size(87, 29);
+            this.lb_DONE.TabIndex = 16;
+            this.lb_DONE.Text = "DONE";
+            // 
+            // lb_DOING
+            // 
+            this.lb_DOING.AutoSize = true;
+            this.lb_DOING.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_DOING.Location = new System.Drawing.Point(995, 157);
+            this.lb_DOING.Name = "lb_DOING";
+            this.lb_DOING.Size = new System.Drawing.Size(96, 29);
+            this.lb_DOING.TabIndex = 17;
+            this.lb_DOING.Text = "DOING";
+            // 
+            // lb_COMING
+            // 
+            this.lb_COMING.AutoSize = true;
+            this.lb_COMING.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_COMING.Location = new System.Drawing.Point(995, 188);
+            this.lb_COMING.Name = "lb_COMING";
+            this.lb_COMING.Size = new System.Drawing.Size(117, 29);
+            this.lb_COMING.TabIndex = 18;
+            this.lb_COMING.Text = "COMING";
+            // 
+            // lb_MISSED
+            // 
+            this.lb_MISSED.AutoSize = true;
+            this.lb_MISSED.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_MISSED.Location = new System.Drawing.Point(995, 219);
+            this.lb_MISSED.Name = "lb_MISSED";
+            this.lb_MISSED.Size = new System.Drawing.Size(110, 29);
+            this.lb_MISSED.TabIndex = 19;
+            this.lb_MISSED.Text = "MISSED";
             // 
             // frm_Chart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1062, 468);
+            this.ClientSize = new System.Drawing.Size(1333, 684);
+            this.Controls.Add(this.lb_MISSED);
+            this.Controls.Add(this.lb_COMING);
+            this.Controls.Add(this.lb_DOING);
+            this.Controls.Add(this.lb_DONE);
+            this.Controls.Add(this.ColumnChart_Tasks);
             this.Controls.Add(this.lb_NotSet);
             this.Controls.Add(this.lb_SadDays);
             this.Controls.Add(this.lb_NeutralDays);
@@ -165,6 +235,7 @@ namespace LIFE_MANAGER.FormUI
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chart";
             ((System.ComponentModel.ISupportInitialize)(this.PieChart_Mood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ColumnChart_Tasks)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -181,5 +252,10 @@ namespace LIFE_MANAGER.FormUI
         private System.Windows.Forms.Label lb_NeutralDays;
         private System.Windows.Forms.Label lb_SadDays;
         private System.Windows.Forms.Label lb_NotSet;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ColumnChart_Tasks;
+        private System.Windows.Forms.Label lb_DONE;
+        private System.Windows.Forms.Label lb_DOING;
+        private System.Windows.Forms.Label lb_COMING;
+        private System.Windows.Forms.Label lb_MISSED;
     }
 }

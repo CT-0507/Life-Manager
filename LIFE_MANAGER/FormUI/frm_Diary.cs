@@ -64,6 +64,8 @@ namespace LIFE_MANAGER.FormUI
                 Plans.Indexes.CreateOne("{ UserId : 1 }", settingoptions);
 #pragma warning restore CS0618 // Type or member is obsolete
                 Plans.InsertOne(plan);
+                var query = Plans.Find(planD => planD.UserId == frm_Login.User._id);
+                plan = query.First();
             }
             try
             {
@@ -208,10 +210,10 @@ namespace LIFE_MANAGER.FormUI
             
         }
 
-        bool isEqualDate(DateTime dateA, DateTime dateB)
-        {
-            return dateA.Year == dateB.Year && dateA.Month == dateB.Month && dateA.Day == dateB.Day;
-        }
+        //bool isEqualDate(DateTime dateA, DateTime dateB)
+        //{
+        //    return dateA.Year == dateB.Year && dateA.Month == dateB.Month && dateA.Day == dateB.Day;
+        //}
 
         void ClearMatrix()
         {
