@@ -16,6 +16,7 @@ namespace LIFE_MANAGER
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FormUI.frm_Loading());
             Application.Run(new FormUI.frm_Login());
         }
     }

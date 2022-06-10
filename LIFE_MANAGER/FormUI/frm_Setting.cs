@@ -40,6 +40,14 @@ namespace LIFE_MANAGER.FormUI
             {
                 this.BackgroundImage = null;
             }
+            if (frm_Login.Setting.isBackgroundMusicVolume == true)
+            {
+                frm_Dashboardnew.Player.controls.play();
+            }
+            else
+            {
+                frm_Dashboardnew.Player.controls.pause();
+            }
         }
 
         private void btn_Close_Click(object sender, EventArgs e)
@@ -74,9 +82,9 @@ namespace LIFE_MANAGER.FormUI
             if(isView)
             {
                 tgb_Volume.Visible = false;
-                tgb_Notification.Visible = false;
+                //tgb_Notification.Visible = false;
                 tgb_StartWithWindows.Visible = false;
-                lb_Notification.Visible = false;
+                //lb_Notification.Visible = false;
                 lb_StartWithWindows.Visible = false;
                 lb_Volume.Visible = false;
                 btn_BackgroundUpload.Visible = false;
@@ -85,13 +93,14 @@ namespace LIFE_MANAGER.FormUI
                 btn_RemoveBackgroundImage.Visible = false;
                 tgb_DarkMode.Visible = false;
                 lb_Darkmode.Visible = false;
+                btn_ChooseSong.Visible = false;
             }
             else
             {
                 tgb_Volume.Visible = true;
-                tgb_Notification.Visible = true;
+                //tgb_Notification.Visible = true;
                 tgb_StartWithWindows.Visible = true;
-                lb_Notification.Visible = true;
+                //lb_Notification.Visible = true;
                 lb_StartWithWindows.Visible = true;
                 lb_Volume.Visible = true;
                 btn_BackgroundUpload.Visible = true;
@@ -100,6 +109,7 @@ namespace LIFE_MANAGER.FormUI
                 btn_RemoveBackgroundImage.Visible = true;
                 tgb_DarkMode.Visible= true;
                 lb_Darkmode.Visible= true;
+                btn_ChooseSong.Visible= true;
             }
 
         }
@@ -237,9 +247,6 @@ namespace LIFE_MANAGER.FormUI
                 frm_Dashboardnew frm = Application.OpenForms.OfType<frm_Dashboardnew>().FirstOrDefault();
                 frm.setbackclor1(Color.LightGreen);
             }
-
-
-
         }
 
         private void btn_ChooseSong_Click(object sender, EventArgs e)

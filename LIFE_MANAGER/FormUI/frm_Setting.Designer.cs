@@ -55,6 +55,7 @@ namespace LIFE_MANAGER.FormUI
             this.lb_Notification.Size = new System.Drawing.Size(150, 31);
             this.lb_Notification.TabIndex = 11;
             this.lb_Notification.Text = "Notification";
+            this.lb_Notification.Visible = false;
             // 
             // lb_StartWithWindows
             // 
@@ -221,6 +222,7 @@ namespace LIFE_MANAGER.FormUI
             this.tgb_Notification.Size = new System.Drawing.Size(90, 40);
             this.tgb_Notification.TabIndex = 9;
             this.tgb_Notification.UseVisualStyleBackColor = true;
+            this.tgb_Notification.Visible = false;
             this.tgb_Notification.CheckedChanged += new System.EventHandler(this.tgb_Notification_CheckedChanged);
             // 
             // rjToggleButton1
@@ -251,9 +253,9 @@ namespace LIFE_MANAGER.FormUI
             this.btn_ChooseSong.ForeColor = System.Drawing.Color.White;
             this.btn_ChooseSong.Location = new System.Drawing.Point(452, 257);
             this.btn_ChooseSong.Name = "btn_ChooseSong";
-            this.btn_ChooseSong.Size = new System.Drawing.Size(284, 46);
+            this.btn_ChooseSong.Size = new System.Drawing.Size(335, 46);
             this.btn_ChooseSong.TabIndex = 21;
-            this.btn_ChooseSong.Text = "Choose background Music";
+            this.btn_ChooseSong.Text = "Choose Music";
             this.btn_ChooseSong.TextColor = System.Drawing.Color.White;
             this.btn_ChooseSong.UseVisualStyleBackColor = false;
             this.btn_ChooseSong.Click += new System.EventHandler(this.btn_ChooseSong_Click);

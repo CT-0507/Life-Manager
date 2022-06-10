@@ -7,8 +7,6 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Serialization;
@@ -70,9 +68,11 @@ namespace LIFE_MANAGER.FormUI
             try
             {
                 XmlDocument doc = new XmlDocument();
+                //string data = Models.AesOperation.DecryptString("Key", plan.Data);
                 doc.LoadXml(plan.Data);
                 doc.Save(filePath);
                 Job = DeserializeFromXML(filePath) as PlanData;
+                File.Delete(filePath);
             }
             catch
             {
@@ -166,11 +166,11 @@ namespace LIFE_MANAGER.FormUI
                     int column = dateOfWeek.IndexOf(useDate.DayOfWeek.ToString());
                     Button btn = Matrix[line][column];
                     btn.Text = i.ToString();
-                    
-                    //if (isEqualDate(useDate, DateTime.Now))
-                    //{
-                    //    btn.BackColor = Color.Yellow;
-                    //}
+
+                    if (isEqualDate(useDate, DateTime.Now))
+                    {
+                        btn.BackColor = Color.Purple;
+                    }
 
                     //if (isEqualDate(useDate, date))
                     //{
@@ -212,10 +212,10 @@ namespace LIFE_MANAGER.FormUI
             
         }
 
-        //bool isEqualDate(DateTime dateA, DateTime dateB)
-        //{
-        //    return dateA.Year == dateB.Year && dateA.Month == dateB.Month && dateA.Day == dateB.Day;
-        //}
+        bool isEqualDate(DateTime dateA, DateTime dateB)
+        {
+            return dateA.Year == dateB.Year && dateA.Month == dateB.Month && dateA.Day == dateB.Day;
+        }
 
         void ClearMatrix()
         {
@@ -265,6 +265,8 @@ namespace LIFE_MANAGER.FormUI
             StreamReader streamReader = new StreamReader(filePath);
             string xml = streamReader.ReadToEnd();
             streamReader.Close();
+            //string encryptXml = Models.AesOperation.EncryptString("Key", xml);
+            File.Delete(filePath);
             var update = Builders<Models.Plan>.Update
                         .Set("Data", xml);
             
@@ -299,6 +301,7 @@ namespace LIFE_MANAGER.FormUI
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             SerializeToXML(Job, filePath);
+            
         }
        
         private void frm_Diary_Load(object sender, EventArgs e)

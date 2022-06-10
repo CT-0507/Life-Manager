@@ -78,12 +78,16 @@ namespace LIFE_MANAGER.FormUI
                             Setting = UserSetting.First();
                         }
                         Thread abc = new Thread(() => new frm_Dashboardnew().ShowDialog());
+                        frm_Loading frm = new frm_Loading();
+                        frm.ShowDialog();
                         abc.SetApartmentState(ApartmentState.STA);
+                        //abc.IsBackground = true;
                         abc.Start();
                         this.Close();
                     }
                     else
                     {
+                        tb_Pass.Clear();
                         lb_WrongUser.Visible = true;
                     }
                 }
@@ -98,6 +102,7 @@ namespace LIFE_MANAGER.FormUI
         {
             Thread a = new Thread(() => new frm_Register().ShowDialog());
             a.SetApartmentState(ApartmentState.STA);
+            //a.IsBackground = true;
             a.Start();
             this.Close();
 
@@ -108,7 +113,7 @@ namespace LIFE_MANAGER.FormUI
             if (e.KeyCode == Keys.Enter)
             {
                 btn_Login.PerformClick();
-                tb_Pass.Text = string.Empty;
+                tb_Pass.Clear();
             }
         }
         private void btn_Close_Click(object sender, EventArgs e)

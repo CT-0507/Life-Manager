@@ -40,12 +40,12 @@ namespace LIFE_MANAGER.FormUI
             GetPlan();
             GetMoodChartValue(Today);
             PieChart_Mood.Titles.Add("Mood Chart");
-            PieChart_Mood.Series["Series1"].IsValueShownAsLabel = true;
-            PieChart_Mood.Series["Series1"].Points.AddXY("Happy", HappyDays);
+            //PieChart_Mood.Series["Series1"].IsValueShownAsLabel = true;
+            if (HappyDays != 0) PieChart_Mood.Series["Series1"].Points.AddXY("Happy", HappyDays);
 
-            PieChart_Mood.Series["Series1"].Points.AddXY("Neutral", NeutralDays);
-            PieChart_Mood.Series["Series1"].Points.AddXY("Sad", SadDays);
-            PieChart_Mood.Series["Series1"].Points.AddXY("Not Set", NotSet);
+            if (NeutralDays != 0) PieChart_Mood.Series["Series1"].Points.AddXY("Neutral", NeutralDays);
+            if (SadDays != 0) PieChart_Mood.Series["Series1"].Points.AddXY("Sad", SadDays);
+            if (NotSet != 0) PieChart_Mood.Series["Series1"].Points.AddXY("Not Set", NotSet);
             setStaticsLabel();
             GetToDoChartValue(Today);
             ColumnChart_Tasks.Titles.Add("Task Chart");
@@ -117,10 +117,11 @@ namespace LIFE_MANAGER.FormUI
             {
                 GetMoodChartValue(dtpk_Time.Value);
                 PieChart_Mood.Series["Series1"].Points.Clear();
-                PieChart_Mood.Series["Series1"].Points.AddXY("Happy", HappyDays);
-                PieChart_Mood.Series["Series1"].Points.AddXY("Neutral", NeutralDays);
-                PieChart_Mood.Series["Series1"].Points.AddXY("Sad", SadDays);
-                PieChart_Mood.Series["Series1"].Points.AddXY("Not Set", NotSet);
+                if (HappyDays != 0) PieChart_Mood.Series["Series1"].Points.AddXY("Happy", HappyDays);
+
+                if (NeutralDays != 0) PieChart_Mood.Series["Series1"].Points.AddXY("Neutral", NeutralDays);
+                if (SadDays != 0) PieChart_Mood.Series["Series1"].Points.AddXY("Sad", SadDays);
+                if (NotSet != 0) PieChart_Mood.Series["Series1"].Points.AddXY("Not Set", NotSet);
                 setStaticsLabel();
                 GetToDoChartValue(dtpk_Time.Value);
                 ColumnChart_Tasks.Series["Series1"].Points.Clear();

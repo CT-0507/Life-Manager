@@ -65,7 +65,7 @@ namespace LIFE_MANAGER.FormUI
                             Models.User user1 = (Models.User)query.First();
                             Models.Setting setting = new Models.Setting()
                             {
-                                isBackgroundMusicVolume = true,
+                                isBackgroundMusicVolume = false,
                                 isNotification = true,
                                 BackgroundImage = "",
                                 StartWithWindows = true,
@@ -83,6 +83,7 @@ namespace LIFE_MANAGER.FormUI
                         }
                         Thread a = new Thread(() => new frm_Login().ShowDialog());
                         a.SetApartmentState(ApartmentState.STA);
+                        //a.IsBackground = true;
                         a.Start();
                         this.Close();
                     }

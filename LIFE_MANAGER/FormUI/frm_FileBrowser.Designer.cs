@@ -34,6 +34,7 @@
             // 
             // lv_Files
             // 
+            this.lv_Files.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lv_Files.HideSelection = false;
             this.lv_Files.Location = new System.Drawing.Point(24, 23);
             this.lv_Files.Name = "lv_Files";
@@ -70,6 +71,7 @@
             this.Controls.Add(this.btn_Open);
             this.Controls.Add(this.lv_Files);
             this.Name = "frm_FileBrowser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_FileBrowser";
             this.ResumeLayout(false);
 

@@ -157,7 +157,7 @@ namespace LIFE_MANAGER.FormUI
         }
         private void OpenChildForm(Form childForm)
         {
-          
+            timer1.Stop();
             try
             {
                 if (frm_Setting.a != null)
@@ -253,6 +253,7 @@ namespace LIFE_MANAGER.FormUI
                 frm_Login.User = null;
                 Thread a = new Thread(() => new frm_Login().ShowDialog());
                 a.SetApartmentState(ApartmentState.STA);
+                a.IsBackground = true;
                 a.Start();
                 this.Close();
             }
@@ -290,8 +291,10 @@ namespace LIFE_MANAGER.FormUI
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to quit", "Quit ?", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
+                timer1.Enabled = false;
                 this.Close();
             }
+            
         }
 
         private void btn_Maximize_Click(object sender, EventArgs e)
@@ -350,6 +353,7 @@ namespace LIFE_MANAGER.FormUI
         {
             this.Activated -= AfterLoading;
             Player = new WMPLib.WindowsMediaPlayer();
+            Player.uiMode = "invisible";
             Player.controls.pause();
             Player.URL = Path.Combine(Path.GetDirectoryName(Application.ExecutablePath), "Resource\\backgroundmusic\\BackgroundMusic.mp3");
             if (frm_Login.Setting.isBackgroundMusicVolume == false)
@@ -361,6 +365,44 @@ namespace LIFE_MANAGER.FormUI
             {
                 Player.controls.play();
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (count == 3)
+            {
+                timer1.Stop();
+                timer1.Enabled = false;
+            }
+            else
+            {
+                timer1.Start();
+                if (frm_Login.Setting.isBackgroundMusicVolume == false)
+                {
+                    Player.controls.pause();
+
+                }
+                count++;
+            }
+            
+            
+        }
+
+        private void btn_Quit_MouseHover(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Red;
+        }
+
+        private void btn_Maximize_MouseHover(object sender, EventArgs e)
+        {
+            this.BackColor= Color.Yellow;
+        }
+        private int count = 0;
+        private void frm_Dashboardnew_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+            timer1.Stop();
+            timer1.Enabled = false;
         }
     }
 }

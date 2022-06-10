@@ -29,6 +29,7 @@ namespace LIFE_MANAGER.FormUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_Dashboardnew));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btn_User = new FontAwesome.Sharp.IconButton();
@@ -50,6 +51,7 @@ namespace LIFE_MANAGER.FormUI
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
@@ -259,6 +261,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Quit.Text = "O";
             this.btn_Quit.UseVisualStyleBackColor = true;
             this.btn_Quit.Click += new System.EventHandler(this.btn_Quit_Click);
+            this.btn_Quit.MouseHover += new System.EventHandler(this.btn_Quit_MouseHover);
             // 
             // btn_Maximize
             // 
@@ -275,6 +278,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Maximize.Text = "O";
             this.btn_Maximize.UseVisualStyleBackColor = true;
             this.btn_Maximize.Click += new System.EventHandler(this.btn_Maximize_Click);
+            this.btn_Maximize.MouseHover += new System.EventHandler(this.btn_Maximize_MouseHover);
             // 
             // bnt_Minimize
             // 
@@ -377,6 +381,12 @@ namespace LIFE_MANAGER.FormUI
             this.label1.TabIndex = 3;
             this.label1.Text = "Application Diary";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frm_Dashboardnew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -391,7 +401,8 @@ namespace LIFE_MANAGER.FormUI
             this.Name = "frm_Dashboardnew";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_Dashboardnew";
+            this.Text = "Life Manager | Dashboard";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Dashboardnew_FormClosing);
             this.Load += new System.EventHandler(this.frm_Dashboardnew_Load);
             this.Resize += new System.EventHandler(this.FormMainMenu_Resize);
             this.panelMenu.ResumeLayout(false);
@@ -431,5 +442,6 @@ namespace LIFE_MANAGER.FormUI
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Panel panelDeskTop;
         private FontAwesome.Sharp.IconButton btn_User;
+        private System.Windows.Forms.Timer timer1;
     }
 }

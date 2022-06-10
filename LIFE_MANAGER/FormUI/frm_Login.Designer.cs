@@ -40,6 +40,7 @@ namespace LIFE_MANAGER.FormUI
             this.lb_WrongUser = new System.Windows.Forms.Label();
             this.btn_Close = new System.Windows.Forms.Button();
             this.btn_Login = new LIFE_MANAGER.Custom_Control.RoundedButton();
+            this.lb_Welcome = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -134,7 +135,7 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Close.FlatAppearance.BorderSize = 0;
             this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Close.Image = ((System.Drawing.Image)(resources.GetObject("btn_Close.Image")));
-            this.btn_Close.Location = new System.Drawing.Point(345, 90);
+            this.btn_Close.Location = new System.Drawing.Point(372, 12);
             this.btn_Close.Name = "btn_Close";
             this.btn_Close.Size = new System.Drawing.Size(75, 23);
             this.btn_Close.TabIndex = 29;
@@ -161,12 +162,24 @@ namespace LIFE_MANAGER.FormUI
             this.btn_Login.UseVisualStyleBackColor = false;
             this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
+            // lb_Welcome
+            // 
+            this.lb_Welcome.AutoSize = true;
+            this.lb_Welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Welcome.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lb_Welcome.Location = new System.Drawing.Point(50, 87);
+            this.lb_Welcome.Name = "lb_Welcome";
+            this.lb_Welcome.Size = new System.Drawing.Size(320, 31);
+            this.lb_Welcome.TabIndex = 30;
+            this.lb_Welcome.Text = "Welcome to Life Manager";
+            // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.ClientSize = new System.Drawing.Size(432, 334);
+            this.Controls.Add(this.lb_Welcome);
             this.Controls.Add(this.btn_Close);
             this.Controls.Add(this.lb_WrongUser);
             this.Controls.Add(this.lb_OpenRegister);
@@ -179,7 +192,7 @@ namespace LIFE_MANAGER.FormUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
+            this.Text = "Life Manager | Login";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -201,5 +214,6 @@ namespace LIFE_MANAGER.FormUI
         private System.Windows.Forms.Label lb_OpenRegister;
         private System.Windows.Forms.Label lb_WrongUser;
         private System.Windows.Forms.Button btn_Close;
+        private System.Windows.Forms.Label lb_Welcome;
     }
 }
